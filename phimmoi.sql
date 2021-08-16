@@ -10,7 +10,7 @@ create table Phim(
 	id int auto_increment primary key,
 	`type` varchar(50),
 	category varchar(50),
-    episode int,
+    episode varchar(50),
     episodeURL text,
     imageURL text,
     title text,
