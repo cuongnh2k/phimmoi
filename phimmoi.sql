@@ -37,3 +37,5 @@ create table Response(
 
 alter table `Comment` add foreign key (id_phim) references Phim(id);
 alter table `Response` add foreign key (id_comment) references `Comment`(id);
+
+insert into `Admin` values('admin','123456');
