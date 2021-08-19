@@ -129,21 +129,34 @@
 	overflow: hidden !important;
 	text-overflow: ellipsis;
 }
+
+.menu1:hover {
+	color: rgb(255, 200, 50);
+}
+.menu2:hover {
+	background-color: rgb(255, 106, 71);
+}
 </style>
 
 <body class="bg-dark" style="font-family: Trirong, serif;">
 	<jsp:include page="Head.jsp"></jsp:include>
+	<c:if test="${phim!=null}">
+		<div class="container">
+			<h3 class="text-primary">${phim.title }</h3>
+			<iframe class="ifra" width=100% src="${phim.episodeURL }"
+				title="${phim.title }" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+
+			<c:forEach items="${boPhim}" var="o">
+				<span class="btn btn-secondary menu2"><a style="color: rgb(240, 240, 240); padding: 0px;" class="nav-link"
+					href="detail?id=${o.id }">${o.episode}</a></span>
+			</c:forEach>
+			<hr
+				style="height: 1px; border: none; background-color: rgb(240, 240, 240);">
+		</div>
+	</c:if>
 	<div class="container">
-		<h3 class="text-primary">xxxxxxxxxxxxxxxxxxxxxx</h3>
-		<iframe class="ifra" width=100%
-			src="https://ok.ru/videoembed/2641654844142" title="" frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-			allowfullscreen></iframe>
-		
-	</div>
-	<div class="container">
-		<hr
-			style="height: 1px; border: none; background-color: rgb(240, 240, 240);">
 
 		<h3 style="color: rgb(255, 200, 50);">Có thể bạn muốn xem</h3>
 		<div class="row">

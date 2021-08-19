@@ -14,6 +14,7 @@ create table Phim(
     episodeURL text,
     imageURL text,
     title text,
+    `view` bigint,
 	constraint CHK_Phim check(
 		`type`='Phim bộ' or `type`='Phim hoạt hình' or `type`='Phim chiếu rạp' or `type`='Phim lẻ'
 		and category='Phim hành động' or category='Phim kinh dị' or category='Phim hoạt hình' or category='Phim tình cảm'
