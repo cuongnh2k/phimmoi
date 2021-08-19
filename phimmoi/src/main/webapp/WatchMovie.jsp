@@ -134,7 +134,7 @@
 	color: rgb(255, 200, 50);
 }
 .menu2:hover {
-	background-color: rgb(255, 106, 71);
+	background-color: rgb(60, 179, 113);
 }
 </style>
 
@@ -149,7 +149,7 @@
 				allowfullscreen></iframe>
 
 			<c:forEach items="${boPhim}" var="o">
-				<span class="btn btn-secondary menu2"><a style="color: rgb(240, 240, 240); padding: 0px;" class="nav-link"
+				<span class="btn ${o.episode==phim.episode?"bg-danger":"btn-secondary" } menu2"><a style="color: rgb(240, 240, 240); padding: 0px;" class="nav-link"
 					href="detail?id=${o.id }">${o.episode}</a></span>
 			</c:forEach>
 			<hr
