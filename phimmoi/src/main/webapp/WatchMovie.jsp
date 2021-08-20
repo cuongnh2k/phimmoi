@@ -27,7 +27,7 @@
 <!-- font google -->
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Sofia">
-<title>xxx</title>
+<title>${phim.title }</title>
 </head>
 
 <style>
@@ -133,8 +133,12 @@
 .menu1:hover {
 	color: rgb(255, 200, 50);
 }
-.menu2:hover {
+.menu3:hover {
 	background-color: rgb(60, 179, 113);
+}
+.menu2:hover {
+	color: white;
+	background-color: #708090;
 }
 </style>
 
@@ -149,7 +153,7 @@
 				allowfullscreen></iframe>
 
 			<c:forEach items="${boPhim}" var="o">
-				<span class="btn ${o.episode==phim.episode?"bg-danger":"btn-secondary" } menu2"><a style="color: rgb(240, 240, 240); padding: 0px;" class="nav-link"
+				<span class="btn ${o.episode==phim.episode?"bg-danger":"btn-secondary" } menu3"><a style="color: rgb(240, 240, 240); padding: 0px;" class="nav-link"
 					href="detail?id=${o.id }">${o.episode}</a></span>
 			</c:forEach>
 			<hr

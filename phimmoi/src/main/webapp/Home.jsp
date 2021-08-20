@@ -27,7 +27,7 @@
 <!-- font google -->
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Sofia">
-<title>xxx</title>
+<title>Phim mới</title>
 </head>
 
 <style>
