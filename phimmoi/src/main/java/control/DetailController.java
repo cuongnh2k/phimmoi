@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.DAO;
+import dao.UserDAO;
 import entity.Phim;
 
 @WebServlet("/detail")
@@ -20,15 +20,16 @@ public class DetailController extends HttpServlet {
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
 		int id = Integer.parseInt(req.getParameter("id"));
-		req.setAttribute("categoryPhimLe", new DAO().getCategoryPhimLe());
-		req.setAttribute("categoryPhimBo", new DAO().getCategoryPhimBo());
-		req.setAttribute("categoryPhimChieuRap", new DAO().getCategoryPhimChieuRap());
-		req.setAttribute("categoryPhimHoatHinh", new DAO().getCategoryPhimHoatHinh());
-		Phim p = new DAO().getPhim(id);
+		req.setAttribute("categoryPhimLe", new UserDAO().getCategoryPhimLe());
+		req.setAttribute("categoryPhimBo", new UserDAO().getCategoryPhimBo());
+		req.setAttribute("categoryPhimChieuRap", new UserDAO().getCategoryPhimChieuRap());
+		req.setAttribute("categoryPhimHoatHinh", new UserDAO().getCategoryPhimHoatHinh());
+		Phim p = new UserDAO().getPhim(id);
 		if (p.getType().equals("Phim bộ") || p.getType().equals("Phim hoạt hình")) {
-			req.setAttribute("boPhim", new DAO().getBoPhim(p));
+			req.setAttribute("boPhim", new UserDAO().getBoPhim(p));
 		}
 		req.setAttribute("phim", p);
+		req.setAttribute("phimTuongTu", new UserDAO().getPhimTuongTu(p));
 		req.getRequestDispatcher("WatchMovie.jsp").forward(req, resp);
 	}
 }

@@ -14,7 +14,7 @@ create table Phim(
     episodeURL text,
     imageURL text,
     title text,
-    `view` bigint,
+    `view` bigint default 0,
 	constraint CHK_Phim check(
 		`type`='Phim bộ' or `type`='Phim hoạt hình' or `type`='Phim chiếu rạp' or `type`='Phim lẻ'
 		and category='Phim hành động' or category='Phim kinh dị' or category='Phim hoạt hình' or category='Phim tình cảm'
@@ -45,3 +45,8 @@ select distinct category from phim where `type`= 'Phim hoạt hình';
 select * from phim order by(`view`) desc limit 12;
 select * from phim where `type`='Phim bộ'and episode = 1 or episode like '1 %' order by(id) limit 12;
 update phim set episode='1' where id<482;
+
+select * from phim where category='Phim tình cảm' group by(title) order by rand() limit 12;
+select* from phim where `type`='Phim lẻ' group by(title) order by(id) desc limit 12;
+select * from phim where `type`='Phim lẻ' and category='Phim cổ trang' limit 12 offset 0;
+select sum(title) from phim group by(title);

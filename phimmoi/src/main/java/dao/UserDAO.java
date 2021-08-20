@@ -9,7 +9,7 @@ import java.util.List;
 import context.DBContext;
 import entity.Phim;
 
-public class DAO {
+public class UserDAO {
 
 	public List<String> getCategoryPhimLe() {
 		List<String> list = new ArrayList<>();
@@ -94,7 +94,7 @@ public class DAO {
 	public List<Phim> getPhimDeCu() {
 		List<Phim> list = new ArrayList<>();
 		try {
-			String sql = "select * from phim order by(`view`) desc limit 12;";
+			String sql = "select * from phim group by(title) order by(sum(`view`)) desc limit 12;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			ResultSet rs = sta.executeQuery();
@@ -114,9 +114,10 @@ public class DAO {
 	public List<Phim> getPhimLeCapNhat() {
 		List<Phim> list = new ArrayList<>();
 		try {
-			String sql = "select * from phim where `type`='Phim lẻ' order by(id) desc limit 12;";
+			String sql = "select * from phim where `type`=? group by(title) order by(id) desc limit 12;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, "Phim lẻ");
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
@@ -134,9 +135,10 @@ public class DAO {
 	public List<Phim> getPhimHoatHinhCapNhat() {
 		List<Phim> list = new ArrayList<>();
 		try {
-			String sql = "select * from phim where `type`='Phim hoạt hình'and episode = 1 or episode like '1 %' order by(id) desc limit 12;";
+			String sql = "select * from phim where `type`=? group by(title) order by(id) desc limit 12;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, "Phim hoạt hình");
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
@@ -154,9 +156,10 @@ public class DAO {
 	public List<Phim> getPhimChieuRapCapNhat() {
 		List<Phim> list = new ArrayList<>();
 		try {
-			String sql = "select * from phim where `type`='Phim chiếu rạp' order by(id) desc limit 12;";
+			String sql = "select * from phim where `type`=? group by(title) order by(id) desc limit 12;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, "Phim chiếu rạp");
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
@@ -174,9 +177,10 @@ public class DAO {
 	public List<Phim> getPhimBoCapNhat() {
 		List<Phim> list = new ArrayList<>();
 		try {
-			String sql = "select * from phim where `type`='Phim bộ' and episode = 1 or episode like '1 %' order by(id) desc limit 12;";
+			String sql = "select * from phim where `type`=? group by(title) order by(id) desc limit 12;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, "Phim bộ");
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
@@ -198,6 +202,7 @@ public class DAO {
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setInt(1, id);
 			ResultSet rs = sta.executeQuery();
+			setView(id);
 			while (rs.next()) {
 				return new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getLong(8));
@@ -219,6 +224,7 @@ public class DAO {
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, p.getTitle());
 			ResultSet rs = sta.executeQuery();
+
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getLong(8)));
@@ -232,20 +238,102 @@ public class DAO {
 		return list;
 	}
 
-//	public void plusCamera(Order o) {
-//		String sql2 = "update camera set so_luong = so_luong+? where ma=? and the_loai=?;";
-//		try {
-//			Connection con2 = new DBContext().getConnection();
-//			PreparedStatement sta2 = con2.prepareStatement(sql2);
-//			sta2.setInt(1, o.getSoLuong());
-//			sta2.setInt(2, o.getMaSP());
-//			sta2.setInt(3, o.getTheLoai());
-//			int rs2 = sta2.executeUpdate();
-//			sta2.close();
-//			con2.close();
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//	}
+	public List<Phim> getPhimTuongTu(Phim p) {
+		List<Phim> list = new ArrayList<Phim>();
+		try {
+			String sql = "select * from phim where category=? group by(title) order by rand() limit 12;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, p.getCategory());
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+						rs.getString(6), rs.getString(7), rs.getLong(8)));
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 
+	public void setView(int id) {
+		String sql = "update phim set `view`=`view`+1 where id=?;";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setInt(1, id);
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public List<Phim> searchByName(String txt) {
+		List<Phim> list = new ArrayList<Phim>();
+		try {
+			String sql = "select * from phim where title like ? group by(title) limit 120;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, "%" + txt + "%");
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+						rs.getString(6), rs.getString(7), rs.getLong(8)));
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	public List<Phim> searchMenu(Phim p) {
+		List<Phim> list = new ArrayList<Phim>();
+		try {
+			String sql = "select * from phim where `type`=? and category=? group by(title) limit 12 offset ?;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, p.getType());
+			sta.setString(2, p.getCategory());
+			sta.setLong(3, p.getView());
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+						rs.getString(6), rs.getString(7), rs.getLong(8)));
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	public int searchMenuCount(Phim p) {
+		try {
+			String sql = "select count(distinct title) from phim where `type`=? and category=?;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, p.getType());
+			sta.setString(2, p.getCategory());
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				return rs.getInt(1);
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
 }

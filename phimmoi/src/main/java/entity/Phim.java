@@ -91,4 +91,10 @@ public class Phim {
 		this.view = view;
 	}
 
+	@Override
+	public String toString() {
+		return "Phim [id=" + id + ", type=" + type + ", category=" + category + ", episode=" + episode + ", episodeURL="
+				+ episodeURL + ", imageURL=" + imageURL + ", title=" + title + ", view=" + view + "]";
+	}
+
 }

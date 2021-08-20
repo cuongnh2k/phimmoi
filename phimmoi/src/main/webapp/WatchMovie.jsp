@@ -1,3 +1,11 @@
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.util.concurrent.ConcurrentHashMap.KeySetView"%>
+<%@page import="dao.UserDAO"%>
+<%@page import="java.util.concurrent.Executors"%>
+<%@page import="java.util.concurrent.ExecutorService"%>
+<%@page import="java.util.concurrent.TimeUnit"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -27,6 +35,9 @@
 <!-- font google -->
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Sofia">
+<!-- jquery -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <title>${phim.title }</title>
 </head>
 
@@ -133,9 +144,11 @@
 .menu1:hover {
 	color: rgb(255, 200, 50);
 }
+
 .menu3:hover {
 	background-color: rgb(60, 179, 113);
 }
+
 .menu2:hover {
 	color: white;
 	background-color: #708090;
@@ -144,41 +157,61 @@
 
 <body class="bg-dark" style="font-family: Trirong, serif;">
 	<jsp:include page="Head.jsp"></jsp:include>
+	<div class="container">
+		<div id="search" class="row"></div>
+	</div>
 	<c:if test="${phim!=null}">
 		<div class="container">
+		<p style="color: rgb(255, 200, 50);">${phim.type } / ${phim.category} / ${phim.title }</p>
 			<h3 class="text-primary">${phim.title }</h3>
+			<c:if test="${boPhim!=null}">
+				<p style="color: rgb(240, 240, 240);">Tập: ${phim.episode }</p>
+			</c:if>
+			<p style="color: rgb(240, 240, 240);">
+				Lượt xem: ${phim.view} <i class="bi bi-eye"></i>
+			</p>
 			<iframe class="ifra" width=100% src="${phim.episodeURL }"
 				title="${phim.title }" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
-
 			<c:forEach items="${boPhim}" var="o">
-				<span class="btn ${o.episode==phim.episode?"bg-danger":"btn-secondary" } menu3"><a style="color: rgb(240, 240, 240); padding: 0px;" class="nav-link"
+				<span class="btn ${o.episode==phim.episode?"btn-danger":"btn-secondary" } menu3"><a
+					style="color: rgb(240, 240, 240); padding: 0px;" class="nav-link"
 					href="detail?id=${o.id }">${o.episode}</a></span>
 			</c:forEach>
 			<hr
 				style="height: 1px; border: none; background-color: rgb(240, 240, 240);">
+			<h3 style="color: rgb(255, 200, 50);">Có thể bạn muốn xem</h3>
+
+			<div class="row">
+				<c:forEach items="${phimTuongTu}" var="o">
+					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6">
+						<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
+							class="card-img-top" alt="${o.title}">
+							<p class="show_txt text-primary">${o.title}</p></a>
+					</div>
+				</c:forEach>
+
+			</div>
 		</div>
 	</c:if>
-	<div class="container">
-
-		<h3 style="color: rgb(255, 200, 50);">Có thể bạn muốn xem</h3>
-		<div class="row">
-			<%
-			for (int j = 0; j < 12; j++) {
-			%>
-			<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6">
-				<img
-					src="https://www.fullphimz.net/static/5fe2d564b3fa6403ffa11d1c/60c0de02d066b12ac2ab4720_khu-rung-bi-an.jpg"
-					class="card-img-top" alt="...">
-				<p class="show_txt text-primary">Phim sss
-					mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
-			</div>
-			<%
-			}
-			%>
-		</div>
-	</div>
 	<jsp:include page="Footer.jsp"></jsp:include>
+	<script>
+		function searchByName(param) {
+			var txtSearch = param.value;
+			$.ajax({
+				url : "/phimmoi/search",
+				type : "post",
+				data : {
+					txt : txtSearch
+				},
+				success : function(data) {
+					var row3 = document.getElementById("search");
+					row3.innerHTML = data;
+				}
+
+			});
+		}
+	</script>
 </body>
 </html>

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.DAO;
+import dao.UserDAO;
 import entity.Phim;
 
 @WebServlet("/home")
@@ -20,14 +20,14 @@ public class HomeController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html;charset=UTF-8");
-		req.setAttribute("categoryPhimLe", new DAO().getCategoryPhimLe());
-		req.setAttribute("categoryPhimBo", new DAO().getCategoryPhimBo());
-		req.setAttribute("categoryPhimChieuRap", new DAO().getCategoryPhimChieuRap());
-		req.setAttribute("categoryPhimHoatHinh", new DAO().getCategoryPhimHoatHinh());
+		req.setAttribute("categoryPhimLe", new UserDAO().getCategoryPhimLe());
+		req.setAttribute("categoryPhimBo", new UserDAO().getCategoryPhimBo());
+		req.setAttribute("categoryPhimChieuRap", new UserDAO().getCategoryPhimChieuRap());
+		req.setAttribute("categoryPhimHoatHinh", new UserDAO().getCategoryPhimHoatHinh());
 		List<Phim> list1 = new ArrayList<Phim>();
 		List<Phim> list2 = new ArrayList<Phim>();
 		List<Phim> list3 = new ArrayList<Phim>();
-		List<Phim> list4 = new DAO().getPhimDeCu();
+		List<Phim> list4 = new UserDAO().getPhimDeCu();
 		for (int i = 0; i < 4; i++) {
 			list1.add(list4.get(i));
 		}
@@ -40,10 +40,10 @@ public class HomeController extends HttpServlet {
 		req.setAttribute("list1", list1);
 		req.setAttribute("list2", list2);
 		req.setAttribute("list3", list3);
-		req.setAttribute("phimBoCapNhat", new DAO().getPhimBoCapNhat());
-		req.setAttribute("phimLeCapNhat", new DAO().getPhimLeCapNhat());
-		req.setAttribute("phimChieuRapCapNhat", new DAO().getPhimChieuRapCapNhat());
-		req.setAttribute("phimHoatHinhCapNhat", new DAO().getPhimHoatHinhCapNhat());
+		req.setAttribute("phimBoCapNhat", new UserDAO().getPhimBoCapNhat());
+		req.setAttribute("phimLeCapNhat", new UserDAO().getPhimLeCapNhat());
+		req.setAttribute("phimChieuRapCapNhat", new UserDAO().getPhimChieuRapCapNhat());
+		req.setAttribute("phimHoatHinhCapNhat", new UserDAO().getPhimHoatHinhCapNhat());
 		req.getRequestDispatcher("Home.jsp").forward(req, resp);
 	}
 }

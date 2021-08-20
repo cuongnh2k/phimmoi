@@ -13,15 +13,15 @@
 			</div>
 
 			<div class="col-lg-3" style="margin-top: 15px;">
-				<form action="#" method="get" class="form-inline my-2 my-lg-0">
+				<form class="form-inline my-2 my-lg-0">
 					<div class="input-group input-group-sm" style="width: 100%;">
-						<input name="ten-phim" type="text" class="form-control"
+						<input oninput="searchByName(this)" type="text" class="form-control"
 							aria-label="Small" aria-describedby="inputGroup-sizing-sm"
 							placeholder="Tìm kiếm theo tên phim">
 						<div class="input-group-append">
-							<button type="submit" class="btn btn-primary btn-number">
+							<dvi class="btn btn-primary btn-number">
 								<i class="bi bi-search"></i>
-							</button>
+							</div>
 						</div>
 					</div>
 				</form>
@@ -41,7 +41,7 @@
 					<div class="dropdown-menu dropdown-menu-right">
 						<c:forEach items="${categoryPhimBo}" var="o">
 							<a class="dropdown-item menu2"
-								href="search?type=Phim%20bộ&cateogry=${o }">${o }</a>
+								href="search?type=Phim%20bộ&category=${o }">${o }</a>
 						</c:forEach>
 					</div>
 				</div>
@@ -53,7 +53,7 @@
 					<div class="dropdown-menu dropdown-menu-right">
 						<c:forEach items="${categoryPhimLe}" var="o">
 							<a class="dropdown-item menu2"
-								href="search?type=Phim%20lẻ&cateogry=${o }">${o }</a>
+								href="search?type=Phim%20lẻ&category=${o }">${o }</a>
 						</c:forEach>
 					</div>
 				</div>
@@ -65,7 +65,7 @@
 					<div class="dropdown-menu dropdown-menu-right">
 						<c:forEach items="${categoryPhimChieuRap}" var="o">
 							<a class="dropdown-item menu2"
-								href="search?type=Phim%20chiếu%20rạp&cateogry=${o }">${o }</a>
+								href="search?type=Phim%20chiếu%20rạp&category=${o }">${o }</a>
 						</c:forEach>
 					</div>
 				</div>
@@ -77,7 +77,7 @@
 					<div class="dropdown-menu dropdown-menu-right">
 						<c:forEach items="${categoryPhimHoatHinh}" var="o">
 							<a class="dropdown-item menu2"
-								href="search?type=Phim%20hoạt%20hình&cateogry=${o }">${o }</a>
+								href="search?type=Phim%20hoạt%20hình&category=${o }">${o }</a>
 						</c:forEach>
 					</div>
 				</div>
