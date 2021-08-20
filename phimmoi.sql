@@ -40,7 +40,8 @@ alter table `Comment` add foreign key (id_phim) references Phim(id);
 alter table `Response` add foreign key (id_comment) references `Comment`(id);
 
 insert into `Admin` values('admin','123456');
-select distinct category from phim where `type`= 'Phim hoạt hình';
 
+select distinct category from phim where `type`= 'Phim hoạt hình';
 select * from phim order by(`view`) desc limit 12;
 select * from phim where `type`='Phim bộ'and episode = 1 or episode like '1 %' order by(id) limit 12;
+update phim set episode='1' where id<482;
