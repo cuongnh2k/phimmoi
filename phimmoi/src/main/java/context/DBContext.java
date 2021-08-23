@@ -30,15 +30,15 @@ public class DBContext {
 //		return null;
 //	}
 
-//	public static void main(String[] args) {
-////		System.out.println(System.getProperty("java.runtime.version"));
-//		DBContext db=new DBContext();
-//		if(db.getConnection()!=null) {
-//			System.out.println("ok");
-//		}
-//		else {
-//			System.out.println("fail");
-//		}
-//	}
+	public static void main(String[] args) {
+//		System.out.println(System.getProperty("java.runtime.version"));
+		DBContext db=new DBContext();
+		if(db.getConnection()!=null) {
+			System.out.println("ok");
+		}
+		else {
+			System.out.println("fail");
+		}
+	}
 
 }

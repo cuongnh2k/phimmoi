@@ -15,18 +15,19 @@
 			<div class="col-lg-3" style="margin-top: 15px;">
 				<form class="form-inline my-2 my-lg-0">
 					<div class="input-group input-group-sm" style="width: 100%;">
-						<input oninput="searchByName(this)" value="${txt }" type="text" class="form-control"
-							aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+						<input oninput="searchByName(this)" value="${txt }" type="text"
+							class="form-control" aria-label="Small"
+							aria-describedby="inputGroup-sizing-sm"
 							placeholder="Tìm kiếm theo tên phim">
 						<div class="input-group-append">
-							<dvi class="btn btn-primary btn-number">
-								<i class="bi bi-search"></i>
-							</div>
+							<dvi class="btn btn-primary btn-number"> <i
+								class="bi bi-search"></i>
 						</div>
 					</div>
-				</form>
 			</div>
+			</form>
 		</div>
+	</div>
 	</div>
 	<hr
 		style="height: 3px; border: none; background-color: rgb(255, 200, 50);">
@@ -81,6 +82,12 @@
 						</c:forEach>
 					</div>
 				</div>
+				<c:if test="${sessionScope.admin!=null}">
+					<div class="btn-group">
+						<a href="logout"><button type="button"
+								class="btn btn-secondary menu1">Đăng xuất</button></a>
+					</div>
+				</c:if>
 			</nav>
 		</div>
 		<hr

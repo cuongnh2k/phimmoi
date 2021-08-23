@@ -162,14 +162,29 @@
 	</div>
 	<c:if test="${phim!=null}">
 		<div class="container">
-		<p style="color: rgb(255, 200, 50);">${phim.type } / ${phim.category} / ${phim.title }</p>
+			<p style="color: rgb(255, 200, 50);">${phim.type }/
+				${phim.category} / ${phim.title }</p>
 			<h3 class="text-primary">${phim.title }</h3>
 			<c:if test="${boPhim!=null}">
 				<p style="color: rgb(240, 240, 240);">Tập: ${phim.episode }</p>
 			</c:if>
-			<p style="color: rgb(240, 240, 240);">
-				Lượt xem: ${phim.view} <i class="bi bi-eye"></i>
-			</p>
+			<div class="row">
+				<div class="col-sm-10">
+					<p style="color: rgb(240, 240, 240);">
+						Lượt xem: ${phim.view} <i class="bi bi-eye"></i>
+					</p>
+				</div>
+				<c:if test="${sessionScope.admin!=null }">
+					<div class="col-sm-1">
+						<i data-toggle="modal" data-target="#edit" class="bi bi-hammer"
+							style="color: rgb(240, 240, 240); font-size: 25px;"></i>
+					</div>
+					<div class="col-sm-1">
+						<i data-toggle="modal" data-target="#remove" class="bi bi-trash"
+							style="color: rgb(240, 240, 240); font-size: 25px;"></i>
+					</div>
+				</c:if>
+			</div>
 			<iframe class="ifra" width=100% src="${phim.episodeURL }"
 				title="${phim.title }" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -196,6 +211,69 @@
 		</div>
 	</c:if>
 	<jsp:include page="Footer.jsp"></jsp:include>
+
+	<!-- Edit -->
+	<div class="modal fade" id="edit" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">${phim.title }</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<form action="edit" method="post">
+					<div class="modal-body">
+						<input name="id" value="${phim.id }" style="display: none;">
+						<label for="type"><b>Kiểu:</b></label> <input type="text"
+							class="form-control" name="type" id="type" value="${phim.type }"><label
+							for="category"><b>Thể loại:</b></label> <input type="text"
+							class="form-control" name="category" id="category"
+							value="${phim.category}"><label for="episode"><b>Tập:</b></label>
+						<input type="text" class="form-control" name="episode"
+							id="episode" value="${phim.episode }"><label
+							for="episodeURL"><b>URL:</b></label> <input type="text"
+							class="form-control" name="episodeURL" id="episodeURL"
+							value="${phim.episodeURL }"><label for="imageURL"><b>Ảnh:</b></label>
+						<input type="text" class="form-control" name="imageURL"
+							id="imageURL" value="${phim.imageURL }"><label
+							for="title"><b>Tiêu đề:</b></label> <input type="text"
+							class="form-control" name="title" id="title"
+							value="${phim.title}">
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Cập nhật</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Rempve -->
+	<div class="modal fade" id="remove" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Có muốn xóa
+						không ?</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Không</button>
+					<form action="remove" method="post">
+						<input name="id" value="${phim.id }" style="display: none;">
+						<button type="button" class="btn btn-primary">Có</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script>
 		function searchByName(param) {
 			var txtSearch = param.value;
