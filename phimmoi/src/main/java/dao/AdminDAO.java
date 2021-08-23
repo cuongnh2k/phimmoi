@@ -1,0 +1,30 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import context.DBContext;
+import entity.Admin;
+
+public class AdminDAO {
+	public Admin checkLoginDAO(Admin a) {
+		try {
+			String sql = "select * from `admin` where `account`= ? and `password`=?;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, a.getAccount());
+			sta.setString(2, a.getPassword());
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				return new Admin(rs.getString(1), rs.getString(2), rs.getString(3));
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+}

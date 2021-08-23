@@ -273,13 +273,14 @@ public class UserDAO {
 		}
 	}
 
-	public List<Phim> searchByName(String txt) {
+	public List<Phim> searchByName(String txt, int x) {
 		List<Phim> list = new ArrayList<Phim>();
 		try {
-			String sql = "select * from phim where title like ? group by(title) limit 120;";
+			String sql = "select * from phim where title like ? group by(title) limit 12 offset ?;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, "%" + txt + "%");
+			sta.setInt(2, x);
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
@@ -292,6 +293,25 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 		return list;
+	}
+
+	public int searchByNameCount(String txt) {
+		try {
+			String sql = "select count(distinct title) from phim where title like ?;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, "%" + txt + "%");
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				return rs.getInt(1);
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
 	}
 
 	public List<Phim> searchMenu(Phim p) {

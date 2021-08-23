@@ -1,0 +1,32 @@
+package control;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dao.AdminDAO;
+
+@WebServlet("/check-password")
+public class CheckPasswordController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html;charset=UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		PrintWriter printWriter = resp.getWriter();
+		if (!new AdminDAO().checkPasswordDAO(req.getParameter("pass")).equals("")) {
+
+			printWriter.println("<i class=\"bi bi-check-lg text-success\"></i>");
+		} else {
+			printWriter.println("<i class=\"bi bi-x-lg text-danger\"></i>");
+		}
+
+	}
+
+}

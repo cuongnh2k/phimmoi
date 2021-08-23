@@ -1,0 +1,48 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import context.DBContext;
+
+public class AdminDAO {
+	public String checkAccountDAO(String acc) {
+		String account="";
+		try {
+			String sql = "select `account` from `admin` where `account`= ?;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, acc);
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				account=rs.getString(1);
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return account;
+	}
+	public String checkPasswordDAO(String pass) {
+		String password="";
+		try {
+			String sql = "select `password` from `admin` where `password` = ?;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, pass);
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				password=rs.getString(1);
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return password;
+	}
+}

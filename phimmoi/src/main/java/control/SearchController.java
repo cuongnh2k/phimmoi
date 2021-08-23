@@ -21,25 +21,6 @@ public class SearchController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.setContentType("text/html;charset=UTF-8");
-		req.setCharacterEncoding("UTF-8");
-		String txtSearch = req.getParameter("txt");
-		if (txtSearch.equals("")) {
-			txtSearch = "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$";
-		}
-		List<Phim> list = new UserDAO().searchByName(txtSearch);
-		PrintWriter out = resp.getWriter();
-		for (Phim p : list) {
-			out.println("<div class=\"col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6\">\r\n"
-					+ "						<a href=\"" + "detail?id=" + p.getId() + "\"> <img src=\"" + p.getImageURL()
-					+ "\"\r\n" + "							class=\"card-img-top\" alt=\"" + p.getTitle() + "\">\r\n"
-					+ "							<p class=\"show_txt text-primary\">" + p.getTitle() + "</p></a>\r\n"
-					+ "					</div>");
-		}
-	}
-
-	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
@@ -75,7 +56,9 @@ public class SearchController extends HttpServlet {
 		}
 		Phim pp = list5.get(0);
 		req.setAttribute("CT030408", pp);
-		req.setAttribute("count", list);
+		
+			req.setAttribute("count", list);
+		
 		req.setAttribute("index", p.getView());
 		req.getRequestDispatcher("Home.jsp").forward(req, resp);
 	}
