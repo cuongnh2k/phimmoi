@@ -1,11 +1,3 @@
-<%@page import="java.sql.PreparedStatement"%>
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.Connection"%>
-<%@page import="java.util.concurrent.ConcurrentHashMap.KeySetView"%>
-<%@page import="dao.UserDAO"%>
-<%@page import="java.util.concurrent.Executors"%>
-<%@page import="java.util.concurrent.ExecutorService"%>
-<%@page import="java.util.concurrent.TimeUnit"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>

@@ -10,9 +10,8 @@ import javax.servlet.http.HttpSession;
 
 import dao.AdminDAO;
 import entity.Admin;
-import entity.Phim;
 
-@WebServlet("/edit")
+@WebServlet("/remove")
 public class RemoveController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
