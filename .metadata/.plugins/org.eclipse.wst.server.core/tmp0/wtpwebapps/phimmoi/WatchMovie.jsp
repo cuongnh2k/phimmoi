@@ -270,7 +270,7 @@
 		function searchByName(param) {
 			var txtSearch = param.value;
 			$.ajax({
-				url : "/phimmoi/search",
+				url : "/phimmoi/searchByName",
 				type : "post",
 				data : {
 					txt : txtSearch

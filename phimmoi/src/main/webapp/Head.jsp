@@ -88,9 +88,50 @@
 								class="btn btn-secondary menu1">Đăng xuất</button></a>
 					</div>
 				</c:if>
+				<c:if test="${sessionScope.admin!=null}">
+					<div class="btn-group">
+						<button data-toggle="modal" data-target="#add" type="button"
+							class="btn btn-secondary menu1">Thêm phim</button>
+					</div>
+				</c:if>
 			</nav>
 		</div>
 		<hr
 			style="height: 1px; border: none; background-color: rgb(240, 240, 240);">
+	</div>
+	<!-- Add -->
+	<div class="modal fade" id="add" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Thêm phim</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<form action="add" method="post">
+					<div class="modal-body">
+						<label for="type"><b>Kiểu:</b></label> <input required="required"
+							type="text" class="form-control" name="type" id="type"><label
+							for="category"><b>Thể loại:</b></label> <input
+							required="required" type="text" class="form-control"
+							name="category" id="category"><label for="episode"><b>Tập:</b></label>
+						<input required="required" type="text" class="form-control"
+							name="episode" id="episode"><label for="episodeURL"><b>URL:</b></label>
+						<input required="required" type="text" class="form-control"
+							name="episodeURL" id="episodeURL"><label for="imageURL"><b>Ảnh:</b></label>
+						<input required="required" type="text" class="form-control"
+							name="imageURL" id="imageURL"><label for="title"><b>Tiêu
+								đề:</b></label> <input required="required" type="text" class="form-control"
+							name="title" id="title">
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Cập nhật</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 </c:if>

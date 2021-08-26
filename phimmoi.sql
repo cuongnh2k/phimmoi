@@ -3,7 +3,8 @@ use PhimMoi;
 
 create table `Admin`(
 	`account` varchar(50),
-    `password` varchar(50)
+    `password` varchar(50),
+    email varchar(50)
 );
 
 create table Phim(
@@ -38,7 +39,7 @@ create table Response(
 
 alter table `Comment` add foreign key (id_phim) references Phim(id);
 alter table `Response` add foreign key (id_comment) references `Comment`(id);
-insert into `Admin` values('admin','123456');
+insert into `Admin` values('admin','123456','cuongnh2k@gmail.com');
 ----------------------------------------------------------------------------
 
 select distinct category from phim where `type`= 'Phim hoạt hình';
