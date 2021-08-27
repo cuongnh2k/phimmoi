@@ -94,6 +94,12 @@
 							class="btn btn-secondary menu1">Thêm phim</button>
 					</div>
 				</c:if>
+				<c:if test="${sessionScope.admin!=null}">
+					<div class="btn-group">
+						<button data-toggle="modal" data-target="#admin" type="button"
+							class="btn btn-secondary menu1">Admin</button>
+					</div>
+				</c:if>
 			</nav>
 		</div>
 		<hr
@@ -134,4 +140,85 @@
 			</div>
 		</div>
 	</div>
+	<!-- admin -->
+	<div class="modal fade" id="admin" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Admin</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="update-email" method="post">
+						<label for="account"><b>Tài khoản:</b></label> <input
+							readonly="readonly" type="text" class="form-control"
+							value="${sessionScope.admin.account}" id="account"><label
+							for="email"><b>Email:</b></label> <input required="required"
+							type="text" class="form-control" name="email" id="email"
+							value="${sessionScope.admin.email}"> <input name="id"
+							value="${sessionScope.admin.id}" style="display: none;" id="_id">
+						<button style="margin: 15px 0 15px 0;" type="submit"
+							class="btn btn-primary">Cập nhật</button>
+					</form>
+					<form action="update-password" method="post">
+						<label for="password"><b>Mật khẩu cũ:</b></label>
+						<div class="row">
+							<div class="col-11">
+								<input oninput="checkPassword(this)" required="required" type="password" class="form-control"
+									id="password" name="password">
+							</div>
+							<div class="col-1" style="margin-top: 5px;" id="pass">
+								<i class="bi bi-x-circle text-danger"></i>
+							</div>
+						</div>
+						<label for="newpass"><b>Mật khẩu mới:</b></label>
+						<div class="row">
+							<div class="col-11">
+								<input required="required" type="password" class="form-control"
+									name="newpass" id="newpass">
+							</div>
+							<div class="col-1" style="margin-top: 5px;">
+								<i class="bi bi-x-circle text-danger"></i>
+							</div>
+						</div>
+						<label for="confirm"><b>Xác nhận mật khẩu:</b></label>
+						<div class="row">
+							<div class="col-11">
+								<input required="required" type="password" class="form-control"
+									name="confirm" id="confirm">
+							</div>
+							<div class="col-1" style="margin-top: 5px;">
+								<i class="bi bi-x-circle text-danger"></i>
+							</div>
+						</div>
+						<button style="margin-top: 15px;" type="submit"
+							class="btn btn-primary">Cập nhật</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function checkPassword(param) {
+			var password = param.value;
+			var _id = document.getElementById("_id").value;
+			$.ajax({
+				url : "/phimmoi/check-password",
+				type : "post",
+				data : {
+					pass : password,
+					id : _id
+				},
+				success : function(data) {
+					var row = document.getElementById("pass");
+					row.innerHTML = data;
+				}
+
+			});
+		}
+	</script>
 </c:if>

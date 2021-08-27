@@ -2,20 +2,22 @@ create database PhimMoi;
 use PhimMoi;
 
 create table `Admin`(
-	`account` varchar(50),
-    `password` varchar(50),
-    email varchar(50)
+	`id` int auto_increment primary key,
+	`account` varchar(50) not null,
+    `password` varchar(50) not null,
+    `email` varchar(50) not null unique
 );
 
 create table Phim(
 	id int auto_increment primary key,
-	`type` varchar(50),
-	category varchar(50),
-    episode varchar(50),
-    episodeURL text,
-    imageURL text,
-    title text,
+	`type` varchar(50) not null,
+	category varchar(50) not null,
+    episode varchar(50) not null,
+    episodeURL text not null,
+    imageURL text not null,
+    title text not null,
     `view` bigint default 0,
+    `report` bit(1) default 0,
 	constraint CHK_Phim check(
 		`type`='Phim bộ' or `type`='Phim hoạt hình' or `type`='Phim chiếu rạp' or `type`='Phim lẻ'
 		and category='Phim hành động' or category='Phim kinh dị' or category='Phim hoạt hình' or category='Phim tình cảm'
@@ -23,33 +25,33 @@ create table Phim(
         or category='TV SHOW'
 	)
 );
+create table `User`(
+	`id` bigint primary key,
+	`email` varchar(50) not null unique,
+    `verified_email` bit(1),
+    `name` varchar(50) not null,
+    `given_name` varchar(50),
+    `family_name` varchar(50),
+    `link` varchar(50),
+    `picture` varchar(50)
+);
 
 create table `Comment`(
-	id int auto_increment primary key,
-    `comment` text,
-    email varchar(50),
-    id_phim int
+	`id` int primary key auto_increment,
+	`content` text not null,
+	`user_id` bigint not null,
+    `phim_id` int not null
 );
 
-create table Response(
-	id_comment int,
-    response text,
-    email varchar(50)
+create table `Response`(
+	`id` int primary key auto_increment,
+	`content` text not null,
+	`user_id` bigint not null,
+    `comment_id` int not null
 );
+ALTER TABLE `Comment` ADD FOREIGN KEY (phim_id) REFERENCES phim(id);
+ALTER TABLE `Comment` ADD FOREIGN KEY (user_id) REFERENCES `user`(id);
+ALTER TABLE `Response` ADD FOREIGN KEY (comment_id) REFERENCES `comment`(id);
 
-alter table `Comment` add foreign key (id_phim) references Phim(id);
-alter table `Response` add foreign key (id_comment) references `Comment`(id);
-insert into `Admin` values('admin','123456','cuongnh2k@gmail.com');
-----------------------------------------------------------------------------
+alter table phim add fulltext(title);
 
-select distinct category from phim where `type`= 'Phim hoạt hình';
-select * from phim order by(`view`) desc limit 12;
-select * from phim where `type`='Phim bộ'and episode = 1 or episode like '1 %' order by(id) limit 12;
-update phim set episode='1' where id<482;
-
-select * from phim where category='Phim tình cảm' group by(title) order by rand() limit 12;
-select* from phim where `type`='Phim lẻ' group by(title) order by(id) desc limit 12;
-select * from phim where `type`='Phim lẻ' and category='Phim cổ trang' limit 12 offset 0;
-select count(distinct title) from phim where `type`='Phim lẻ' and category='Phim tình cảm';
-ALTER TABLE `response` DROP FOREIGN KEY response_ibfk_1;
-select count(*) from phim

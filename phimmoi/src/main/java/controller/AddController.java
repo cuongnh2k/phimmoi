@@ -1,4 +1,4 @@
-package control;
+package controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -10,9 +10,10 @@ import javax.servlet.http.HttpSession;
 
 import dao.AdminDAO;
 import entity.Admin;
+import entity.Phim;
 
-@WebServlet("/remove")
-public class RemoveController extends HttpServlet {
+@WebServlet("/add")
+public class AddController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
@@ -24,8 +25,10 @@ public class RemoveController extends HttpServlet {
 		Admin a = (Admin) session.getAttribute("admin");
 		if (a != null) {
 			if (a.getAccount().equals("admin")) {
-				int id=Integer.parseInt(req.getParameter("id"));
-				new AdminDAO().removeDAO(id);
+				Phim p = new Phim(0, req.getParameter("type"), req.getParameter("category"),
+						req.getParameter("episode"), req.getParameter("episodeURL"), req.getParameter("imageURL"),
+						req.getParameter("title"), 0);
+				new AdminDAO().addDAO(p);
 				resp.sendRedirect("home");
 			} else {
 				resp.sendRedirect("login");
@@ -34,4 +37,5 @@ public class RemoveController extends HttpServlet {
 			resp.sendRedirect("login");
 		}
 	}
+
 }

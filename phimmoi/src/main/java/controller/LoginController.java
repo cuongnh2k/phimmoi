@@ -1,4 +1,4 @@
-package control;
+package controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -26,7 +26,7 @@ public class LoginController extends HttpServlet {
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
 		Admin a = new AdminDAO()
-				.checkLoginDAO(new Admin(req.getParameter("taiKhoan"), req.getParameter("matKhau"), null));
+				.checkLoginDAO(new Admin(0, req.getParameter("taiKhoan"), req.getParameter("matKhau"), null));
 		if (a != null) {
 			HttpSession session = req.getSession();
 			session.setAttribute("admin", a);

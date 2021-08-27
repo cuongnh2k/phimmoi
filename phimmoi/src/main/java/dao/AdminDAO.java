@@ -18,7 +18,7 @@ public class AdminDAO {
 			sta.setString(2, a.getPassword());
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				return new Admin(rs.getString(1), rs.getString(2), rs.getString(3));
+				return new Admin(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4));
 			}
 			rs.close();
 			sta.close();
@@ -80,5 +80,45 @@ public class AdminDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public boolean updateEmailDAO(Admin a) {
+		String sql = "update `admin`set `email`=? where id=?;";
+		int rs = 0;
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, a.getEmail());
+			sta.setInt(2, a.getId());
+			rs = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		if (rs != 0) {
+			return true;
+		}
+		return false;
+	}
+
+	public Admin checkPasswordDAO(Admin a) {
+		try {
+			String sql = "select * from `admin` where `password`= ? and `id`=?;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, a.getPassword());
+			sta.setInt(2, a.getId());
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				return new Admin(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4));
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

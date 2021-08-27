@@ -276,10 +276,10 @@ public class UserDAO {
 	public List<Phim> searchByName(String txt, int x) {
 		List<Phim> list = new ArrayList<Phim>();
 		try {
-			String sql = "select * from phim where title like ? group by(title) limit 12 offset ?;";
+			String sql = "SELECT * FROM phim WHERE MATCH(title) AGAINST( ? ) group by(title) limit 12 offset ?;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
-			sta.setString(1, "%" + txt + "%");
+			sta.setString(1, txt);
 			sta.setInt(2, x);
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
@@ -297,10 +297,10 @@ public class UserDAO {
 
 	public int searchByNameCount(String txt) {
 		try {
-			String sql = "select count(distinct title) from phim where title like ?;";
+			String sql = "select count(distinct title) FROM phim WHERE MATCH(title) AGAINST( ? );";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
-			sta.setString(1, "%" + txt + "%");
+			sta.setString(1, txt);
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				return rs.getInt(1);
