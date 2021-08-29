@@ -24,15 +24,11 @@ public class AddController extends HttpServlet {
 		HttpSession session = req.getSession();
 		Admin a = (Admin) session.getAttribute("admin");
 		if (a != null) {
-			if (a.getAccount().equals("admin")) {
-				Phim p = new Phim(0, req.getParameter("type"), req.getParameter("category"),
-						req.getParameter("episode"), req.getParameter("episodeURL"), req.getParameter("imageURL"),
-						req.getParameter("title"), 0);
-				new AdminDAO().addDAO(p);
-				resp.sendRedirect("home");
-			} else {
-				resp.sendRedirect("login");
-			}
+
+			Phim p = new Phim(0, req.getParameter("type"), req.getParameter("category"), req.getParameter("episode"),
+					req.getParameter("episodeURL"), req.getParameter("imageURL"), req.getParameter("title"), 0);
+			new AdminDAO().addDAO(p);
+			resp.sendRedirect("home");
 		} else {
 			resp.sendRedirect("login");
 		}

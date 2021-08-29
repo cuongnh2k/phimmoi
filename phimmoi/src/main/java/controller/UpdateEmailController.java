@@ -24,18 +24,15 @@ public class UpdateEmailController extends HttpServlet {
 		HttpSession session = req.getSession();
 		Admin a = (Admin) session.getAttribute("admin");
 		if (a != null) {
-			if (a.getAccount().equals("admin")) {
 
-				Admin e = new Admin();
-				e.setId(Integer.parseInt(req.getParameter("id")));
-				e.setEmail(req.getParameter("email"));
-				if (new AdminDAO().updateEmailDAO(e)) {
-					a.setEmail(e.getEmail());
-				}
-				resp.sendRedirect("home");
-			} else {
-				resp.sendRedirect("login");
+			Admin e = new Admin();
+			e.setId(Integer.parseInt(req.getParameter("id")));
+			e.setEmail(req.getParameter("email"));
+			e.setPassword(req.getParameter("password"));
+			if (new AdminDAO().updateEmailDAO(e)) {
+				a.setEmail(e.getEmail());
 			}
+			resp.sendRedirect("home");
 		} else {
 			resp.sendRedirect("login");
 		}

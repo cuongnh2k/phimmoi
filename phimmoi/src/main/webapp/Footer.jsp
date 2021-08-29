@@ -5,5 +5,5 @@
 	test="${categoryPhimBo!=null||categoryPhimLe!=null||categoryPhimChieuRap!=null||categoryPhimHoatHinh!=null}">
 	<hr
 		style="height: 3px; border: none; background-color: rgb(255, 200, 50);">
-	<footer> </footer>
+	<footer> <p style="color:red;">CT030408</p> </footer>
 </c:if>

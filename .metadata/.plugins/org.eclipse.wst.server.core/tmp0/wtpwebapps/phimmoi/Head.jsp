@@ -154,58 +154,145 @@
 				</div>
 				<div class="modal-body">
 					<form action="update-email" method="post">
-						<label for="account"><b>Tài khoản:</b></label> <input
-							readonly="readonly" type="text" class="form-control"
-							value="${sessionScope.admin.account}" id="account"><label
-							for="email"><b>Email:</b></label> <input required="required"
-							type="text" class="form-control" name="email" id="email"
-							value="${sessionScope.admin.email}"> <input name="id"
-							value="${sessionScope.admin.id}" style="display: none;" id="_id">
-						<button style="margin: 15px 0 15px 0;" type="submit"
-							class="btn btn-primary">Cập nhật</button>
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<label for="account"><b>Tài khoản:</b></label>
+							</div>
+							<div class="col-1"></div>
+						</div>
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<input readonly="readonly" type="text" class="form-control"
+									value="${sessionScope.admin.account}" id="account">
+							</div>
+							<div class="col-1"></div>
+						</div>
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<label for="email"><b>Email:</b></label>
+							</div>
+							<div class="col-1"></div>
+						</div>
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<input required="required" type="email" class="form-control"
+									name="email" id="email" value="${sessionScope.admin.email}">
+							</div>
+							<div class="col-1"></div>
+						</div>
+						<input name="id" value="${sessionScope.admin.id}"
+							style="display: none;" id="_id">
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<label for="password"><b>Mật khẩu cũ:</b></label>
+							</div>
+							<div class="col-1"></div>
+						</div>
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<input oninput="checkPassword1(this)" required="required"
+									type="password" class="form-control" id="password"
+									name="password"> <sup><a href="get-password">Quên mật
+										khẩu</a></sup>
+							</div>
+							<div class="col-1" style="margin-top: 5px;" id="pass1"></div>
+						</div>
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<button style="margin: 15px 0 15px 0;" type="submit"
+									class="btn btn-primary">Cập nhật</button>
+							</div>
+							<div class="col-1"></div>
+						</div>
 					</form>
-					<form action="update-password" method="post">
-						<label for="password"><b>Mật khẩu cũ:</b></label>
+					<form action="update-password" onsubmit="return confirmm()"
+						method="post">
+						<input name="id" value="${sessionScope.admin.id}"
+							style="display: none;" id="_id">
 						<div class="row">
-							<div class="col-11">
-								<input oninput="checkPassword(this)" required="required" type="password" class="form-control"
-									id="password" name="password">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<label for="password"><b>Mật khẩu cũ:</b></label>
 							</div>
-							<div class="col-1" style="margin-top: 5px;" id="pass">
-								<i class="bi bi-x-circle text-danger"></i>
-							</div>
+							<div class="col-1"></div>
 						</div>
-						<label for="newpass"><b>Mật khẩu mới:</b></label>
 						<div class="row">
-							<div class="col-11">
-								<input required="required" type="password" class="form-control"
-									name="newpass" id="newpass">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<input oninput="checkPassword2(this)" required="required"
+									type="password" class="form-control" id="password"
+									name="password"> <sup><a href="get-password">Quên mật
+										khẩu</a></sup>
+							</div>
+							<div class="col-1" style="margin-top: 5px;" id="pass2"></div>
+						</div>
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<label for="newpass"><b>Mật khẩu mới:</b></label>
+							</div>
+							<div class="col-1"></div>
+						</div>
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<input oninput="newPass()" required="required" type="password"
+									class="form-control" name="newpass" id="newpass"> <sup
+									id="a" class="text-danger" style="display: none;">Mật
+									khẩu yếu</sup>
 							</div>
 							<div class="col-1" style="margin-top: 5px;">
-								<i class="bi bi-x-circle text-danger"></i>
+								<i id="b" class="bi bi-x-circle text-danger"
+									style="display: none;"></i> <i id="c"
+									class="bi bi-check-circle text-success" style="display: none;"></i>
 							</div>
 						</div>
-						<label for="confirm"><b>Xác nhận mật khẩu:</b></label>
 						<div class="row">
-							<div class="col-11">
-								<input required="required" type="password" class="form-control"
-									name="confirm" id="confirm">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<label for="confirm"><b>Xác nhận mật khẩu:</b></label>
+
+							</div>
+							<div class="col-1"></div>
+						</div>
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<input oninput="confirmm()" required="required" type="password"
+									class="form-control" name="confirm" id="confirm"> <sup
+									id="d" class="text-danger" style="display: none;">Mật
+									khẩu không khớp</sup>
 							</div>
 							<div class="col-1" style="margin-top: 5px;">
-								<i class="bi bi-x-circle text-danger"></i>
+								<i id="e" class="bi bi-x-circle text-danger"
+									style="display: none;"></i> <i id="f"
+									class="bi bi-check-circle text-success" style="display: none;"></i>
 							</div>
 						</div>
-						<button style="margin-top: 15px;" type="submit"
-							class="btn btn-primary">Cập nhật</button>
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-10">
+								<button style="margin-top: 15px; display: none;" type="submit"
+									id="submit" class="btn btn-primary">Cập nhật</button>
+							</div>
+							<div class="col-1"></div>
+						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script>
-		function checkPassword(param) {
-			var password = param.value;
-			var _id = document.getElementById("_id").value;
+		function checkPassword1(param) {
+			let password = param.value;
+			let _id = document.getElementById("_id").value;
 			$.ajax({
 				url : "/phimmoi/check-password",
 				type : "post",
@@ -214,11 +301,74 @@
 					id : _id
 				},
 				success : function(data) {
-					var row = document.getElementById("pass");
+					let row = document.getElementById("pass1");
 					row.innerHTML = data;
 				}
 
 			});
+		}
+		function checkPassword2(param) {
+			let password = param.value;
+			let _id = document.getElementById("_id").value;
+			$.ajax({
+				url : "/phimmoi/check-password",
+				type : "post",
+				data : {
+					pass : password,
+					id : _id
+				},
+				success : function(data) {
+					let row = document.getElementById("pass2");
+					row.innerHTML = data;
+				}
+
+			});
+		}
+
+		function newPass() {
+			let newpass = document.getElementById("newpass").value;
+			if (newpass.length >= 6 && /[\d]/.test(newpass)
+					&& /[a-z]/.test(newpass) && /[A-Z]/.test(newpass)
+					&& /[\W]/.test(newpass) && /[\w]/.test(newpass)) {
+				document.getElementById("a").style.display = "none";
+				document.getElementById("c").style.display = "inline";
+				document.getElementById("b").style.display = "none";
+			} else {
+				document.getElementById("a").style.display = "inline";
+				document.getElementById("c").style.display = "none";
+				document.getElementById("b").style.display = "inline";
+			}
+			confirmm();
+		}
+
+		function confirmm() {
+			let confirm = document.getElementById("confirm").value;
+			let newpass = document.getElementById("newpass").value;
+			{
+				if (confirm == newpass) {
+					document.getElementById("d").style.display = "none";
+					document.getElementById("f").style.display = "inline";
+					document.getElementById("e").style.display = "none";
+				} else {
+					document.getElementById("d").style.display = "inline";
+					document.getElementById("f").style.display = "none";
+					document.getElementById("e").style.display = "inline";
+				}
+			}
+			{
+				if (newpass.length >= 6 && /[\d]/.test(newpass)
+						&& /[a-z]/.test(newpass) && /[A-Z]/.test(newpass)
+						&& /[\W]/.test(newpass) && /[\w]/.test(newpass)
+						&& confirm == newpass) {
+					document.getElementById("submit").style.display = "inline";
+				} else {
+					document.getElementById("submit").style.display = "none";
+				}
+			}
+			return newpass.length >= 6 && /[\d]/.test(newpass)
+					&& /[a-z]/.test(newpass) && /[A-Z]/.test(newpass)
+					&& /[\W]/.test(newpass) && /[\w]/.test(newpass)
+					&& confirm == newpass;
 		}
 	</script>
 </c:if>

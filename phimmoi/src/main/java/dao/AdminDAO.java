@@ -83,13 +83,14 @@ public class AdminDAO {
 	}
 
 	public boolean updateEmailDAO(Admin a) {
-		String sql = "update `admin`set `email`=? where id=?;";
+		String sql = "update `admin`set `email`=? where id=? and `password`=?;";
 		int rs = 0;
 		try {
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, a.getEmail());
 			sta.setInt(2, a.getId());
+			sta.setString(3, a.getPassword());
 			rs = sta.executeUpdate();
 			sta.close();
 			conn.close();
@@ -120,5 +121,55 @@ public class AdminDAO {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public void updatePasswordDAO(Admin a) {
+		String sql = "update `admin`set `password`=? where id=? and `password` =?;";
+		int rs = 0;
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, a.getAccount());
+			sta.setInt(2, a.getId());
+			sta.setString(3, a.getPassword());
+			rs = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public Admin checkAccountDAO(Admin a) {
+		try {
+			String sql = "select `email` from `admin` where `account`= ?;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, a.getAccount());
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				return new Admin(1, null, null, rs.getString(1));
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	public void updatePassword1DAO(Admin a) {
+		String sql = "update `admin` set `password`=? where `account` =?;";
+		
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, a.getPassword());
+			sta.setString(2, a.getAccount());
+		int	rs = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

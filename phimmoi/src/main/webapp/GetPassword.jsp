@@ -67,51 +67,47 @@
 	<div
 		style="width: 350px; border-radius: 5px; background-color: rgb(240, 240, 240);"
 		class="khung">
-		<form action="login" method="post">
+		<form>
 			<div class="row">
-				<c:if test="${loi!=null }">
-					<div class="col-12">
-						<p style="background-color: rgb(255, 200, 50); color: rgb(240, 240, 240); text-align: center;">${loi }</p>
-					</div>
-				</c:if>
 				<div class="col-2"></div>
 				<div class="col-8" style="margin-top: 20px;">
-					<label for="taiKhoan"><b>Tài khoản:</b></label>
+					<label for="taiKhoan"><b>Chọn tài khoản:</b></label>
 				</div>
 				<div class="col-2"></div>
 				<div class="col-2"></div>
 				<div class="col-8">
-					<input class="form-control" id="taiKhoan" name="taiKhoan"
-						type="text">
+					<input oninput="getPassword(this)" class="form-control"
+						id="taiKhoan" name="taiKhoan" type="text"> <div
+						id="account"></div>
 				</div>
 				<div class="col-2" style="margin-top: 5px;" id="acc"></div>
-				<div class="col-2"></div>
-				<div class="col-8" style="margin-top: 20px;">
-					<label for="matKhau"><b>Mật khẩu:</b></label>
-				</div>
-				<div class="col-2"></div>
-				<div class="col-2"></div>
-				<div class="col-8">
-					<input class="form-control" id="matKhau" name="matKhau"
-						type="password">
-				</div>
-				<div class="col-2" style="margin-top: 5px;" id="pass"></div>
 
-				<div class="col-4"></div>
-				<div class="col-4" style="margin-top: 20px;">
-					<input type="submit" value="Đăng nhập" class="btn btn-secondary">
-				</div>
-				<div class="col-4"></div>
 				<div class="col-12 text-center" style="margin-top: 20px;">
 					<a href="home" class="text-center nav-link">Trang chủ</a>
 				</div>
-				<div class="col-12 text-center"margin-bottom: 20px;">
-					<a href="get-password" class="text-center nav-link">Quên mật khẩu</a>
+				<div class="col-12 text-center" style="margin-bottom: 20px;">
+					<a href="login" class="text-center nav-link">Đăng nhập</a>
 				</div>
 			</div>
 
 		</form>
 	</div>
+	<script>
+	function getPassword(huyenanh) {
+		var account = huyenanh.value;
+		$.ajax({
+			url : "/phimmoi/get-password",
+			type : "post",
+			data : {
+				acc : account
+			},
+			success : function(data) {
+				var row3 = document.getElementById("account");
+				row3.innerHTML = data;
+			}
 
+		});
+	}
+	</script>
 </body>
 </html>

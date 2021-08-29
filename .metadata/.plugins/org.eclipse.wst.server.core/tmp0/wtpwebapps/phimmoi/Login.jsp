@@ -106,7 +106,7 @@
 					<a href="home" class="text-center nav-link">Trang chủ</a>
 				</div>
 				<div class="col-12 text-center"margin-bottom: 20px;">
-					<a href="#" class="text-center nav-link">Quên mật khẩu</a>
+					<a href="get-password" class="text-center nav-link">Quên mật khẩu</a>
 				</div>
 			</div>
 

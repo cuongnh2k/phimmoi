@@ -11,8 +11,8 @@ import javax.servlet.http.HttpSession;
 import dao.AdminDAO;
 import entity.Admin;
 
-@WebServlet("/remove")
-public class RemoveController extends HttpServlet {
+@WebServlet("/update-password")
+public class UpdatePasswordController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
@@ -23,10 +23,16 @@ public class RemoveController extends HttpServlet {
 		HttpSession session = req.getSession();
 		Admin a = (Admin) session.getAttribute("admin");
 		if (a != null) {
-		
-				int id=Integer.parseInt(req.getParameter("id"));
-				new AdminDAO().removeDAO(id);
-				resp.sendRedirect("home");
+			Admin e = new Admin();
+			e.setId(Integer.parseInt(req.getParameter("id")));
+			e.setPassword(req.getParameter("password"));
+			e.setAccount(req.getParameter("newpass"));
+			e.setEmail(req.getParameter("confirm"));
+			if (e.getAccount().equals(e.getEmail())) {
+				new AdminDAO().updatePasswordDAO(e);
+			}
+			resp.sendRedirect("home");
+
 		} else {
 			resp.sendRedirect("login");
 		}
