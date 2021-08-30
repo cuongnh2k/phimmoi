@@ -176,6 +176,10 @@
 							style="color: rgb(240, 240, 240); font-size: 25px;"></i>
 					</div>
 				</c:if>
+				<div class="col-12">
+					<span onclick="report()"
+						style="color: rgb(240, 240, 240); font-size: 25px;">Báo cáo</span>
+				</div>
 			</div>
 			<iframe class="ifra" width=100% src="${phim.episodeURL }"
 				title="${phim.title }" frameborder="0"
@@ -218,7 +222,7 @@
 				</div>
 				<form action="edit" method="post">
 					<div class="modal-body">
-						<input name="id" value="${phim.id }" style="display: none;">
+						<input name="id" id="id" value="${phim.id }" style="display: none;">
 						<label for="type"><b>Kiểu:</b></label> <input type="text"
 							class="form-control" name="type" id="type" value="${phim.type }"><label
 							for="category"><b>Thể loại:</b></label> <input type="text"
@@ -267,6 +271,23 @@
 		</div>
 	</div>
 	<script>
+		function report() {
+			let id = document.getElementById("id").value;
+			$.ajax({
+				url : "/phimmoi/report",
+				type : "post",
+				data : {
+					id : id
+				},
+				success : function(data) {
+					
+				}
+
+			});
+			
+			alert('Báo cáo thành công');
+		}
+
 		function searchByName(param) {
 			var txtSearch = param.value;
 			$.ajax({

@@ -100,7 +100,7 @@ public class UserDAO {
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
 			sta.close();
@@ -121,7 +121,7 @@ public class UserDAO {
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
 			sta.close();
@@ -142,7 +142,7 @@ public class UserDAO {
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
 			sta.close();
@@ -163,7 +163,7 @@ public class UserDAO {
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
 			sta.close();
@@ -184,7 +184,7 @@ public class UserDAO {
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
 			sta.close();
@@ -205,7 +205,7 @@ public class UserDAO {
 			setView(id);
 			while (rs.next()) {
 				return new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9));
 			}
 			rs.close();
 			sta.close();
@@ -227,7 +227,7 @@ public class UserDAO {
 
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
 			sta.close();
@@ -248,7 +248,7 @@ public class UserDAO {
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
 			sta.close();
@@ -284,7 +284,7 @@ public class UserDAO {
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
 			sta.close();
@@ -326,7 +326,7 @@ public class UserDAO {
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
 			sta.close();
@@ -355,5 +355,20 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 		return 0;
+	}
+
+	public void reportDAO(String id) {
+		String sql = "update phim set `report`=? where id=?;";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setInt(1, 1);
+			sta.setString(2, id);
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

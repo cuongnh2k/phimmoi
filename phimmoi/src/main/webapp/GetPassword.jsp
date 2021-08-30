@@ -67,21 +67,26 @@
 	<div
 		style="width: 350px; border-radius: 5px; background-color: rgb(240, 240, 240);"
 		class="khung">
-		<form>
+		<form action="get-password" method="post">
+			<div style="background-color: rgb(255, 200, 50); color: rgb(240, 240, 240); text-align: center;">${loi }</div>
 			<div class="row">
 				<div class="col-2"></div>
 				<div class="col-8" style="margin-top: 20px;">
-					<label for="taiKhoan"><b>Chọn tài khoản:</b></label>
+					<label for="account"><b>Chọn tài khoản:</b></label>
 				</div>
 				<div class="col-2"></div>
 				<div class="col-2"></div>
 				<div class="col-8">
-					<input oninput="getPassword(this)" class="form-control"
-						id="taiKhoan" name="taiKhoan" type="text"> <div
-						id="account"></div>
-				</div>
-				<div class="col-2" style="margin-top: 5px;" id="acc"></div>
+					<input class="form-control" id="account" name="account" type="text">
 
+				</div>
+				<div class="col-2"></div>
+				<div class="col-2"></div>
+				<div class="col-8">
+					<input class="form-control btn btn-primary" type="submit"
+						value="Lấy mật khẩu" style="margin-top: 10px;">
+				</div>
+				<div class="col-2" style="margin-top: 5px;"></div>
 				<div class="col-12 text-center" style="margin-top: 20px;">
 					<a href="home" class="text-center nav-link">Trang chủ</a>
 				</div>
@@ -92,22 +97,5 @@
 
 		</form>
 	</div>
-	<script>
-	function getPassword(huyenanh) {
-		var account = huyenanh.value;
-		$.ajax({
-			url : "/phimmoi/get-password",
-			type : "post",
-			data : {
-				acc : account
-			},
-			success : function(data) {
-				var row3 = document.getElementById("account");
-				row3.innerHTML = data;
-			}
-
-		});
-	}
-	</script>
 </body>
 </html>

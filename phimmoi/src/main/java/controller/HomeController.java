@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.AdminDAO;
 import dao.UserDAO;
 import entity.Phim;
 
@@ -44,6 +45,7 @@ public class HomeController extends HttpServlet {
 		req.setAttribute("phimLeCapNhat", new UserDAO().getPhimLeCapNhat());
 		req.setAttribute("phimChieuRapCapNhat", new UserDAO().getPhimChieuRapCapNhat());
 		req.setAttribute("phimHoatHinhCapNhat", new UserDAO().getPhimHoatHinhCapNhat());
+		req.setAttribute("report", new AdminDAO().getReport());
 		req.getRequestDispatcher("Home.jsp").forward(req, resp);
 	}
 }

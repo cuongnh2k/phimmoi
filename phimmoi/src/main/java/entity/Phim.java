@@ -9,13 +9,14 @@ public class Phim {
 	private String imageURL;
 	private String title;
 	private long view;
+	private boolean report;
 
 	public Phim() {
 		super();
 	}
 
 	public Phim(int id, String type, String category, String episode, String episodeURL, String imageURL, String title,
-			long view) {
+			long view, boolean report) {
 		super();
 		this.id = id;
 		this.type = type;
@@ -25,6 +26,7 @@ public class Phim {
 		this.imageURL = imageURL;
 		this.title = title;
 		this.view = view;
+		this.report = report;
 	}
 
 	public int getId() {
@@ -91,10 +93,19 @@ public class Phim {
 		this.view = view;
 	}
 
+	public boolean isReport() {
+		return report;
+	}
+
+	public void setReport(boolean report) {
+		this.report = report;
+	}
+
 	@Override
 	public String toString() {
 		return "Phim [id=" + id + ", type=" + type + ", category=" + category + ", episode=" + episode + ", episodeURL="
-				+ episodeURL + ", imageURL=" + imageURL + ", title=" + title + ", view=" + view + "]";
+				+ episodeURL + ", imageURL=" + imageURL + ", title=" + title + ", view=" + view + ", report=" + report
+				+ "]";
 	}
 
 }

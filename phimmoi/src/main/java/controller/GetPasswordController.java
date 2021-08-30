@@ -2,8 +2,6 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,27 +27,19 @@ public class GetPasswordController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
-		Admin a = new Admin(0, req.getParameter("acc"), null, null);
-		PrintWriter out = resp.getWriter();
-		Admin a1 = new AdminDAO().checkAccountDAO(a);
-		a1.setPassword(new Service().random());
+		
+		String account=req.getParameter("account");
+		Admin a1 = new AdminDAO().checkAccountDAO(account);
+		
 		if (a1 != null) {
-			Runnable task1 = () -> {
-				out.println(
-						"<sub class=\"text-success\">Chúng tôi đã gửi 1 email chứa mật khẩu tới tài khoản của bạn</sub>");
-			};
-			Runnable task2 = () -> {
-				new AdminDAO().updatePassword1DAO(a1);
-				new Service().senPassword(a1.getEmail(), a1.getPassword());
-			};
-			ExecutorService executorService = Executors.newFixedThreadPool(2);
-			executorService.execute(task1);
-			executorService.execute(task2);
-			
-			executorService.shutdown();
-			
+			a1.setPassword(new Service().random());
+			new AdminDAO().updatePassword1DAO(a1);
+			new Service().senPassword(a1.getEmail(), a1.getPassword());
+			req.setAttribute("loi", "Một email chứa mật khẩu đã được gửi đến email của bạn");
+			req.getRequestDispatcher("GetPassword.jsp").forward(req, resp);
 		} else {
-			out.println("<sub>Tài khoản không chính xác</sub>");
+			req.setAttribute("loi", "Tài khoản không chính xác");
+			req.getRequestDispatcher("GetPassword.jsp").forward(req, resp);
 		}
 	}
 }

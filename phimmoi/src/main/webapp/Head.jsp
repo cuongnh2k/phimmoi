@@ -100,6 +100,14 @@
 							class="btn btn-secondary menu1">Admin</button>
 					</div>
 				</c:if>
+				<c:if test="${sessionScope.admin!=null}">
+					<div class="btn-group">
+						<button data-toggle="modal" data-target="#report" type="button"
+							class="btn btn-secondary menu1">
+							<i class="bi bi-bell-fill"></i>
+						</button>
+					</div>
+				</c:if>
 			</nav>
 		</div>
 		<hr
@@ -137,6 +145,29 @@
 						<button type="submit" class="btn btn-primary">Cập nhật</button>
 					</div>
 				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Get report -->
+	<div class="modal fade" id="report" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Báo lỗi</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<ul>
+						<c:forEach items="${report}" var="o">
+							<li><a href="report?id=${o.id }">${o.title }</a></li>
+						</c:forEach>
+					</ul>
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -198,8 +229,8 @@
 							<div class="col-10">
 								<input oninput="checkPassword1(this)" required="required"
 									type="password" class="form-control" id="password"
-									name="password"> <sup><a href="get-password">Quên mật
-										khẩu</a></sup>
+									name="password"> <sup><a href="get-password">Quên
+										mật khẩu</a></sup>
 							</div>
 							<div class="col-1" style="margin-top: 5px;" id="pass1"></div>
 						</div>
@@ -228,8 +259,8 @@
 							<div class="col-10">
 								<input oninput="checkPassword2(this)" required="required"
 									type="password" class="form-control" id="password"
-									name="password"> <sup><a href="get-password">Quên mật
-										khẩu</a></sup>
+									name="password"> <sup><a href="get-password">Quên
+										mật khẩu</a></sup>
 							</div>
 							<div class="col-1" style="margin-top: 5px;" id="pass2"></div>
 						</div>

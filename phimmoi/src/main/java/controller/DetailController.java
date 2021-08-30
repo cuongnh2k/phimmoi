@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.AdminDAO;
 import dao.UserDAO;
 import entity.Phim;
 
@@ -30,6 +31,7 @@ public class DetailController extends HttpServlet {
 		}
 		req.setAttribute("phim", p);
 		req.setAttribute("phimTuongTu", new UserDAO().getPhimTuongTu(p));
+		req.setAttribute("report", new AdminDAO().getReport());
 		req.getRequestDispatcher("WatchMovie.jsp").forward(req, resp);
 	}
 }

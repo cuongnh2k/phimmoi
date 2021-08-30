@@ -54,4 +54,7 @@ ALTER TABLE `Comment` ADD FOREIGN KEY (user_id) REFERENCES `user`(id);
 ALTER TABLE `Response` ADD FOREIGN KEY (comment_id) REFERENCES `comment`(id);
 
 alter table phim add fulltext(title);
-
+SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("anh" IN NATURAL LANGUAGE MODE);
+SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("anh" WITH QUERY EXPANSION);
+SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("+anh -hung" IN BOOLEAN MODE);
+SELECT count(*) FROM phim WHERE MATCH(title) AGAINST('"anh hung"' IN BOOLEAN MODE);
