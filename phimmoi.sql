@@ -27,13 +27,7 @@ create table Phim(
 );
 create table `User`(
 	`id` bigint primary key,
-	`email` varchar(50) not null unique,
-    `verified_email` bit(1),
-    `name` varchar(50) not null,
-    `given_name` varchar(50),
-    `family_name` varchar(50),
-    `link` varchar(50),
-    `picture` varchar(50)
+    `name` varchar(50) not null
 );
 
 create table `Comment`(
@@ -54,7 +48,9 @@ ALTER TABLE `Comment` ADD FOREIGN KEY (user_id) REFERENCES `user`(id);
 ALTER TABLE `Response` ADD FOREIGN KEY (comment_id) REFERENCES `comment`(id);
 
 alter table phim add fulltext(title);
-SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("anh" IN NATURAL LANGUAGE MODE);
+SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("abc" IN NATURAL LANGUAGE MODE);
 SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("anh" WITH QUERY EXPANSION);
 SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("+anh -hung" IN BOOLEAN MODE);
-SELECT count(*) FROM phim WHERE MATCH(title) AGAINST('"anh hung"' IN BOOLEAN MODE);
+SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("anh" IN BOOLEAN MODE);
+select count(distinct title) from phim ;
+update `admin` set `password`='1' where `account` ='admin';
