@@ -190,6 +190,18 @@
 					style="color: rgb(240, 240, 240); padding: 0px;" class="nav-link"
 					href="detail?id=${o.id }">${o.episode}</a></span>
 			</c:forEach>
+
+			<div style="background-color: rgb(240, 240, 240); width: 100%">
+				<c:forEach items="${comment }" var="o">
+					<p>${o.content }</p>
+					<c:forEach items="${response }" var="j">
+						<c:if test="${o.id==j.comment_id }">
+							<p>${j.content }</p>
+						</c:if>
+					</c:forEach>
+				</c:forEach>
+			</div>
+
 			<hr
 				style="height: 1px; border: none; background-color: rgb(240, 240, 240);">
 			<h3 style="color: rgb(255, 200, 50);">Có thể bạn muốn xem</h3>
@@ -222,22 +234,22 @@
 				</div>
 				<form action="edit" method="post">
 					<div class="modal-body">
-						<input name="id" id="id" value="${phim.id }" style="display: none;">
-						<label for="type"><b>Kiểu:</b></label> <input type="text"
-							class="form-control" name="type" id="type" value="${phim.type }"><label
-							for="category"><b>Thể loại:</b></label> <input type="text"
-							class="form-control" name="category" id="category"
-							value="${phim.category}"><label for="episode"><b>Tập:</b></label>
-						<input type="text" class="form-control" name="episode"
-							id="episode" value="${phim.episode }"><label
-							for="episodeURL"><b>URL:</b></label> <input type="text"
-							class="form-control" name="episodeURL" id="episodeURL"
-							value="${phim.episodeURL }"><label for="imageURL"><b>Ảnh:</b></label>
-						<input type="text" class="form-control" name="imageURL"
-							id="imageURL" value="${phim.imageURL }"><label
-							for="title"><b>Tiêu đề:</b></label> <input type="text"
-							class="form-control" name="title" id="title"
-							value="${phim.title}">
+						<input name="id" id="id" value="${phim.id }"
+							style="display: none;"> <label for="type"><b>Kiểu:</b></label>
+						<input type="text" class="form-control" name="type" id="type"
+							value="${phim.type }"><label for="category"><b>Thể
+								loại:</b></label> <input type="text" class="form-control" name="category"
+							id="category" value="${phim.category}"><label
+							for="episode"><b>Tập:</b></label> <input type="text"
+							class="form-control" name="episode" id="episode"
+							value="${phim.episode }"><label for="episodeURL"><b>URL:</b></label>
+						<input type="text" class="form-control" name="episodeURL"
+							id="episodeURL" value="${phim.episodeURL }"><label
+							for="imageURL"><b>Ảnh:</b></label> <input type="text"
+							class="form-control" name="imageURL" id="imageURL"
+							value="${phim.imageURL }"><label for="title"><b>Tiêu
+								đề:</b></label> <input type="text" class="form-control" name="title"
+							id="title" value="${phim.title}">
 					</div>
 					<div class="modal-footer">
 						<button type="submit" class="btn btn-primary">Cập nhật</button>
@@ -264,7 +276,7 @@
 						data-dismiss="modal">Không</button>
 					<form action="remove" method="post">
 						<input name="id" value="${phim.id }" style="display: none;">
-						<button type="button" class="btn btn-primary">Có</button>
+						<button type="submit" class="btn btn-primary">Có</button>
 					</form>
 				</div>
 			</div>
@@ -280,11 +292,11 @@
 					id : id
 				},
 				success : function(data) {
-					
+
 				}
 
 			});
-			
+
 			alert('Báo cáo thành công');
 		}
 

@@ -34,18 +34,23 @@ create table `Comment`(
 	`id` int primary key auto_increment,
 	`content` text not null,
 	`user_id` bigint not null,
-    `phim_id` int not null
+    `phim_id` int not null,
+    `time` datetime not null
 );
 
 create table `Response`(
 	`id` int primary key auto_increment,
 	`content` text not null,
 	`user_id` bigint not null,
-    `comment_id` int not null
+    `comment_id` int not null,
+    `phim_id` int not null,
+    `time` datetime not null
 );
 ALTER TABLE `Comment` ADD FOREIGN KEY (phim_id) REFERENCES phim(id);
 ALTER TABLE `Comment` ADD FOREIGN KEY (user_id) REFERENCES `user`(id);
 ALTER TABLE `Response` ADD FOREIGN KEY (comment_id) REFERENCES `comment`(id);
+ALTER TABLE `Response` ADD FOREIGN KEY (user_id) REFERENCES `user`(id);
+ALTER TABLE `Response` ADD FOREIGN KEY (phim_id) REFERENCES `phim`(id);
 
 alter table phim add fulltext(title);
 SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("abc" IN NATURAL LANGUAGE MODE);
@@ -54,3 +59,4 @@ SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("+anh -hung" IN BOOLEAN MOD
 SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("anh" IN BOOLEAN MODE);
 select count(distinct title) from phim ;
 update `admin` set `password`='1' where `account` ='admin';
+alter table `response` add column `time` datetime not null;

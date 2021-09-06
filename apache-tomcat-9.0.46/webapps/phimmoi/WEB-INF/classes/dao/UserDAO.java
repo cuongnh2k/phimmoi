@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import context.DBContext;
+import entity.Comment;
 import entity.Phim;
+import entity.Response;
 
 public class UserDAO {
 
@@ -370,5 +372,47 @@ public class UserDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public List<Comment> getComment(int id) {
+		List<Comment> list = new ArrayList<Comment>();
+		try {
+			String sql = "select `comment`.id, `comment`.content,`comment`.user_id,`comment`.`time`, `user`.`name` from `user`, `comment` where `user`.id=`comment`.user_id and `comment`.phim_id=?;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setInt(1, id);
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				list.add(new Comment(rs.getInt(1), rs.getString(2), rs.getLong(3), rs.getString(4), rs.getString(5),
+						id));
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	public List<Response> getResponse(int id) {
+		List<Response> list = new ArrayList<>();
+		try {
+			String sql = "select `response`.id, `response`.content,`response`.user_id,`response`.`comment_id`, `response`.`time`,`user`.`name` from `user`, `response` where `user`.id=`response`.user_id and `response`.phim_id=?;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setInt(1, id);
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				list.add(new Response(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getString(5),
+						rs.getString(6), id));
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
 	}
 }

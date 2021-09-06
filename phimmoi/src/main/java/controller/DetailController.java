@@ -20,7 +20,9 @@ public class DetailController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
+		
 		int id = Integer.parseInt(req.getParameter("id"));
+		
 		req.setAttribute("categoryPhimLe", new UserDAO().getCategoryPhimLe());
 		req.setAttribute("categoryPhimBo", new UserDAO().getCategoryPhimBo());
 		req.setAttribute("categoryPhimChieuRap", new UserDAO().getCategoryPhimChieuRap());
@@ -32,6 +34,10 @@ public class DetailController extends HttpServlet {
 		req.setAttribute("phim", p);
 		req.setAttribute("phimTuongTu", new UserDAO().getPhimTuongTu(p));
 		req.setAttribute("report", new AdminDAO().getReport());
+		
+		req.setAttribute("comment", new UserDAO().getComment(id));
+		req.setAttribute("response", new UserDAO().getResponse(id));
+		
 		req.getRequestDispatcher("WatchMovie.jsp").forward(req, resp);
 	}
 }
