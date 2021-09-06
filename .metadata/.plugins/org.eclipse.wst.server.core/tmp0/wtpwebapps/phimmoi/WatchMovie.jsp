@@ -190,6 +190,40 @@
 					style="color: rgb(240, 240, 240); padding: 0px;" class="nav-link"
 					href="detail?id=${o.id }">${o.episode}</a></span>
 			</c:forEach>
+
+			<div style="background-color: rgb(240, 240, 240); width: 100%">
+				<c:forEach items="${comment }" var="o">
+					<img
+						style="border-radius: 50%; width: 30px; margin: 10px 10px 0px 10px;"
+						alt=""
+						src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwoHCAoJBwkGCAoHCAoICAcIDRIICQcKFREWFhURExMYHCggGCYxGxMTITEhMSkrLi4uFx8zODMsNygtLisBCgoKCw0NDw0NFS0dHxkrKysrKysrLSsrKysrLTcrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAN8A2QMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAAAQIFBgQDB//EADYQAQACAgEBBQUFBwUBAAAAAAABAgMRBAUSISIxUjJBUXKSExVCYmMzNFNhcYKiIyRzgZEU/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwD9EAaQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADv8AKO+WhxelXyx2s9vs49NfaBn7g3DocXTsOOPY7XzPrHHw/wAKn0lHM7PN0l+FhtGpxU/6ePkdIraJnDOvyyUY4vkxWwTNMlOzKgAAAAAAAAAAAAAAAAAAAPRwMP8A9GaKx3xXxWBodK4PZiMuaN3nyaceZEajUR3R3JZVIACJSA83K4teTSa2jv8Aw2c9mx2w3mlvc6lldZwbrGWI12PaUZAfzFQAAAAAAAAAAAAAAAAavQsf7TJP4vZZTc6LH+2j49pBogIoAAACJfHmY4yYL1n0vuraNxMT74BykfD0i2SIjJeI/DZVpAAAAAAAAAAAAAAAABudE/d/7mG1eh5Y1fHv2fEitgRuEoAAAACLd0TMpefm5Ix4L2mdeHsg5y87yZJ9VrKnf5yNIAAAAAAAAAAAAAAAAT5Ptw808fNS8eXs2fEB1dbRaItHvWY3SebFI+xzW+SzY3DKpERO0gAjcAT5MfrXI76YqTv1PdzeVXj1nxeO3s1c9e9sl5vbzsuYI7/eAqAAAAAAAAAAAAAAAAAAHm0OF1S2KOxyPFWPZyM81sHTYeRjyxE0vSX23Hm5OImPJb7S8RqMmX6kiuotetY3a2ng5PVaUia4fFdi2ta0atO/62RqI8u4gtlyXzW7eSe9UGsQAQAAAAAAAAAAAAAADcL4sVs89jFG5a3F6VSmr5/9S/p/CDKxYb5v2dLz/g9ePpOW/fbsVbdaxXurGo/kmPNKrIjo1vfl1/RP3P8Ar3+lsBRj/c/69/pPuf8AXv8AS2Aox/uf9e/0n3P+vf6WwFGPPR592b/F87dIyxG65KS3ET3lHNZuFmxe1TcflfCe7unudXO3m5PBxciPFXU+qCjnR6eZwr8ad9ndPU8yoAAAAAAAAAAPtx+PbkXilPrfGImZ7NfOzouBxY42OI7Pjn2rGi/F4teNTsUj5p9T7wlG4ZVIjcG4BIhIAhIAIBII3AJRPkbg3AK3rFomt43EsPqHAnBPbxd+P0+lvT/6rakWia2jcSDlfdsenncaeNkmPwX9l5mkAAAAAAAJ8gaHSMEZcn2lo7qVbW+95emYoxcakfHxPQmqts3CogtuDcKgLbNqgLbNqgLbNqgLbNwqAtuDcKgLbN/FUB5+p4Iz4ZmPOrA13fK6ie+NfHwua5FPssuSn5lxHzAUAAAADW5iPzCY84+aoOjw+HHSvpqvtSs+GPlSC2zapALbNo3BuATs2jcEgnZtUgFtm0SgFtm1QFtm1QFtm1UAvtidVr2eRM/GvabLI6v+8R/xA8IAAAAAB74+aoA6OvsRP5Tb4cHLOTDG/OKvuBs2AGzYAbNgBs2AGzYAbNgBs2AGzYAbZPVpic8a/hNWZ1G/SwuXknLmvf8AtB8gAAAf/9k=">
+					<span>${o.name } </span>
+					<span class="text-secondary"> ${o.time } </span>
+					<br>
+					<span style="margin-left: 50px;"></span>
+					<span>${o.content }</span>
+					<br>
+					<span style="margin-left: 50px;"></span>
+					<span class="text-primary"><u>Phản hồi</u></span>
+					<c:forEach items="${response }" var="j">
+						<c:if test="${o.id==j.comment_id }">
+							<div>
+								<img
+									style="border-radius: 50%; width: 30px; margin: 10px 10px 0px 50px;"
+									alt=""
+									src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwoHCAoJBwkGCAoHCAoICAcIDRIICQcKFREWFhURExMYHCggGCYxGxMTITEhMSkrLi4uFx8zODMsNygtLisBCgoKCw0NDw0NFS0dHxkrKysrKysrLSsrKysrLTcrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAN8A2QMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAAAQIFBgQDB//EADYQAQACAgEBBQUFBwUBAAAAAAABAgMRBAUSISIxUjJBUXKSExVCYmMzNFNhcYKiIyRzgZEU/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwD9EAaQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADv8AKO+WhxelXyx2s9vs49NfaBn7g3DocXTsOOPY7XzPrHHw/wAKn0lHM7PN0l+FhtGpxU/6ePkdIraJnDOvyyUY4vkxWwTNMlOzKgAAAAAAAAAAAAAAAAAAAPRwMP8A9GaKx3xXxWBodK4PZiMuaN3nyaceZEajUR3R3JZVIACJSA83K4teTSa2jv8Aw2c9mx2w3mlvc6lldZwbrGWI12PaUZAfzFQAAAAAAAAAAAAAAAAavQsf7TJP4vZZTc6LH+2j49pBogIoAAACJfHmY4yYL1n0vuraNxMT74BykfD0i2SIjJeI/DZVpAAAAAAAAAAAAAAAABudE/d/7mG1eh5Y1fHv2fEitgRuEoAAAACLd0TMpefm5Ix4L2mdeHsg5y87yZJ9VrKnf5yNIAAAAAAAAAAAAAAAAT5Ptw808fNS8eXs2fEB1dbRaItHvWY3SebFI+xzW+SzY3DKpERO0gAjcAT5MfrXI76YqTv1PdzeVXj1nxeO3s1c9e9sl5vbzsuYI7/eAqAAAAAAAAAAAAAAAAAAHm0OF1S2KOxyPFWPZyM81sHTYeRjyxE0vSX23Hm5OImPJb7S8RqMmX6kiuotetY3a2ng5PVaUia4fFdi2ta0atO/62RqI8u4gtlyXzW7eSe9UGsQAQAAAAAAAAAAAAAADcL4sVs89jFG5a3F6VSmr5/9S/p/CDKxYb5v2dLz/g9ePpOW/fbsVbdaxXurGo/kmPNKrIjo1vfl1/RP3P8Ar3+lsBRj/c/69/pPuf8AXv8AS2Aox/uf9e/0n3P+vf6WwFGPPR592b/F87dIyxG65KS3ET3lHNZuFmxe1TcflfCe7unudXO3m5PBxciPFXU+qCjnR6eZwr8ad9ndPU8yoAAAAAAAAAAPtx+PbkXilPrfGImZ7NfOzouBxY42OI7Pjn2rGi/F4teNTsUj5p9T7wlG4ZVIjcG4BIhIAhIAIBII3AJRPkbg3AK3rFomt43EsPqHAnBPbxd+P0+lvT/6rakWia2jcSDlfdsenncaeNkmPwX9l5mkAAAAAAAJ8gaHSMEZcn2lo7qVbW+95emYoxcakfHxPQmqts3CogtuDcKgLbNqgLbNqgLbNqgLbNwqAtuDcKgLbN/FUB5+p4Iz4ZmPOrA13fK6ie+NfHwua5FPssuSn5lxHzAUAAAADW5iPzCY84+aoOjw+HHSvpqvtSs+GPlSC2zapALbNo3BuATs2jcEgnZtUgFtm0SgFtm1QFtm1QFtm1UAvtidVr2eRM/GvabLI6v+8R/xA8IAAAAAB74+aoA6OvsRP5Tb4cHLOTDG/OKvuBs2AGzYAbNgBs2AGzYAbNgBs2AGzYAbZPVpic8a/hNWZ1G/SwuXknLmvf8AtB8gAAAf/9k=">
+								<span>${j.name } </span><span class="text-secondary">
+									${j.time } </span> <br> <span style="margin-left: 100px;">
+								</span> <span>${j.content }</span> <br>
+
+							</div>
+						</c:if>
+					</c:forEach>
+					<br>
+					<div style="margin-top: 30px;"></div>
+				</c:forEach>
+			</div>
+
 			<hr
 				style="height: 1px; border: none; background-color: rgb(240, 240, 240);">
 			<h3 style="color: rgb(255, 200, 50);">Có thể bạn muốn xem</h3>
@@ -222,22 +256,22 @@
 				</div>
 				<form action="edit" method="post">
 					<div class="modal-body">
-						<input name="id" id="id" value="${phim.id }" style="display: none;">
-						<label for="type"><b>Kiểu:</b></label> <input type="text"
-							class="form-control" name="type" id="type" value="${phim.type }"><label
-							for="category"><b>Thể loại:</b></label> <input type="text"
-							class="form-control" name="category" id="category"
-							value="${phim.category}"><label for="episode"><b>Tập:</b></label>
-						<input type="text" class="form-control" name="episode"
-							id="episode" value="${phim.episode }"><label
-							for="episodeURL"><b>URL:</b></label> <input type="text"
-							class="form-control" name="episodeURL" id="episodeURL"
-							value="${phim.episodeURL }"><label for="imageURL"><b>Ảnh:</b></label>
-						<input type="text" class="form-control" name="imageURL"
-							id="imageURL" value="${phim.imageURL }"><label
-							for="title"><b>Tiêu đề:</b></label> <input type="text"
-							class="form-control" name="title" id="title"
-							value="${phim.title}">
+						<input name="id" id="id" value="${phim.id }"
+							style="display: none;"> <label for="type"><b>Kiểu:</b></label>
+						<input type="text" class="form-control" name="type" id="type"
+							value="${phim.type }"><label for="category"><b>Thể
+								loại:</b></label> <input type="text" class="form-control" name="category"
+							id="category" value="${phim.category}"><label
+							for="episode"><b>Tập:</b></label> <input type="text"
+							class="form-control" name="episode" id="episode"
+							value="${phim.episode }"><label for="episodeURL"><b>URL:</b></label>
+						<input type="text" class="form-control" name="episodeURL"
+							id="episodeURL" value="${phim.episodeURL }"><label
+							for="imageURL"><b>Ảnh:</b></label> <input type="text"
+							class="form-control" name="imageURL" id="imageURL"
+							value="${phim.imageURL }"><label for="title"><b>Tiêu
+								đề:</b></label> <input type="text" class="form-control" name="title"
+							id="title" value="${phim.title}">
 					</div>
 					<div class="modal-footer">
 						<button type="submit" class="btn btn-primary">Cập nhật</button>
@@ -264,7 +298,7 @@
 						data-dismiss="modal">Không</button>
 					<form action="remove" method="post">
 						<input name="id" value="${phim.id }" style="display: none;">
-						<button type="button" class="btn btn-primary">Có</button>
+						<button type="submit" class="btn btn-primary">Có</button>
 					</form>
 				</div>
 			</div>
@@ -280,11 +314,11 @@
 					id : id
 				},
 				success : function(data) {
-					
+
 				}
 
 			});
-			
+
 			alert('Báo cáo thành công');
 		}
 
