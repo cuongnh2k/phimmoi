@@ -10,6 +10,7 @@ import context.DBContext;
 import entity.Comment;
 import entity.Phim;
 import entity.Response;
+import entity.User;
 
 public class UserDAO {
 
@@ -414,5 +415,54 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 		return list;
+	}
+
+	public User checkUser(User u) {
+		try {
+			String sql = "select * from `user` where id=?;";
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setObject(1, u.getId());
+			ResultSet rs = sta.executeQuery();
+			while (rs.next()) {
+				return new User(rs.getLong(1), rs.getString(2));
+			}
+			rs.close();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public void addUser(User u) {
+		String sql = "insert into `user` values(?,?);";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setLong(1, u.getId());
+			sta.setString(2, u.getName());
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void updateName(User u) {
+		String sql = "update `user` set `name`=? where id=?;";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setLong(2, u.getId());
+			sta.setString(1, u.getName());
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
