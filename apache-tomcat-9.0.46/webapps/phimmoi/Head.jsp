@@ -82,7 +82,7 @@
 						</c:forEach>
 					</div>
 				</div>
-				<c:if test="${sessionScope.admin!=null}">
+				<c:if test="${sessionScope.admin!=null || sessionScope.user!=null}">
 					<div class="btn-group">
 						<a href="logout"><button type="button"
 								class="btn btn-secondary menu1">Đăng xuất</button></a>
@@ -108,6 +108,14 @@
 						</button>
 					</div>
 				</c:if>
+				<c:if test="${sessionScope.user==null}">
+					<div class="btn-group">
+						<a
+							href="https://www.facebook.com/dialog/oauth?client_id=667188987589328&redirect_uri=https://localhost:8443/phimmoi/login-facebook"><button
+								type="button" class="btn btn-secondary menu1">Đăng nhập</button></a>
+					</div>
+				</c:if>
+
 			</nav>
 		</div>
 		<hr

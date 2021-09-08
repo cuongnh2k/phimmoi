@@ -202,7 +202,7 @@
 						</div>
 						<div class="col-sm-11">
 							<p style="margin-top: 25px;">
-								<b>test</b>
+								<b>${sessionScope.user.name }</b>
 							</p>
 							<form action="#">
 								<textarea rows="" cols="" class="form-control" name="x"></textarea>
@@ -216,8 +216,8 @@
 				</c:if>
 				<c:if test="${sessionScope.user==null}">
 					<a
-						href="https://www.facebook.com/dialog/oauth?client_id=667188987589328&redirect_uri=https://localhost:8443/phimmoi/login-facebook">Login
-						Facebook</a>
+						href="https://www.facebook.com/dialog/oauth?client_id=667188987589328&redirect_uri=https://localhost:8443/phimmoi/login-facebook"><button class="btn text-primary">Đăng
+							nhập bằng Facebook</button></a>
 				</c:if>
 				<c:forEach items="${comment }" var="o">
 					<div class="row">
