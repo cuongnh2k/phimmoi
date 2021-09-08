@@ -204,8 +204,11 @@
 							<p style="margin-top: 25px;">
 								<b>${sessionScope.user.name }</b>
 							</p>
-							<form action="#">
-								<textarea rows="" cols="" class="form-control" name="x"></textarea>
+							<form action="add-comment" method="get">
+								<textarea rows="" cols="" class="form-control" name="text"></textarea>
+								<input name="user-id" value="${sessionScope.user.id }"
+									style="display: none;"> <input name="phim-id"
+									value="${phim.id }" style="display: none;">
 								<p class="text-primary">
 									<button class="btn-primary">Bình luận</button>
 								</p>
@@ -216,8 +219,8 @@
 				</c:if>
 				<c:if test="${sessionScope.user==null}">
 					<a
-						href="https://www.facebook.com/dialog/oauth?client_id=667188987589328&redirect_uri=https://localhost:8443/phimmoi/login-facebook"><button class="btn">Đăng
-							nhập bằng Facebook</button></a>
+						href="https://www.facebook.com/dialog/oauth?client_id=667188987589328&redirect_uri=https://localhost:8443/phimmoi/login-facebook"><button
+							class="btn text-primary">Đăng nhập bằng Facebook</button></a>
 				</c:if>
 				<c:forEach items="${comment }" var="o">
 					<div class="row">

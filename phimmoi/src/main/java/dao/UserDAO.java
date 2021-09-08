@@ -378,7 +378,7 @@ public class UserDAO {
 	public List<Comment> getComment(int id) {
 		List<Comment> list = new ArrayList<Comment>();
 		try {
-			String sql = "select `comment`.id, `comment`.content,`comment`.user_id,`comment`.`time`, `user`.`name` from `user`, `comment` where `user`.id=`comment`.user_id and `comment`.phim_id=?;";
+			String sql = "select `comment`.id, `comment`.content,`comment`.user_id,`comment`.`time`, `user`.`name` from `user`, `comment` where `user`.id=`comment`.user_id and `comment`.phim_id=? order by (id) desc;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setInt(1, id);
@@ -399,7 +399,7 @@ public class UserDAO {
 	public List<Response> getResponse(int id) {
 		List<Response> list = new ArrayList<>();
 		try {
-			String sql = "select `response`.id, `response`.content,`response`.user_id,`response`.`comment_id`, `response`.`time`,`user`.`name` from `user`, `response` where `user`.id=`response`.user_id and `response`.phim_id=?;";
+			String sql = "select `response`.id, `response`.content,`response`.user_id,`response`.`comment_id`, `response`.`time`,`user`.`name` from `user`, `response` where `user`.id=`response`.user_id and `response`.phim_id=? order by (id) desc;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setInt(1, id);
@@ -458,6 +458,22 @@ public class UserDAO {
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setLong(2, u.getId());
 			sta.setString(1, u.getName());
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void addComment(Comment cmt) {
+		String sql = "insert into `comment`(`content`,`user_id`,`phim_id`,`time`) values(?,?,?,?);";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, cmt.getContent());
+			sta.setLong(2, cmt.getUser_id());
+			sta.setInt(3, cmt.getPhim_id());
+			sta.setString(4, cmt.getTime());
 			int rs2 = sta.executeUpdate();
 			sta.close();
 			conn.close();
