@@ -51,8 +51,36 @@ public class AdminDAO {
 		}
 	}
 
-	public void removeDAO(int id) {
+	public void removePhimDAO(int id) {
 		String sql = "delete from phim where id=?;";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setInt(1, id);
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void removeCommentDAO(int id) {
+		String sql = "delete from phim where phim_id=?;";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setInt(1, id);
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void removeResponseDAO(int id) {
+		String sql = "delete from phim where phim_id=?;";
 		try {
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
@@ -176,6 +204,7 @@ public class AdminDAO {
 			e.printStackTrace();
 		}
 	}
+
 	public List<Phim> getReport() {
 		List<Phim> list = new ArrayList<>();
 		try {
@@ -196,6 +225,7 @@ public class AdminDAO {
 		}
 		return list;
 	}
+
 	public void reportDAO(String id) {
 		String sql = "update phim set `report`=? where id=?;";
 		try {

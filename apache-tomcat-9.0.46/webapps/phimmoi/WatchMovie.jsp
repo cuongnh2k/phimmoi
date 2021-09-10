@@ -236,14 +236,26 @@
 							</p>
 							<sub class="text-secondary">${o.time }</sub>
 							<form action="#">
-								<textarea rows="" cols="" class="form-control" name="x">${o.content }</textarea>
+								<c:if test="${sessionScope.user.id!=o.user_id}">
+									<textarea rows="" cols="" class="form-control" name="x"
+										readonly="readonly">${o.content }</textarea>
+								</c:if>
+								<c:if test="${sessionScope.user.id==o.user_id}">
+									<textarea rows="" cols="" class="form-control" name="x">${o.content }</textarea>
+								</c:if>
 								<p class="text-primary">
-									<u>Phản hồi</u><span style="margin-left: 10px;"></span><u>Xóa</u><span
-										style="margin-left: 10px;"></span><span><button
-											class="btn-primary">Cập nhật</button></span>
+									<u>Phản hồi</u><span style="margin-left: 10px;"></span>
+									<c:if test="${sessionScope.user.id==o.user_id}">
+										<a
+											href="remove-comment?id=${o.id }&user_id=${o.user_id}&phim_id=${o.phim_id}">Xóa</a>
+									</c:if>
+									<span style="margin-left: 10px;"></span>
+									<c:if test="${sessionScope.user.id==o.user_id}">
+										<span><button class="btn-primary">Cập nhật</button></span>
+									</c:if>
 								</p>
 							</form>
-							<div class="row">
+							<div class="row" style="display: none;">
 								<div class="col-sm-1">
 									<img
 										style="border-radius: 50%; width: 50px; margin: 10px 0px 0px 10px;"
@@ -252,7 +264,7 @@
 								</div>
 								<div class="col-sm-11">
 									<p style="margin-top: 25px;">
-										<b>test</b>
+										<b>${o.name }</b>
 									</p>
 									<form action="#">
 										<textarea rows="" cols="" class="form-control" name="x"></textarea>
@@ -280,8 +292,9 @@
 											<form action="#">
 												<textarea rows="" cols="" class="form-control" name="x">${j.content }</textarea>
 												<p class="text-primary">
-													<u>Phản hồi</u><span style="margin-left: 10px;"></span><u>Xóa</u><span
-														style="margin-left: 10px;"></span><span><button
+													<u>Phản hồi</u><span style="margin-left: 10px;"></span> <u>Xóa</u>
+
+													<span style="margin-left: 10px;"></span><span><button
 															class="btn-primary">Cập nhật</button></span>
 												</p>
 											</form>

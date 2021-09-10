@@ -1,0 +1,457 @@
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:12:23 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:12:23 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:12:23 +0700] "GET /phimmoi HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:12:25 +0700] "GET /phimmoi/ HTTP/1.1" 200 86292
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:12:30 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:12:30 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:12:30 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5458
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:12:35 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:12:35 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:12:35 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:13:01 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:13:01 +0700] "GET /phimmoi/detail?id=7612 HTTP/1.1" 200 32906
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:13:07 +0700] "GET /phimmoi/login-facebook?code=AQCZ2x6KhZpnx5V2CQF5enEERyM0olgrRA7OxcRgNzTJimXSJ_o_EWuu-kKK3ysOaKQOklGzP7c6AGslG8cZ4efgIbYHyBFCDjeO3wz0oGje-djI7utoEeOenN-dwZX5EQfe2OXVI_Y0PeVZsOAkB6E1nI1LwqAKD4g9tPk2-D4PpyFaOR_zdtDHgPD401JsieO1lY9FMN-LkAhVaDAW5hteSQYN9tLWsI1gee5xDXztOZw0dn5Vl36Csj3Wa9f13sT-7nRGuXxyJZiIXNWb72b-ORWfucLNU_u0qEVNmYiaWCInzF8VYbL_BqYcryls5Jhf2GOZ6xQdWob2ohQ5BdfJCm92eEH_V-5p9Kol-4c_wwqVFp2mg0o1aYYhCTIbutcRKYrTEINUa9nRhqNKFXgTfQ2kSEy9HMopNgfwgsBx1ucnBtcNwyKjD8eMFHS2QNM HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:13:07 +0700] "GET /phimmoi/home HTTP/1.1" 200 86168
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:13:12 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:13:12 +0700] "GET /phimmoi/detail?id=7823 HTTP/1.1" 200 37975
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:13:18 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:13:18 +0700] "GET /phimmoi/add-comment?text=hay%0D%0A&user-id=958140914734886&phim-id=7823 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:13:19 +0700] "GET /phimmoi/detail?id=7823 HTTP/1.1" 200 43457
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:13:29 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:13:30 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 69031
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:24:24 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:24:24 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:24:24 +0700] "GET /phimmoi/add-comment?text=d%E1%BB%9F&user-id=958140914734886&phim-id=1 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:24:25 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 74479
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:26:20 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:26:20 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:26:21 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 74424
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:26:23 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:26:33 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:26:37 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 72274
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:26:40 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:27:51 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:27:51 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:27:52 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 72126
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:27:55 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:28:00 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:28:01 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 71833
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:28:02 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:28:31 +0700] "GET /phimmoi/login-facebook?code=AQC-fB2hZkFCRUh3mxNy1nSw8tSLQ9jpgG5Q4fzPPJ0tw9936qGmUQQAJNzZ2xeFtPNWecBaRgdtrocjeN9w2b1bmkSDoEAKd4JyDfoKe0uY2GaVQbtK9XcoBYHsbtfp-5y4M3AP0TNSCdVLAFi3XU0K5uGOxa8OXQLKOi6maLsLydLuCnIIjfWHYrDlpoAMi17M4_Zo7RXbxg5ppCRJfVEqLHqW_449EwUsephEXJc4P4xWrlhGKB77pP-PuWhJMa-2Qhz9clsrNSxKXe_6_J5nAyrtNbzulUpsJl23K3_vW9DDz4OyaCZyJDOm0blINGtDZ6Oo2pw9G7mSJ7y5YJ82ZxaBdyxq4jrWlrYX0GSbAowQpnOkKoAi3jjiB7kPn9rEiHTmIkpBOt2VIF9HEzyum13UIfRVNyXgTPAuJQWpJKGF69A16j3qFJ620JZjQbI HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:28:32 +0700] "GET /phimmoi/home HTTP/1.1" 200 86168
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:28:38 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:28:38 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 74393
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:03 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:03 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:03 +0700] "GET /phimmoi/home HTTP/1.1" 200 86168
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:12 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:12 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:12 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5458
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:12 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5462
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:13 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5466
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:13 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5470
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:14 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5474
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:14 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5686
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:23 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5474
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:25 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5686
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:26 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5690
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:26 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5694
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:26 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5698
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:27 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5702
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:28 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5706
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:28 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5710
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:28 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5735
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:38:28 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5930
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:39:40 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:39:40 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:39:41 +0700] "GET /phimmoi/search?type=Phim%20b%E1%BB%99&category=Phim%20t%C3%ACnh%20c%E1%BA%A3m HTTP/1.1" 200 76899
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:39:47 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:39:47 +0700] "GET /phimmoi/search?type=Phim%20chi%E1%BA%BFu%20r%E1%BA%A1p&category=Phim%20t%C3%ACnh%20c%E1%BA%A3m HTTP/1.1" 200 73266
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:39:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:39:52 +0700] "GET /phimmoi/search?type=Phim%20ho%E1%BA%A1t%20h%C3%ACnh&category=Phim%20phi%C3%AAu%20l%C6%B0u HTTP/1.1" 200 69038
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:39:56 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:39:56 +0700] "GET /phimmoi/search?type=Phim%20chi%E1%BA%BFu%20r%E1%BA%A1p&category=Phim%20ho%E1%BA%A1t%20h%C3%ACnh HTTP/1.1" 200 73641
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:41:30 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:41:30 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:41:30 +0700] "GET /phimmoi/search?type=Phim%20chi%E1%BA%BFu%20r%E1%BA%A1p&category=Phim%20ho%E1%BA%A1t%20h%C3%ACnh HTTP/1.1" 200 73641
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:41:36 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:41:37 +0700] "GET /phimmoi/home HTTP/1.1" 200 86168
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:42:00 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:42:01 +0700] "GET /phimmoi/detail?id=335 HTTP/1.1" 200 31613
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:42:38 +0700] "GET /phimmoi/logout HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:42:38 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:42:38 +0700] "GET /phimmoi/home HTTP/1.1" 200 86292
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:42:43 +0700] "GET /phimmoi/login-facebook?code=AQBnJ_i2yWu5Mb8FCoOvH9K4djPmT2Vnv9LQVvyVBpErpgfzyfE6_F7Czlcvq0KwW9NTeEHUBPUoURcGKCrSs1qgYYV7bMlIw6P0xFaAwVZZ8CA5yzJ-9oXmPdceLU5tqZFnWI7rQNrRqIVOjqL8awXGiR56sKzlxcZQ7VdH5Q_gwIkO3zQ3yRvZsB0_YBZ1YCtrrf3Yr-yC3J2VkImOZq38mRJdt4OLALtqKH46iVhgTElphX2U9h3e4VoLNaTN0F1eOcD_pPO3TkcDfm4wItUvaBFILBv__QD_TfXmMyWVwgyWOKr2wdEUHzzc7s-FiWtHUS-yemQ9iP4JzFNLUrU7oxhS-MufsFMFOtS_t5viz73hsHwB7jKhPYdA7BGot4EQjKk0PGaf-8dpCOFy1HgIDDHbaOg5Qwr5uVhvzzicngZshOBL9oeXz6bnjpEpRAU HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:42:43 +0700] "GET /phimmoi/home HTTP/1.1" 200 86168
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:42:46 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:42:47 +0700] "GET /phimmoi/detail?id=7895 HTTP/1.1" 200 60096
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:42:56 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:42:56 +0700] "GET /phimmoi/add-comment?text=huhuhuu&user-id=958140914734886&phim-id=7895 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:42:56 +0700] "GET /phimmoi/detail?id=7895 HTTP/1.1" 200 65218
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:44:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:44:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:44:52 +0700] "GET /phimmoi/admin HTTP/1.1" 404 768
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:44:59 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:44:59 +0700] "GET /phimmoi/login HTTP/1.1" 200 3225
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:45:04 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:45:04 +0700] "POST /phimmoi/login HTTP/1.1" 200 3429
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:45:11 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:45:11 +0700] "POST /phimmoi/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:45:11 +0700] "GET /phimmoi/home HTTP/1.1" 200 86763
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:45:30 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:45:31 +0700] "GET /phimmoi/detail?id=7823 HTTP/1.1" 200 44224
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:45:32 +0700] "POST /phimmoi/report HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:45:38 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:18:45:38 +0700] "GET /phimmoi/home HTTP/1.1" 200 86849
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:20:58:10 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:20:58:10 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:20:58:10 +0700] "GET /phimmoi/detail?id=7895 HTTP/1.1" 200 46152
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:20:59:34 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:20:59:34 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:20:59:34 +0700] "GET /phimmoi/ HTTP/1.1" 200 86378
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:20:59:51 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:20:59:51 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:20:59:52 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 1843
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:20:59:55 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:20:59:55 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:20:59:55 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:40 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:40 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:40 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5458
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:41 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5462
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:41 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:41 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5466
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:41 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5470
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:41 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5474
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:42 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5686
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:43 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5690
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:44 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5694
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:44 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5698
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:00:44 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5702
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:01:09 +0700] "GET /phimmoi/search?type=Phim%20b%E1%BB%99&category=Phim%20ho%E1%BA%A1t%20h%C3%ACnh HTTP/1.1" 200 69305
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:01:13 +0700] "GET /phimmoi/search?type=Phim%20b%E1%BB%99&category=Phim%20c%E1%BB%95%20trang HTTP/1.1" 200 74649
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:01:17 +0700] "GET /phimmoi/search?type=Phim%20chi%E1%BA%BFu%20r%E1%BA%A1p&category=Phim%20t%C3%ACnh%20c%E1%BA%A3m HTTP/1.1" 200 73390
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:01:29 +0700] "GET /phimmoi/search?type=Phim%20ho%E1%BA%A1t%20h%C3%ACnh&category=Phim%20t%C3%ACnh%20c%E1%BA%A3m HTTP/1.1" 200 69269
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:01:33 +0700] "GET /phimmoi/home HTTP/1.1" 200 86378
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:01:53 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:01:53 +0700] "GET /phimmoi/detail?id=335 HTTP/1.1" 200 29210
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:01:57 +0700] "POST /phimmoi/report HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:03 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:03 +0700] "GET /phimmoi/detail?id=335 HTTP/1.1" 200 29202
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:05 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:14 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:15 +0700] "GET /phimmoi/detail?id=335 HTTP/1.1" 200 29224
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:16 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:18 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:18 +0700] "GET /phimmoi/detail?id=335 HTTP/1.1" 200 29343
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:19 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:27 +0700] "GET /phimmoi/login-facebook?code=AQDaLhLMWbGU4R0pvFEXtW748W07ldQHH1w1YnHFzeLqd3Hx_R862zfudFrKLrmCgIFaVz3Ioo5p1dkA6-hTDQyZa3hnUxeC7m7Z5upO5Z1K7b04M6muTjEet80nWAha9zJR23Nw3M8Fa6mrxJWmDaKrFDjb_tqpblBqpIp9nnnkKHfQZRZld1Qf9N9UhQEgbLCaqgDJItq-bZ8CAH-pzuik9SQHrlPJ9AmUgv29hK-ahqRocuxkOMcM_OgvXKqFuA6li6HuTbk9IIUWn_E4xJpUTxETuDtvaPx92YM3YeXZcEQ0mHAqqnHLBWNx1TvM4ycxWdJuDcj55Tw6mKJ5oVku9f6GsJbRl1tMGdGfhN60quY8BfeCjKDcCNuKv7E8hvbHKYNq6vyPYfAAD13sF9sipvyegwiKM7LtT83gCBtcZPk8exoedtyoc7pOcLOYZSc HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:27 +0700] "GET /phimmoi/home HTTP/1.1" 200 86254
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:41 +0700] "GET /phimmoi/logout HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:41 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:42 +0700] "GET /phimmoi/home HTTP/1.1" 200 86378
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:49 +0700] "GET /phimmoi/login-facebook?code=AQAQZrFbhQB8pckSt_Nb97AP5D2utlqPgl4p1EymP6ljPGKLN3t1z2IfZK3_tTILmeS3x08tMJKcd2rOaMsajai98ci7xG7Vp3BJjfFpn6NP-uzkHuGCeIaFJYL9dAQFms6GSEWL9__OMvAkh9amBneTNqylvWbhSrR3YUK5SnYV2OJp1qINowSjlHpk_SEyJEurwMvu5D_vmjtLd2dXFXkm2_6zGiqn3Zc68nuYNFCRpFMjoT4ffO7HIrEp73YBftHi6sufeNAw3IICm8hu2y0ACuAQyVDBnsUaPJQEu_hEvK8YAe3gyEoXcFz75AE0N0QLNeXXb7bNzZbL_ugohbBVx34rZqW0i4_PGsUjBr-8JzYH_FIQQyiutNhx8p5ZZZ6sNUWFl_egpj_1V5hwsuDmNQxmODRFiZpeUKPVAVAhJWR_nnHCfOu0UyrkdPnjCJQ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:50 +0700] "GET /phimmoi/home HTTP/1.1" 200 86254
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:56 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:02:56 +0700] "GET /phimmoi/detail?id=7895 HTTP/1.1" 200 65435
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:03:07 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:03:07 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 74672
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:03:18 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:03:18 +0700] "GET /phimmoi/add-comment?text=hay&user-id=958140914734886&phim-id=1 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:03:18 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 79889
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:03:38 +0700] "GET /phimmoi/login HTTP/1.1" 200 3225
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:03:38 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:03:45 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:03:45 +0700] "POST /phimmoi/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:03:45 +0700] "GET /phimmoi/home HTTP/1.1" 200 86849
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:03:59 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:03:59 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:00 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:00 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:01 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:01 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:02 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:02 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 51
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:04 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:06 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 51
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:08 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:08 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:09 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:09 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 51
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:53 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:53 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:53 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:54 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:54 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:04:55 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 51
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:05:36 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:05:37 +0700] "GET /phimmoi/home HTTP/1.1" 200 86849
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:05:39 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:05:39 +0700] "GET /phimmoi/detail?id=7895 HTTP/1.1" 200 75210
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:05:44 +0700] "POST /phimmoi/report HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:05:54 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:05:55 +0700] "GET /phimmoi/home HTTP/1.1" 200 86928
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:06:01 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:06:02 +0700] "GET /phimmoi/report?id=8194 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:06:02 +0700] "GET /phimmoi/detail?id=8194 HTTP/1.1" 200 66386
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:06:28 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:06:28 +0700] "GET /phimmoi/report?id=7895 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:06:29 +0700] "GET /phimmoi/detail?id=7895 HTTP/1.1" 200 49455
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:06:38 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:06:38 +0700] "GET /phimmoi/report?id=152 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:06:38 +0700] "GET /phimmoi/detail?id=152 HTTP/1.1" 200 32061
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:07:03 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:07:04 +0700] "GET /phimmoi/home HTTP/1.1" 200 86690
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:08:45 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:08:45 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:08:45 +0700] "GET /phimmoi/logout HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:08:46 +0700] "GET /phimmoi/home HTTP/1.1" 200 86219
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:36 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:36 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:36 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:36 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:36 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:36 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5227
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5231
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5227
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:37 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5231
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:11:56 +0700] "GET /phimmoi/home HTTP/1.1" 200 86219
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:12:06 +0700] "GET /phimmoi/search?type=Phim%20chi%E1%BA%BFu%20r%E1%BA%A1p&category=Phim%20kinh%20d%E1%BB%8B HTTP/1.1" 200 69353
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:12:14 +0700] "GET /phimmoi/search?type=Phim%20b%E1%BB%99&category=Phim%20ho%E1%BA%A1t%20h%C3%ACnh HTTP/1.1" 200 69305
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:12:16 +0700] "GET /phimmoi/search?type=Phim%20b%E1%BB%99&category=Phim%20t%C3%ACnh%20c%E1%BA%A3m HTTP/1.1" 200 77023
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:12:36 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:12:36 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:12:36 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 3901
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:12:36 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5445
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:14:48 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:14:48 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:14:48 +0700] "GET /phimmoi/home HTTP/1.1" 200 86219
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:15:01 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:15:01 +0700] "GET /phimmoi/detail?id=7895 HTTP/1.1" 200 45893
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:15:14 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:15:14 +0700] "GET /phimmoi/home HTTP/1.1" 200 86219
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:15:45 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:15:46 +0700] "GET /phimmoi/search?type=Phim%20b%E1%BB%99&category=Phim%20t%C3%ACnh%20c%E1%BA%A3m HTTP/1.1" 200 77023
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:15:53 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:15:53 +0700] "GET /phimmoi/detail?id=556 HTTP/1.1" 200 32352
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:15:59 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:15:59 +0700] "GET /phimmoi/detail?id=557 HTTP/1.1" 200 32498
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:16:05 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:21:16:05 +0700] "GET /phimmoi/detail?id=563 HTTP/1.1" 200 32364
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:01 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:01 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:02 +0700] "GET /phimmoi/detail?id=563 HTTP/1.1" 200 32395
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:03 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:39 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:40 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:52 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:52 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:54 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5458
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:55 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:56 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:56 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:57 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:58 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:06:58 +0700] "POST /phimmoi/searchByName HTTP/1.1" 200 5458
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:07:10 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:07:10 +0700] "GET /phimmoi/search?type=Phim%20b%E1%BB%99&category=Phim%20c%E1%BB%95%20trang HTTP/1.1" 200 74649
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:07:19 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:07:20 +0700] "GET /phimmoi/search?type=Phim%20chi%E1%BA%BFu%20r%E1%BA%A1p&category=Phim%20t%C3%ACnh%20c%E1%BA%A3m HTTP/1.1" 200 73390
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:07:40 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:07:40 +0700] "GET /phimmoi/search?type=Phim%20chi%E1%BA%BFu%20r%E1%BA%A1p&category=Phim%20t%C3%ACnh%20c%E1%BA%A3m HTTP/1.1" 200 73390
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:07:41 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:07:42 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:07:43 +0700] "GET /phimmoi/search?type=Phim%20chi%E1%BA%BFu%20r%E1%BA%A1p&category=Phim%20t%C3%ACnh%20c%E1%BA%A3m&index=12 HTTP/1.1" 200 71756
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:08:09 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:08:10 +0700] "GET /phimmoi/home HTTP/1.1" 200 86219
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:08:41 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:08:41 +0700] "GET /phimmoi/detail?id=7863 HTTP/1.1" 200 42028
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:08:53 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:08:54 +0700] "GET /phimmoi/detail?id=7864 HTTP/1.1" 200 31573
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:08:56 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:08:57 +0700] "GET /phimmoi/home HTTP/1.1" 200 86219
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:09:03 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:09:03 +0700] "GET /phimmoi/detail?id=7863 HTTP/1.1" 200 41802
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:09:25 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:09:26 +0700] "GET /phimmoi/detail?id=393 HTTP/1.1" 200 28960
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:09:33 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:09:33 +0700] "GET /phimmoi/detail?id=47 HTTP/1.1" 200 29048
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:09:45 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:09:45 +0700] "GET /phimmoi/detail?id=47 HTTP/1.1" 200 28740
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:09:48 +0700] "POST /phimmoi/report HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:10:15 +0700] "GET /phimmoi/login-facebook?code=AQAKpkZ9EbfqGNO4FVoO8KuWEYGFzy6jZ5KjZj5llHLrMiH00Rf1N2NOUm5qSGxgVJF2H6tCXLpsVFVBplRi56Dn1VVQP9JuvI5HSypIIQ5A-pq-7gj47gemzDLD64boC6i0-7oitVfES_A8QinHbQuFnNFouZ4u3QtmkJLdXdVjjNRHmz4oih_dcKTwWhR8bDo4GdJ84_7d0tHzZWTHrO_SXvHTXjQwTXcxGk-yNG96EKGTkM3lmRTfpjmQ5uoiGIzhuWixKwOmbOFdgUU7WH19w5zzc4GnvttOET_vsx-zRZakrJlb8ZuS7ckeo0tQcLmke7P5GGG3e4Tsbih_2pGT1Qxcq8Qjvhv3n1-jHIdQS38-WrqcKhWYneC2scF3VkSSK4E74PM4E8LqJ218rE7C52COKY-nbXYXozHduL4vxwFtJV1H9E1Nhv5we4cOdKA HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:10:16 +0700] "GET /phimmoi/home HTTP/1.1" 200 86173
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:10:20 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:10:21 +0700] "GET /phimmoi/detail?id=7823 HTTP/1.1" 200 43379
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:10:35 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:10:35 +0700] "GET /phimmoi/add-comment?text=b%C3%ACnh+lu%E1%BA%ADn&user-id=958140914734886&phim-id=7823 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:10:35 +0700] "GET /phimmoi/detail?id=7823 HTTP/1.1" 200 48913
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:10:51 +0700] "GET /phimmoi/login HTTP/1.1" 200 3225
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:10:51 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:11 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:11 +0700] "POST /phimmoi/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:12 +0700] "GET /phimmoi/home HTTP/1.1" 200 86768
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:37 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:37 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:38 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:39 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:40 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:40 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 51
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:48 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:48 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:48 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:48 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:48 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:48 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:52 +0700] "POST /phimmoi/update-email HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:11:53 +0700] "GET /phimmoi/home HTTP/1.1" 200 86768
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:04 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:04 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:04 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:05 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:06 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:06 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 51
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:10 +0700] "GET /phimmoi/get-password HTTP/1.1" 200 2938
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:21 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:22 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:22 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:23 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:23 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:24 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 51
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:55 +0700] "GET /phimmoi/get-password HTTP/1.1" 200 2938
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:12:55 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:09 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:09 +0700] "POST /phimmoi/get-password HTTP/1.1" 200 2969
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:21 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:21 +0700] "GET /phimmoi/home HTTP/1.1" 200 86768
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:40 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:40 +0700] "GET /phimmoi/report?id=47 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:40 +0700] "GET /phimmoi/detail?id=47 HTTP/1.1" 200 32221
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:44 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:44 +0700] "GET /phimmoi/report?id=335 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:44 +0700] "GET /phimmoi/detail?id=335 HTTP/1.1" 200 32269
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:49 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:49 +0700] "GET /phimmoi/report?id=2422 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:49 +0700] "GET /phimmoi/detail?id=2422 HTTP/1.1" 200 37556
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:13:52 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:14:11 +0700] "GET /phimmoi/logout HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:14:11 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:14:11 +0700] "GET /phimmoi/home HTTP/1.1" 200 86037
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:14:13 +0700] "GET /phimmoi/login-facebook?code=AQBjIHyYIW5TyUdeflEf53_pTXDPX6hpsIDxo1N6xH9XQSiJOp4y-lWVn67E_mJoRDZxF9Jf0yiIBjvIUeM759Mrw7Ou0wKriyA8m87XEPNGKGkpgpbHUIGr5PnTeX9dCd7F0H660Z9yTteyICuyF20dbA7pEiOVyToVvywXok_KVOD8JRRqqyhECQsrQG_bn5CQSPs2O8D8LAaiRaIU0n4OwYvNlGeuNViz0r9vfPpFET0SOJvDOQJ7mu0ueYJb08qTNbZSxapfUhijD_iv3nwCTQCD3z7dMcoy0BiD1youvcdNe9YNINbDouYIo3bNFDFegOKPQAk85vgQFz6eSyiMKQ-huLLAZliby2_PRAr9cdeSusEMtBFVcM8xcHi4pQ8OadDSD6_RozYii-l5PV8GjgdZNR-2HIvfqnvZsgVTlUVS8KGk7i1uUQf-hU_cmSA HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:14:14 +0700] "GET /phimmoi/home HTTP/1.1" 200 85913
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:14:28 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:14:29 +0700] "GET /phimmoi/detail?id=7787 HTTP/1.1" 200 37043
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:14:31 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:14:36 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:14:36 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 79511
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:17 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:17 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:17 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 76677
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:19 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:31 +0700] "GET /phimmoi/login HTTP/1.1" 200 3225
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:31 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:37 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:37 +0700] "POST /phimmoi/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:38 +0700] "GET /phimmoi/home HTTP/1.1" 200 86796
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:44 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:44 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 77647
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:53 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:53 +0700] "POST /phimmoi/remove HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:53 +0700] "GET /phimmoi/home HTTP/1.1" 200 86796
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:58 +0700] "GET /phimmoi/login HTTP/1.1" 200 3225
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:56:58 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:57:02 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:57:02 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 77660
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:57:02 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:57:03 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 77647
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:58:08 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:58:08 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:58:09 +0700] "POST /phimmoi/remove HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:58:09 +0700] "GET /phimmoi/home HTTP/1.1" 200 86796
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:58:13 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:58:14 +0700] "GET /phimmoi/home HTTP/1.1" 200 86796
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:58:17 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:58:17 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:22:58:18 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 77611
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:22 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:22 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:24 +0700] "GET /phimmoi/home HTTP/1.1" 200 86037
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:32 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:33 +0700] "GET /phimmoi/login HTTP/1.1" 200 3225
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:33 +0700] "GET /phimmoi/login HTTP/1.1" 200 3225
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:33 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:42 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:42 +0700] "POST /phimmoi/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:43 +0700] "GET /phimmoi/home HTTP/1.1" 200 86796
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:50 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:50 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:51 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:51 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:53 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:53 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 51
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:21:59 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:00 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:00 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:00 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:00 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:01 +0700] "POST /phimmoi/check-password HTTP/1.1" 200 44
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:16 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:16 +0700] "GET /phimmoi/search?type=Phim%20ho%E1%BA%A1t%20h%C3%ACnh&category=Phim%20phi%C3%AAu%20l%C6%B0u HTTP/1.1" 200 69921
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:20 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:21 +0700] "GET /phimmoi/detail?id=8195 HTTP/1.1" 200 30273
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:26 +0700] "GET /phimmoi/login-facebook?code=AQCCoUYUdW-mWywHoQHUiBWNZswNcMauEorG7QwT7jU-1QFfE3CZXm4RuAGhO5YSmbeMXhKjPkHtUOy-E4fvb0KC42dd8fVvf0TrD89G4IyW6aOC7NKr-6SY2hPCbLV9N-qPDuN2DHbPgiqbx4KdsqNXHSCAezazFEi7dFEljOjnkt8GCC-jqTVUkffmU2KX4JoVUPJke1eaoafQX9ivvuu26eS9pfOiduql2j_HBIJP87DlhREUTpZ0XWx5xp1pSs2mf4mOl-XKQqYxdqwbdvRauzVQc_8O2EAx-tqiSE_Qa_bBdBl-rNkzG4QoDDtI4M69WtSTsfaL5y3skYpzQkwDWMyWdQPiyc1HxxuaDEZooMRQnFAUx7nP2yNFGVadwkKAlnz0aJbmvN9XoRMTleCrNs08-VFQfneHJVxh901FMM1Q2tgamm4bsHcb2hua8E8 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:27 +0700] "GET /phimmoi/home HTTP/1.1" 200 86509
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:32 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:32 +0700] "GET /phimmoi/search?type=Phim%20ho%E1%BA%A1t%20h%C3%ACnh&category=Phim%20phi%C3%AAu%20l%C6%B0u HTTP/1.1" 200 69633
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:36 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:36 +0700] "GET /phimmoi/detail?id=8195 HTTP/1.1" 200 32355
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:40 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:40 +0700] "GET /phimmoi/add-comment?text=qqqqq&user-id=958140914734886&phim-id=8195 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:40 +0700] "GET /phimmoi/detail?id=8195 HTTP/1.1" 200 37821
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:48 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:48 +0700] "POST /phimmoi/remove HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:48 +0700] "GET /phimmoi/home HTTP/1.1" 200 86509
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:50 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:51 +0700] "GET /phimmoi/detail?id=8195 HTTP/1.1" 200 37673
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:53 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:53 +0700] "GET /phimmoi/detail?id=8195 HTTP/1.1" 200 37798
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:22:53 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:23:40 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:23:40 +0700] "GET /phimmoi/detail?id=8195 HTTP/1.1" 200 32400
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:23:40 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:23:45 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:23:45 +0700] "POST /phimmoi/remove HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:23:46 +0700] "GET /phimmoi/home HTTP/1.1" 200 86668
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:23:51 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:23:51 +0700] "GET /phimmoi/search?type=Phim%20ho%E1%BA%A1t%20h%C3%ACnh&category=Phim%20phi%C3%AAu%20l%C6%B0u HTTP/1.1" 200 69570
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:24:07 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:24:07 +0700] "GET /phimmoi/detail?id=8092 HTTP/1.1" 200 34750
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:24:11 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:24:13 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:24:13 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 80782
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:24:14 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [10/Sep/2021:23:24:14 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 80813

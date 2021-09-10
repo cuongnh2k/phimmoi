@@ -466,14 +466,40 @@ public class UserDAO {
 		}
 	}
 	public void addComment(Comment cmt) {
-		String sql = "insert into `comment`(`content`,`user_id`,`phim_id`,`time`) values(?,?,?,?);";
+		String sql = "insert into `comment`(`content`,`user_id`,`phim_id`,`time`) values(?,?,?, CURRENT_TIMESTAMP() );";
 		try {
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, cmt.getContent());
 			sta.setLong(2, cmt.getUser_id());
 			sta.setInt(3, cmt.getPhim_id());
-			sta.setString(4, cmt.getTime());
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void deleteComment(Comment cmt) {
+		String sql = "delete from `comment` where `id`=? and user_id=?;";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setLong(2, cmt.getUser_id());
+			sta.setInt(1, cmt.getId());
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void deleteResponse(Comment cmt) {
+		String sql = "delete from `response` where `comment_id`=?;";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setInt(1, cmt.getId());
 			int rs2 = sta.executeUpdate();
 			sta.close();
 			conn.close();
