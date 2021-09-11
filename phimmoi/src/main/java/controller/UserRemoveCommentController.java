@@ -23,7 +23,7 @@ public class UserRemoveCommentController extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 
 		Comment comment = new Comment(Integer.parseInt(req.getParameter("id")), null,
-				Long.parseLong(req.getParameter("user_id")), null, null, Integer.parseInt(req.getParameter("phim_id")));
+				Long.parseLong(req.getParameter("user_id")), null, null, Integer.parseInt(req.getParameter("phim_id")),false);
 
 		HttpSession session = req.getSession();
 		User user = (User) session.getAttribute("user");

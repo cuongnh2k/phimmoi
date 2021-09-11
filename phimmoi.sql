@@ -35,7 +35,8 @@ create table `Comment`(
 	`content` text not null,
 	`user_id` bigint not null,
     `phim_id` int not null,
-    `time` datetime not null
+    `time` datetime not null,
+    `edit` bit(1) default 0
 );
 
 create table `Response`(
@@ -44,7 +45,8 @@ create table `Response`(
 	`user_id` bigint not null,
     `comment_id` int not null,
     `phim_id` int not null,
-    `time` datetime not null
+    `time` datetime not null,
+     `edit` bit(1) default 0
 );
 ALTER TABLE `Comment` ADD FOREIGN KEY (phim_id) REFERENCES phim(id);
 ALTER TABLE `Comment` ADD FOREIGN KEY (user_id) REFERENCES `user`(id);
@@ -53,10 +55,10 @@ ALTER TABLE `Response` ADD FOREIGN KEY (user_id) REFERENCES `user`(id);
 ALTER TABLE `Response` ADD FOREIGN KEY (phim_id) REFERENCES `phim`(id);
 
 alter table phim add fulltext(title);
-SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("abc" IN NATURAL LANGUAGE MODE);
-SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("anh" WITH QUERY EXPANSION);
-SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("+anh -hung" IN BOOLEAN MODE);
-SELECT count(*) FROM phim WHERE MATCH(title) AGAINST("anh" IN BOOLEAN MODE);
-select count(distinct title) from phim ;
-update `admin` set `password`='1' where `account` ='admin';
-alter table `response` add column `time` datetime not null;
+
+select `comment`.id, `comment`.content,`comment`.user_id,`comment`.`time`, `user`.`name` from `user`, `comment` where `user`.id=`comment`.user_id and `comment`.phim_id=1;
+select `response`.id, `response`.content,`response`.user_id,`response`.`comment_id`, `response`.`time`,`user`.`name` from `user`, `response` where `user`.id=`response`.user_id and `response`.phim_id=1;
+insert into `comment`(`content`,`user_id`,`phim_id`,`time`) values('huyền anh ngốc',958140914734886,1,'0000-00-00 19:00:00');
+INSERT INTO `phimmoi`.`comment` (`id`, `content`, `user_id`, `phim_id`,`time`) VALUES ('7', 'wwwwwwwwwwwwwww', '1', '1',CURRENT_TIMESTAMP());
+select count(`title`) from phim;
+delete from `phim` where id=1;

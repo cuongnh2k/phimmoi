@@ -234,14 +234,24 @@
 							<p style="margin-top: 25px;">
 								<b>${o.name }</b>
 							</p>
-							<sub class="text-secondary">${o.time }</sub>
-							<form action="#">
+							<c:if test="${o.edit==false }">
+								<sub class="text-secondary">${o.time }</sub>
+							</c:if>
+							<c:if test="${o.edit==true }">
+								<sub class="text-secondary">${o.time } Đã chỉnh sửa</sub>
+							</c:if>
+							<form action="update-comment" method="get">
 								<c:if test="${sessionScope.user.id!=o.user_id}">
-									<textarea rows="" cols="" class="form-control" name="x"
+									<textarea rows="" cols="" class="form-control" name="content"
 										readonly="readonly">${o.content }</textarea>
 								</c:if>
 								<c:if test="${sessionScope.user.id==o.user_id}">
-									<textarea rows="" cols="" class="form-control" name="x">${o.content }</textarea>
+									<input name="id" value="${o.id }" style="display: none;">
+									<input name="user-id" value="${sessionScope.user.id }"
+										style="display: none;">
+									<input name="phim-id" value="${phim.id }"
+										style="display: none;">
+									<textarea rows="" cols="" class="form-control" name="content">${o.content }</textarea>
 								</c:if>
 								<p class="text-primary">
 									<u>Phản hồi</u><span style="margin-left: 10px;"></span>
@@ -251,7 +261,8 @@
 									</c:if>
 									<span style="margin-left: 10px;"></span>
 									<c:if test="${sessionScope.user.id==o.user_id}">
-										<span><button class="btn-primary">Cập nhật</button></span>
+										<span><button type="submit" class="btn-primary">Cập
+												nhật</button></span>
 									</c:if>
 								</p>
 							</form>

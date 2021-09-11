@@ -378,14 +378,14 @@ public class UserDAO {
 	public List<Comment> getComment(int id) {
 		List<Comment> list = new ArrayList<Comment>();
 		try {
-			String sql = "select `comment`.id, `comment`.content,`comment`.user_id,`comment`.`time`, `user`.`name` from `user`, `comment` where `user`.id=`comment`.user_id and `comment`.phim_id=? order by (id) desc;";
+			String sql = "select `comment`.id, `comment`.content,`comment`.user_id,`comment`.`time`, `user`.`name`,`comment`.edit from `user`, `comment` where `user`.id=`comment`.user_id and `comment`.phim_id=? order by (id) desc;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setInt(1, id);
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				list.add(new Comment(rs.getInt(1), rs.getString(2), rs.getLong(3), rs.getString(4), rs.getString(5),
-						id));
+				list.add(new Comment(rs.getInt(1), rs.getString(2), rs.getLong(3), rs.getString(4), rs.getString(5), id,
+						rs.getBoolean(6)));
 			}
 			rs.close();
 			sta.close();
@@ -465,6 +465,7 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 	}
+
 	public void addComment(Comment cmt) {
 		String sql = "insert into `comment`(`content`,`user_id`,`phim_id`,`time`) values(?,?,?, CURRENT_TIMESTAMP() );";
 		try {
@@ -480,6 +481,7 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 	}
+
 	public void deleteComment(Comment cmt) {
 		String sql = "delete from `comment` where `id`=? and user_id=?;";
 		try {
@@ -494,12 +496,29 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 	}
+
 	public void deleteResponse(Comment cmt) {
 		String sql = "delete from `response` where `comment_id`=?;";
 		try {
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setInt(1, cmt.getId());
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void updateComment(Comment cmt) {
+		String sql = "update `comment` set `content`=? , `time`= CURRENT_TIMESTAMP(), `edit`=1 where `id`=? and user_id=?;";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, cmt.getContent());
+			sta.setInt(2, cmt.getId());
+			sta.setLong(3, cmt.getUser_id());
 			int rs2 = sta.executeUpdate();
 			sta.close();
 			conn.close();
