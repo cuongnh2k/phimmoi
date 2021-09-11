@@ -161,10 +161,14 @@
 				<p style="color: rgb(240, 240, 240);">Tập: ${phim.episode }</p>
 			</c:if>
 			<div class="row">
-				<div class="col-sm-10">
+				<div class="col-sm-12">
 					<p style="color: rgb(240, 240, 240);">
 						Lượt xem: ${phim.view} <i class="bi bi-eye"></i>
 					</p>
+				</div>
+				<div class="col-sm-1" onclick="report()"
+					style="color: rgb(240, 240, 240); font-size: 25px;">
+					<i class="bi bi-flag-fill"></i>
 				</div>
 				<c:if test="${sessionScope.admin!=null }">
 					<div class="col-sm-1">
@@ -176,10 +180,6 @@
 							style="color: rgb(240, 240, 240); font-size: 25px;"></i>
 					</div>
 				</c:if>
-				<div class="col-12">
-					<span onclick="report()"
-						style="color: rgb(240, 240, 240); font-size: 25px;">Báo cáo</span>
-				</div>
 			</div>
 			<iframe class="ifra" width=100% src="${phim.episodeURL }"
 				title="${phim.title }" frameborder="0"

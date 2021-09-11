@@ -48,6 +48,7 @@ public class UserSearchByNameController extends HttpServlet {
 			list1.put(i, index);
 			index += 12;
 		}
+		out.println("<div class=\"col-12\">");
 		for (Integer i : list1.keySet()) {
 			String test;
 			if (list1.get(i) == 0) {
@@ -59,6 +60,12 @@ public class UserSearchByNameController extends HttpServlet {
 					+ "					style=\"color: rgb(240, 240, 240); padding: 0px;\" class=\"nav-link\"\r\n"
 					+ "					href=\"searchByName?txt=" + txtSearch + "&x=" + list1.get(i) + "\">" + i
 					+ "</a></span>");
+		}
+		out.println("</div>");
+		if (list1.size()>0) {
+			out.println("<div class=\"col-12\">");
+			out.println("<hr style=\"height: 1px; border: none; background-color: rgb(240, 240, 240);\">");
+			out.println("</div>");
 		}
 	}
 
@@ -92,9 +99,9 @@ public class UserSearchByNameController extends HttpServlet {
 		req.setAttribute("phimHoatHinhCapNhat", new UserDAO().getPhimHoatHinhCapNhat());
 
 		req.setAttribute("searchByName", list);
-		
-			req.setAttribute("size", list1);
-		
+
+		req.setAttribute("size", list1);
+
 		req.setAttribute("x", x);
 		req.setAttribute("txt", txtSearch);
 

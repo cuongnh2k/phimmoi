@@ -208,7 +208,7 @@ public class AdminDAO {
 	public List<Phim> getReport() {
 		List<Phim> list = new ArrayList<>();
 		try {
-			String sql = "select * from phim where `report`=?;";
+			String sql = "select * from phim where `report`=? order by(id) desc;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, "1");
