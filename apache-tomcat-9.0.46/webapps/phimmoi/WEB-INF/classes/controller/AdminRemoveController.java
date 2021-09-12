@@ -24,7 +24,7 @@ public class AdminRemoveController extends HttpServlet {
 		Admin a = (Admin) session.getAttribute("admin");
 		if (a != null) {
 
-			int id = Integer.parseInt(req.getParameter("id"));
+			long id = Long.parseLong(req.getParameter("id"));
 			new AdminDAO().removeResponseDAO(id);
 			new AdminDAO().removeCommentDAO(id);
 			new AdminDAO().removePhimDAO(id);

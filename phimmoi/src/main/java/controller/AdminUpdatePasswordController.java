@@ -24,7 +24,7 @@ public class AdminUpdatePasswordController extends HttpServlet {
 		Admin a = (Admin) session.getAttribute("admin");
 		if (a != null) {
 			Admin e = new Admin();
-			e.setId(Integer.parseInt(req.getParameter("id")));
+			e.setId(Long.parseLong(req.getParameter("id")));
 			e.setPassword(req.getParameter("password"));
 			e.setAccount(req.getParameter("newpass"));
 			e.setEmail(req.getParameter("confirm"));

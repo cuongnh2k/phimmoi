@@ -21,9 +21,9 @@ public class UserUpdateResponseController extends HttpServlet {
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
 
-		Response r = new Response(Integer.parseInt(req.getParameter("id")), req.getParameter("content"),
+		Response r = new Response(Long.parseLong(req.getParameter("id")), req.getParameter("content"),
 				Long.parseLong(req.getParameter("user_id")), 0, null,
-				null, Integer.parseInt(req.getParameter("phim_id")), false);
+				null, Long.parseLong(req.getParameter("phim_id")), false);
 
 		HttpSession session = req.getSession();
 		User user = (User) session.getAttribute("user");

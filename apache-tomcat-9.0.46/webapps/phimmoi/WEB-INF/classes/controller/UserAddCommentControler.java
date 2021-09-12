@@ -23,7 +23,7 @@ public class UserAddCommentControler extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 
 		Comment comment = new Comment(0, req.getParameter("text"), Long.parseLong(req.getParameter("user-id")), null,
-				null, Integer.parseInt(req.getParameter("phim-id")), false);
+				null, Long.parseLong(req.getParameter("phim-id")), false);
 
 		HttpSession session = req.getSession();
 		User user = (User) session.getAttribute("user");

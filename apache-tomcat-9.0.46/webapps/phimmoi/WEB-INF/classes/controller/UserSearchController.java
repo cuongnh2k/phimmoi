@@ -29,7 +29,7 @@ public class UserSearchController extends HttpServlet {
 		p.setType(req.getParameter("type"));
 		p.setCategory(req.getParameter("category"));
 		try {
-			p.setView(Integer.parseInt(req.getParameter("index")));
+			p.setView(Long.parseLong(req.getParameter("index")));
 		} catch (Exception e) {
 			p.setView(0);
 		}
@@ -44,14 +44,14 @@ public class UserSearchController extends HttpServlet {
 		req.setAttribute("phimHoatHinhCapNhat", new UserDAO().getPhimHoatHinhCapNhat());
 		List<Phim> list5 = new UserDAO().searchMenu(p);
 		req.setAttribute("searchMenu", list5);
-		int a = new UserDAO().searchMenuCount(p);
-		int b = a / 12;
+		long a = new UserDAO().searchMenuCount(p);
+		long b = a / 12;
 		if (a % 12 != 0) {
 			b += 1;
 		}
-		Map<Integer, Integer> list = new HashMap<Integer, Integer>();
-		int index = 0;
-		for (int i = 1; i <= b; i++) {
+		Map<Long, Long> list = new HashMap<Long, Long>();
+		long index = 0;
+		for (long i = 1; i <= b; i++) {
 			list.put(i, index);
 			index += 12;
 		}

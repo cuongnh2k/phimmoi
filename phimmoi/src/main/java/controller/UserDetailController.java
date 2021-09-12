@@ -28,7 +28,7 @@ public class UserDetailController extends HttpServlet {
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
 
-		int id = Integer.parseInt(req.getParameter("id"));
+		long id = Long.parseLong(req.getParameter("id"));
 
 		req.setAttribute("categoryPhimLe", new UserDAO().getCategoryPhimLe());
 		req.setAttribute("categoryPhimBo", new UserDAO().getCategoryPhimBo());
@@ -60,7 +60,7 @@ public class UserDetailController extends HttpServlet {
 			for (int i = 0; i < arr.length; i++) {
 				try {
 					String arr1[] = arr[i].split("\\#");
-					list.add(new History(Integer.parseInt(arr1[0]), arr1[1], arr1[2]));
+					list.add(new History(Long.parseLong(arr1[0]), arr1[1], arr1[2]));
 				} catch (NumberFormatException e) {
 					continue;
 				}

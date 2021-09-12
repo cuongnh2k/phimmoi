@@ -26,7 +26,7 @@ public class AdminUpdateEmailController extends HttpServlet {
 		if (a != null) {
 
 			Admin e = new Admin();
-			e.setId(Integer.parseInt(req.getParameter("id")));
+			e.setId(Long.parseLong(req.getParameter("id")));
 			e.setEmail(req.getParameter("email"));
 			e.setPassword(req.getParameter("password"));
 			if (new AdminDAO().updateEmailDAO(e)) {

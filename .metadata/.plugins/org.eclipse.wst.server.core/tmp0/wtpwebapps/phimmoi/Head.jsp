@@ -114,7 +114,7 @@
 			</c:if>
 			<c:if test="${sessionScope.user!=null}">
 				<div class="btn-group">
-					<button data-toggle="modal" data-target="#" type="button"
+					<button data-toggle="modal" data-target="#history" type="button"
 						class="btn btn-secondary menu1">
 						<i class="bi bi-clock-history"></i>
 					</button>
@@ -181,7 +181,31 @@
 				<div class="modal-body">
 					<ul>
 						<c:forEach items="${report}" var="o">
-							<li><a href="report?id=${o.id }">${o.title }</a></li>
+							<li><a href="report?id=${o.id }" class="nav-link">${o.title }</a></li>
+						</c:forEach>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- Get history -->
+	<div class="modal fade" id="history" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Lịch sử</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<ul>
+						<c:forEach items="${history}" var="o">
+							<li><a href="detail?id=${o.id }" class="nav-link"> <span> ${o.title } </span><span style="color: red;"> ${o.time } </span>
+							</a></li>
 						</c:forEach>
 					</ul>
 				</div>

@@ -102,7 +102,7 @@ public class UserDAO {
 			PreparedStatement sta = conn.prepareStatement(sql);
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
@@ -123,7 +123,7 @@ public class UserDAO {
 			sta.setString(1, "Phim lẻ");
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
@@ -144,7 +144,7 @@ public class UserDAO {
 			sta.setString(1, "Phim hoạt hình");
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
@@ -165,7 +165,7 @@ public class UserDAO {
 			sta.setString(1, "Phim chiếu rạp");
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
@@ -186,7 +186,7 @@ public class UserDAO {
 			sta.setString(1, "Phim bộ");
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
@@ -198,16 +198,16 @@ public class UserDAO {
 		return list;
 	}
 
-	public Phim getPhim(int id) {
+	public Phim getPhim(long id) {
 		try {
 			String sql = "select * from phim where id=?;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
-			sta.setInt(1, id);
+			sta.setLong(1, id);
 			ResultSet rs = sta.executeQuery();
 			setView(id);
 			while (rs.next()) {
-				return new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+				return new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9));
 			}
 			rs.close();
@@ -229,7 +229,7 @@ public class UserDAO {
 			ResultSet rs = sta.executeQuery();
 
 			while (rs.next()) {
-				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
@@ -250,7 +250,7 @@ public class UserDAO {
 			sta.setString(1, p.getCategory());
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
@@ -262,12 +262,12 @@ public class UserDAO {
 		return list;
 	}
 
-	public void setView(int id) {
+	public void setView(long id) {
 		String sql = "update phim set `view`=`view`+1 where id=?;";
 		try {
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
-			sta.setInt(1, id);
+			sta.setLong(1, id);
 			int rs2 = sta.executeUpdate();
 			sta.close();
 			conn.close();
@@ -276,17 +276,17 @@ public class UserDAO {
 		}
 	}
 
-	public List<Phim> searchByName(String txt, int x) {
+	public List<Phim> searchByName(String txt, long x) {
 		List<Phim> list = new ArrayList<Phim>();
 		try {
 			String sql = "SELECT * FROM phim WHERE MATCH(title) AGAINST( ? ) group by(title) limit 12 offset ?;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, txt);
-			sta.setInt(2, x);
+			sta.setLong(2, x);
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
@@ -298,7 +298,7 @@ public class UserDAO {
 		return list;
 	}
 
-	public int searchByNameCount(String txt) {
+	public long searchByNameCount(String txt) {
 		try {
 			String sql = "select count(distinct title) FROM phim WHERE MATCH(title) AGAINST( ? );";
 			Connection conn = new DBContext().getConnection();
@@ -306,7 +306,7 @@ public class UserDAO {
 			sta.setString(1, txt);
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				return rs.getInt(1);
+				return rs.getLong(1);
 			}
 			rs.close();
 			sta.close();
@@ -328,7 +328,7 @@ public class UserDAO {
 			sta.setLong(3, p.getView());
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				list.add(new Phim(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
+				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
 						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
 			}
 			rs.close();
@@ -340,7 +340,7 @@ public class UserDAO {
 		return list;
 	}
 
-	public int searchMenuCount(Phim p) {
+	public long searchMenuCount(Phim p) {
 		try {
 			String sql = "select count(distinct title) from phim where `type`=? and category=?;";
 			Connection conn = new DBContext().getConnection();
@@ -349,7 +349,7 @@ public class UserDAO {
 			sta.setString(2, p.getCategory());
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				return rs.getInt(1);
+				return rs.getLong(1);
 			}
 			rs.close();
 			sta.close();
@@ -365,7 +365,7 @@ public class UserDAO {
 		try {
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
-			sta.setInt(1, 1);
+			sta.setLong(1, 1);
 			sta.setString(2, id);
 			int rs2 = sta.executeUpdate();
 			sta.close();
@@ -375,16 +375,16 @@ public class UserDAO {
 		}
 	}
 
-	public List<Comment> getComment(int id) {
+	public List<Comment> getComment(long id) {
 		List<Comment> list = new ArrayList<Comment>();
 		try {
 			String sql = "select `comment`.id, `comment`.content,`comment`.user_id,`comment`.`time`, `user`.`name`,`comment`.edit from `user`, `comment` where `user`.id=`comment`.user_id and `comment`.phim_id=? order by (`comment`.id) desc;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
-			sta.setInt(1, id);
+			sta.setLong(1, id);
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				list.add(new Comment(rs.getInt(1), rs.getString(2), rs.getLong(3), rs.getString(4), rs.getString(5), id,
+				list.add(new Comment(rs.getLong(1), rs.getString(2), rs.getLong(3), rs.getString(4), rs.getString(5), id,
 						rs.getBoolean(6)));
 			}
 			rs.close();
@@ -396,16 +396,16 @@ public class UserDAO {
 		return list;
 	}
 
-	public List<Response> getResponse(int id) {
+	public List<Response> getResponse(long id) {
 		List<Response> list = new ArrayList<>();
 		try {
 			String sql = "select `response`.id, `response`.content,`response`.user_id,`response`.`comment_id`, `response`.`time`,`user`.`name`,`response`.`edit` from `user`, `response` where `user`.id=`response`.user_id and `response`.phim_id=? order by (`response`.id) desc;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
-			sta.setInt(1, id);
+			sta.setLong(1, id);
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				list.add(new Response(rs.getInt(1), rs.getString(2), rs.getLong(3), rs.getInt(4), rs.getString(5),
+				list.add(new Response(rs.getLong(1), rs.getString(2), rs.getLong(3), rs.getLong(4), rs.getString(5),
 						rs.getString(6), id, rs.getBoolean(7)));
 			}
 			rs.close();
@@ -425,7 +425,7 @@ public class UserDAO {
 			sta.setObject(1, u.getId());
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				return new User(rs.getLong(1), rs.getString(2),rs.getString(3));
+				return new User(rs.getLong(1), rs.getString(2), rs.getString(3));
 			}
 			rs.close();
 			sta.close();
@@ -474,7 +474,7 @@ public class UserDAO {
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, cmt.getContent());
 			sta.setLong(2, cmt.getUser_id());
-			sta.setInt(3, cmt.getPhim_id());
+			sta.setLong(3, cmt.getPhim_id());
 			int rs2 = sta.executeUpdate();
 			sta.close();
 			conn.close();
@@ -490,8 +490,8 @@ public class UserDAO {
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, res.getContent());
 			sta.setLong(2, res.getUser_id());
-			sta.setInt(3, res.getComment_id());
-			sta.setInt(4, res.getPhim_id());
+			sta.setLong(3, res.getComment_id());
+			sta.setLong(4, res.getPhim_id());
 			int rs2 = sta.executeUpdate();
 			sta.close();
 			conn.close();
@@ -506,7 +506,7 @@ public class UserDAO {
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setLong(2, cmt.getUser_id());
-			sta.setInt(1, cmt.getId());
+			sta.setLong(1, cmt.getId());
 			int rs2 = sta.executeUpdate();
 			sta.close();
 			conn.close();
@@ -520,7 +520,7 @@ public class UserDAO {
 		try {
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
-			sta.setInt(1, cmt.getId());
+			sta.setLong(1, cmt.getId());
 			int rs2 = sta.executeUpdate();
 			sta.close();
 			conn.close();
@@ -535,7 +535,7 @@ public class UserDAO {
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, cmt.getContent());
-			sta.setInt(2, cmt.getId());
+			sta.setLong(2, cmt.getId());
 			sta.setLong(3, cmt.getUser_id());
 			int rs2 = sta.executeUpdate();
 			sta.close();
@@ -545,19 +545,14 @@ public class UserDAO {
 		}
 	}
 
-	public static void main(String[] args) {
-		UserDAO u = new UserDAO();
-		for (Response r : u.getResponse(1)) {
-			System.out.println(r);
-		}
-	}
+
 	public void updateResponse(Response cmt) {
 		String sql = "update `response` set `content`=? , `time`= CURRENT_TIMESTAMP(), `edit`=1 where `id`=? and user_id=?;";
 		try {
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, cmt.getContent());
-			sta.setInt(2, cmt.getId());
+			sta.setLong(2, cmt.getId());
 			sta.setLong(3, cmt.getUser_id());
 			int rs2 = sta.executeUpdate();
 			sta.close();
@@ -566,12 +561,13 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 	}
+
 	public void removeResponse(Response cmt) {
 		String sql = "delete from `response` where `id`=? and user_id=?;";
 		try {
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
-			sta.setInt(1, cmt.getId());
+			sta.setLong(1, cmt.getId());
 			sta.setLong(2, cmt.getUser_id());
 			int rs2 = sta.executeUpdate();
 			sta.close();
@@ -580,6 +576,7 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 	}
+
 	public void updateHistory(User u) {
 		String sql = "update `user` set `history`= ? where `id`=?;";
 		try {

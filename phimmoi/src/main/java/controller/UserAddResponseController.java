@@ -22,8 +22,8 @@ public class UserAddResponseController extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 
 		Response r = new Response(0, req.getParameter("content"), Long.parseLong(req.getParameter("user_id")),
-				Integer.parseInt(req.getParameter("comment_id")), null, null,
-				Integer.parseInt(req.getParameter("phim_id")), false);
+				Long.parseLong(req.getParameter("comment_id")), null, null,
+				Long.parseLong(req.getParameter("phim_id")), false);
 
 		HttpSession session = req.getSession();
 		User user = (User) session.getAttribute("user");

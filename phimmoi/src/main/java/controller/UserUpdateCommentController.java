@@ -21,8 +21,8 @@ public class UserUpdateCommentController extends HttpServlet {
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
 
-		Comment comment = new Comment(Integer.parseInt(req.getParameter("id")), req.getParameter("content"),
-				Long.parseLong(req.getParameter("user-id")), null, null, Integer.parseInt(req.getParameter("phim-id")),
+		Comment comment = new Comment(Long.parseLong(req.getParameter("id")), req.getParameter("content"),
+				Long.parseLong(req.getParameter("user-id")), null, null, Long.parseLong(req.getParameter("phim-id")),
 				false);
 
 		HttpSession session = req.getSession();

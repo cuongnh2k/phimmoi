@@ -1,7 +1,7 @@
 package entity;
 
 public class Admin {
-	private int id;
+	private long id;
 	private String account;
 	private String password;
 	private String email;
@@ -10,7 +10,7 @@ public class Admin {
 		super();
 	}
 
-	public Admin(int id, String account, String password, String email) {
+	public Admin(long id, String account, String password, String email) {
 		super();
 		this.id = id;
 		this.account = account;
@@ -18,11 +18,11 @@ public class Admin {
 		this.email = email;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

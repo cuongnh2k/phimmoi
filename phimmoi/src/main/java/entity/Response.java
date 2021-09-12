@@ -1,20 +1,20 @@
 package entity;
 
 public class Response {
-	private int id;
+	private long id;
 	private String content;
 	private long user_id;
-	private int comment_id;
+	private long comment_id;
 	private String time;
 	private String name;
-	private int phim_id;
+	private long phim_id;
 	private boolean edit;
 
 	public Response() {
 		super();
 	}
 
-	public Response(int id, String content, long user_id, int comment_id, String time, String name, int phim_id,
+	public Response(long id, String content, long user_id, long comment_id, String time, String name, long phim_id,
 			boolean edit) {
 		super();
 		this.id = id;
@@ -27,11 +27,11 @@ public class Response {
 		this.edit = edit;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -51,19 +51,19 @@ public class Response {
 		this.user_id = user_id;
 	}
 
-	public int getComment_id() {
+	public long getComment_id() {
 		return comment_id;
 	}
 
-	public void setComment_id(int comment_id) {
+	public void setComment_id(long comment_id) {
 		this.comment_id = comment_id;
 	}
 
-	public int getPhim_id() {
+	public long getPhim_id() {
 		return phim_id;
 	}
 
-	public void setPhim_id(int phim_id) {
+	public void setPhim_id(long phim_id) {
 		this.phim_id = phim_id;
 	}
 

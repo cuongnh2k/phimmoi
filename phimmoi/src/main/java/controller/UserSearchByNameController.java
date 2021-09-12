@@ -37,19 +37,19 @@ public class UserSearchByNameController extends HttpServlet {
 					+ "					</div>");
 		}
 
-		int a = new UserDAO().searchByNameCount(txtSearch);
-		int b = a / 12;
+		long a = new UserDAO().searchByNameCount(txtSearch);
+		long b = a / 12;
 		if (a % 12 != 0) {
 			b += 1;
 		}
-		Map<Integer, Integer> list1 = new HashMap<Integer, Integer>();
-		int index = 0;
-		for (int i = 1; i <= b; i++) {
+		Map<Long, Long> list1 = new HashMap<Long, Long>();
+		long index = 0;
+		for (long i = 1; i <= b; i++) {
 			list1.put(i, index);
 			index += 12;
 		}
 		out.println("<div class=\"col-12\">");
-		for (Integer i : list1.keySet()) {
+		for (Long i : list1.keySet()) {
 			String test;
 			if (list1.get(i) == 0) {
 				test = "btn-danger";
@@ -74,16 +74,16 @@ public class UserSearchByNameController extends HttpServlet {
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
 		String txtSearch = req.getParameter("txt");
-		int x = Integer.parseInt(req.getParameter("x"));
+		long x = Long.parseLong(req.getParameter("x"));
 		List<Phim> list = new UserDAO().searchByName(txtSearch, x);
-		int a = new UserDAO().searchByNameCount(txtSearch);
-		int b = a / 12;
+		long a = new UserDAO().searchByNameCount(txtSearch);
+		long b = a / 12;
 		if (a % 12 != 0) {
 			b += 1;
 		}
-		Map<Integer, Integer> list1 = new HashMap<Integer, Integer>();
-		int index = 0;
-		for (int i = 1; i <= b; i++) {
+		Map<Long, Long> list1 = new HashMap<Long, Long>();
+		long index = 0;
+		for (long i = 1; i <= b; i++) {
 			list1.put(i, index);
 			index += 12;
 		}

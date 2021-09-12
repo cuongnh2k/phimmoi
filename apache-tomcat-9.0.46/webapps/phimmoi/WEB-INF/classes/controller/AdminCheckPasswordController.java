@@ -21,7 +21,7 @@ public class AdminCheckPasswordController extends HttpServlet {
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
 
-		Admin a = new Admin(Integer.parseInt(req.getParameter("id")), null, req.getParameter("pass"), null);
+		Admin a = new Admin(Long.parseLong(req.getParameter("id")), null, req.getParameter("pass"), null);
 		PrintWriter out = resp.getWriter();
 		if (new AdminDAO().checkPasswordDAO(a) != null) {
 			out.println("<i class=\"bi bi-check-circle text-success  \"></i>");

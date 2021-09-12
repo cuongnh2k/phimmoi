@@ -1,7 +1,7 @@
 package entity;
 
 public class Phim {
-	private int id;
+	private long id;
 	private String type;
 	private String category;
 	private String episode;
@@ -15,7 +15,7 @@ public class Phim {
 		super();
 	}
 
-	public Phim(int id, String type, String category, String episode, String episodeURL, String imageURL, String title,
+	public Phim(long id, String type, String category, String episode, String episodeURL, String imageURL, String title,
 			long view, boolean report) {
 		super();
 		this.id = id;
@@ -29,11 +29,11 @@ public class Phim {
 		this.report = report;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
