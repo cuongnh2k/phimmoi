@@ -34,18 +34,15 @@ public class LoginFacebookServlet extends HttpServlet {
 			String accessToken = RestFB.getToken(code);
 			User user = RestFB.getUserInfo(accessToken);
 
-//			request.setAttribute("id", user.getId());
-//			request.setAttribute("name", user.getName());
-//			request.getRequestDispatcher("index.jsp").forward(request, response);
-
-			entity.User u = new entity.User(Long.parseLong(user.getId()), user.getName());
+			entity.User u = new entity.User(Long.parseLong(user.getId()), user.getName(), " # # $ # # ");
 			entity.User u1 = new UserDAO().checkUser(u);
 			if (u1 != null) {
 				if (!u1.getName().equalsIgnoreCase(u.getName())) {
 					new UserDAO().updateName(u);
+					u1.setName(u.getName());
 				}
 				HttpSession session = request.getSession();
-				session.setAttribute("user", u);
+				session.setAttribute("user", u1);
 				response.sendRedirect("home");
 			} else {
 				new UserDAO().addUser(u);

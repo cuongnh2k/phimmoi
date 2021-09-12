@@ -2,6 +2,8 @@ package controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -9,10 +11,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.AdminDAO;
 import dao.UserDAO;
+import entity.History;
 import entity.Phim;
+import entity.User;
 
 @WebServlet("/home")
 public class UserHomeController extends HttpServlet {
@@ -46,6 +51,26 @@ public class UserHomeController extends HttpServlet {
 		req.setAttribute("phimChieuRapCapNhat", new UserDAO().getPhimChieuRapCapNhat());
 		req.setAttribute("phimHoatHinhCapNhat", new UserDAO().getPhimHoatHinhCapNhat());
 		req.setAttribute("report", new AdminDAO().getReport());
+		
+		HttpSession session = req.getSession();
+		User user = (User) session.getAttribute("user");
+		List<History> list = new ArrayList<History>();
+		if (user != null) {	
+			
+			User u=new UserDAO().checkUser(user);
+			
+			String arr[] = u.getHistory().split("\\$");
+			for (int i = 0; i < arr.length; i++) {
+				try {
+					String arr1[] = arr[i].split("\\#");
+					list.add(new History(Integer.parseInt(arr1[0]), arr1[1], arr1[2]));
+				} catch (NumberFormatException e) {
+					continue;
+				}
+			}
+		}
+		Collections.reverse(list);
+		req.setAttribute("history", list);
 		req.getRequestDispatcher("Home.jsp").forward(req, resp);
 	}
 }

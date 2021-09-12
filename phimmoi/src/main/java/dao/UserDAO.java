@@ -378,7 +378,7 @@ public class UserDAO {
 	public List<Comment> getComment(int id) {
 		List<Comment> list = new ArrayList<Comment>();
 		try {
-			String sql = "select `comment`.id, `comment`.content,`comment`.user_id,`comment`.`time`, `user`.`name`,`comment`.edit from `user`, `comment` where `user`.id=`comment`.user_id and `comment`.phim_id=? order by (id) desc;";
+			String sql = "select `comment`.id, `comment`.content,`comment`.user_id,`comment`.`time`, `user`.`name`,`comment`.edit from `user`, `comment` where `user`.id=`comment`.user_id and `comment`.phim_id=? order by (`comment`.id) desc;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setInt(1, id);
@@ -399,14 +399,14 @@ public class UserDAO {
 	public List<Response> getResponse(int id) {
 		List<Response> list = new ArrayList<>();
 		try {
-			String sql = "select `response`.id, `response`.content,`response`.user_id,`response`.`comment_id`, `response`.`time`,`user`.`name` from `user`, `response` where `user`.id=`response`.user_id and `response`.phim_id=? order by (id) desc;";
+			String sql = "select `response`.id, `response`.content,`response`.user_id,`response`.`comment_id`, `response`.`time`,`user`.`name`,`response`.`edit` from `user`, `response` where `user`.id=`response`.user_id and `response`.phim_id=? order by (`response`.id) desc;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setInt(1, id);
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				list.add(new Response(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getString(5),
-						rs.getString(6), id));
+				list.add(new Response(rs.getInt(1), rs.getString(2), rs.getLong(3), rs.getInt(4), rs.getString(5),
+						rs.getString(6), id, rs.getBoolean(7)));
 			}
 			rs.close();
 			sta.close();
@@ -425,7 +425,7 @@ public class UserDAO {
 			sta.setObject(1, u.getId());
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
-				return new User(rs.getLong(1), rs.getString(2));
+				return new User(rs.getLong(1), rs.getString(2),rs.getString(3));
 			}
 			rs.close();
 			sta.close();
@@ -437,12 +437,13 @@ public class UserDAO {
 	}
 
 	public void addUser(User u) {
-		String sql = "insert into `user` values(?,?);";
+		String sql = "insert into `user` values(?,?,?);";
 		try {
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setLong(1, u.getId());
 			sta.setString(2, u.getName());
+			sta.setString(3, u.getHistory());
 			int rs2 = sta.executeUpdate();
 			sta.close();
 			conn.close();
@@ -474,6 +475,23 @@ public class UserDAO {
 			sta.setString(1, cmt.getContent());
 			sta.setLong(2, cmt.getUser_id());
 			sta.setInt(3, cmt.getPhim_id());
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void addResponse(Response res) {
+		String sql = "insert into `response`(`content`,`user_id`,`comment_id`,`phim_id`,`time`) values(?,?,?,?, CURRENT_TIMESTAMP() );";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, res.getContent());
+			sta.setLong(2, res.getUser_id());
+			sta.setInt(3, res.getComment_id());
+			sta.setInt(4, res.getPhim_id());
 			int rs2 = sta.executeUpdate();
 			sta.close();
 			conn.close();
@@ -519,6 +537,56 @@ public class UserDAO {
 			sta.setString(1, cmt.getContent());
 			sta.setInt(2, cmt.getId());
 			sta.setLong(3, cmt.getUser_id());
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		UserDAO u = new UserDAO();
+		for (Response r : u.getResponse(1)) {
+			System.out.println(r);
+		}
+	}
+	public void updateResponse(Response cmt) {
+		String sql = "update `response` set `content`=? , `time`= CURRENT_TIMESTAMP(), `edit`=1 where `id`=? and user_id=?;";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, cmt.getContent());
+			sta.setInt(2, cmt.getId());
+			sta.setLong(3, cmt.getUser_id());
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void removeResponse(Response cmt) {
+		String sql = "delete from `response` where `id`=? and user_id=?;";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setInt(1, cmt.getId());
+			sta.setLong(2, cmt.getUser_id());
+			int rs2 = sta.executeUpdate();
+			sta.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void updateHistory(User u) {
+		String sql = "update `user` set `history`= ? where `id`=?;";
+		try {
+			Connection conn = new DBContext().getConnection();
+			PreparedStatement sta = conn.prepareStatement(sql);
+			sta.setString(1, u.getHistory());
+			sta.setLong(2, u.getId());
 			int rs2 = sta.executeUpdate();
 			sta.close();
 			conn.close();

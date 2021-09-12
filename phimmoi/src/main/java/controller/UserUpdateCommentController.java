@@ -22,12 +22,13 @@ public class UserUpdateCommentController extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 
 		Comment comment = new Comment(Integer.parseInt(req.getParameter("id")), req.getParameter("content"),
-				Long.parseLong(req.getParameter("user-id")), null, null, Integer.parseInt(req.getParameter("phim-id")),false);
+				Long.parseLong(req.getParameter("user-id")), null, null, Integer.parseInt(req.getParameter("phim-id")),
+				false);
 
 		HttpSession session = req.getSession();
 		User user = (User) session.getAttribute("user");
 
-		if (user != null) {
+		if (user.getId() == comment.getUser_id()) {
 			new UserDAO().updateComment(comment);
 			resp.sendRedirect("detail?id=" + comment.getPhim_id());
 

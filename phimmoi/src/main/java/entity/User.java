@@ -3,15 +3,17 @@ package entity;
 public class User {
 	private long id;
 	private String name;
+	private String history;
 
 	public User() {
 		super();
 	}
 
-	public User(long id, String name) {
+	public User(long id, String name, String history) {
 		super();
 		this.id = id;
 		this.name = name;
+		this.history = history;
 	}
 
 	public long getId() {
@@ -30,9 +32,17 @@ public class User {
 		this.name = name;
 	}
 
+	public String getHistory() {
+		return history;
+	}
+
+	public void setHistory(String history) {
+		this.history = history;
+	}
+
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + "]";
+		return "User [id=" + id + ", name=" + name + ", history=" + history + "]";
 	}
 
 }

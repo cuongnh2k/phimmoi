@@ -8,12 +8,14 @@ public class Response {
 	private String time;
 	private String name;
 	private int phim_id;
+	private boolean edit;
 
 	public Response() {
 		super();
 	}
 
-	public Response(int id, String content, long user_id, int comment_id,  String time, String name,int phim_id) {
+	public Response(int id, String content, long user_id, int comment_id, String time, String name, int phim_id,
+			boolean edit) {
 		super();
 		this.id = id;
 		this.content = content;
@@ -22,6 +24,7 @@ public class Response {
 		this.phim_id = phim_id;
 		this.time = time;
 		this.name = name;
+		this.edit = edit;
 	}
 
 	public int getId() {
@@ -80,10 +83,18 @@ public class Response {
 		this.name = name;
 	}
 
+	public boolean isEdit() {
+		return edit;
+	}
+
+	public void setEdit(boolean edit) {
+		this.edit = edit;
+	}
+
 	@Override
 	public String toString() {
 		return "Response [id=" + id + ", content=" + content + ", user_id=" + user_id + ", comment_id=" + comment_id
-				+ ", phim_id=" + phim_id + ", time=" + time + ", name=" + name + "]";
+				+ ", time=" + time + ", name=" + name + ", phim_id=" + phim_id + ", edit=" + edit + "]";
 	}
 
 }

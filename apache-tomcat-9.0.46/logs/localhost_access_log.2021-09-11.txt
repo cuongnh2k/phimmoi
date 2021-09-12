@@ -874,3 +874,362 @@
 0:0:0:0:0:0:0:1 - - [11/Sep/2021:13:47:31 +0700] "-" 400 -
 0:0:0:0:0:0:0:1 - - [11/Sep/2021:13:47:31 +0700] "GET /phimmoi/update-comment?id=20&user-id=958140914734886&phim-id=1&content=huy%E1%BB%81n+%C6%A1i%2C+............................ HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [11/Sep/2021:13:47:31 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 65456
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:14:07:20 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:14:07:20 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:14:07:21 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 62000
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:14:07:23 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:14:07:26 +0700] "GET /phimmoi/login-facebook?code=AQCJtycJfrKzRqCJEceDywLyfvVhPUD5xkrq44DhEJkmqbLCxkO3zAua1Y2lx7P45S53O1AmsGAEEWK3w3xDXQ1HP6nVlUC-ur87ml7V_kGQFMHCbDQOh1u4jABwQByxQUuUxKBTuQj0A5ouDbcwe9MOuIXmAcCpiU9KndvFa1fyu2AWQMY-I6_u1ybNYd0jIeB5wxFWhbDG3YX7YcbdEup39XOhgtGsqvoOsmxqCCj04-5QjCY_SxPQEiZSI2SRY-kqYOKw2gwE-9TQ4KKcO0y-XeV1bH9dgO8KQxbaoFwXYrCx5xc45Ju-TGfH4t7lY9E7QD9z6h9oTo5iKjRoNIlBP7d_80wi2qibCbPrlYTwi7MWi3WVCracd3xL712FpNfcYzu1aigWf2dKaFKOz7srKv0kslvVls3fWCTU4bBdF43UnHPw_o2_MH8VH7GzlNM HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:14:07:27 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:14:07:31 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:14:07:32 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 65386
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:14:07:32 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:14:07:32 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 65165
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:29 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:29 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:29 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 61976
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:32 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:36 +0700] "GET /phimmoi/login-facebook?code=AQABd7k3rYxGbtQIBgUwGIO0h1M1FyutR2__wDI21qF049pkNt--Mvsz1JrWi2wV5i60xetpb3R9NNPhu7zj9SPZsx5oNwy1dOiu2tEEKSYNTq2ST-dX0bRpiot4O_FbSHFruCA0Ko-JA_aH55DBuC-xRhPwftC4h6rlngtPNvEIRTp1nU9zIBj97lt_-ovJieAgm4ikLwRQtv3U_mC-94xAqaQC8VZy57CwHFKZHiqzho3XW3gW9v5rBXtzMaCNdZM03NAw_AD6nUwYvQjYCkk6xBF-JSQOe5y7Q6NtNSBkWEwWEru3oJouas69MJ_DSn9nFJhY7ZXmxjEeUNKdvWFpqCWm3VoTBa96jUQR6EfHDfDdbsirB1atfkg46fVKf2nYbUvO-6QNwXbMop_5zx22r93ZVDqk0T7enHe02upJgId0qzC4YwDrIAH6fXDMLsM HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:37 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:40 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:41 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 65443
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:41 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:41 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 65316
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:47 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:47 +0700] "GET /phimmoi/update-comment?id=20&user-id=958140914734886&phim-id=1&content=huy%E1%BB%81n+%C6%A1i%2C+................... HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:43:48 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 65339
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:49:19 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:49:19 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:49:19 +0700] "GET /phimmoi/remove-comment?id=20&user_id=958140914734886&phim_id=1 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:49:20 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 59568
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:49:43 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:49:43 +0700] "GET /phimmoi/add-comment?text=%C3%A2ssasasasasassa&user-id=958140914734886&phim-id=1 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:49:43 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 65417
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:49:55 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:49:55 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 65222
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:50:05 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:50:05 +0700] "GET /phimmoi/add-comment?text=%C3%A2ssasasasasassa&user-id=958140914734886&phim-id=1 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:50:05 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 71180
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:50:08 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:50:08 +0700] "GET /phimmoi/remove-comment?id=22&user_id=958140914734886&phim_id=1 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:50:09 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 65230
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:50:11 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:50:12 +0700] "GET /phimmoi/remove-comment?id=21&user_id=958140914734886&phim_id=1 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:50:12 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 59468
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:58:55 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:58:55 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:58:56 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 59404
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:58:57 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:58:59 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:58:59 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 59499
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:59:00 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:59:25 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:59:29 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 57191
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:59:30 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:59:36 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:59:36 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 57232
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:59:37 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:59:55 +0700] "GET /phimmoi/login-facebook?code=AQDhF19gLduwpxUucOlhySgbO0iu3WK6W2tmWo_RzM57Yx0FdDGQ2-tANrO0A_LKUpqKbM1rcicvUivamxDFZKpFd8TAUll2epd5b1KWYfgofenrGqcMo3VrmmP_Q4XbMznvqhLSuxXNHoHNa-VcRzrR32WL0UTO3eGDD4DbV7UiwjTuQrwFu5Zoikx6UUbFcUUX62-_vubIMZn4oFDj2pkd1SrLkr3qCCo-EF1WrMVaXXuHVfAGyB9CGV0-z0oK8hLPYQPonsoTAJdup-e9-Vd7eZbm8rUKZgYdvym75nC3okgm1roX1L9gPdgf7guBbOMJd8YyVst0U34vKAOWhu1-NoxzG7g74dzkdVZgtp_E2XFttNGXjwijCdciqLaubgRGoQUHSz1cd1tFDEuBvxby6KDKoBfuSBYuo3cAgrCqEIj7kmQhpIBVX8yEKgT53pQ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:21:59:56 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:00:00 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:00:00 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 60362
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:00:01 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:00:01 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 60155
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:00:19 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:00:19 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 60087
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:00:20 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:00:28 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:00:28 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 60271
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:00:29 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:02:23 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:02:23 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:02:23 +0700] "GET /phimmoi/logout HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:02:23 +0700] "GET /phimmoi/home HTTP/1.1" 200 86328
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:02:28 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:02:29 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:02:29 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 57348
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:05:06 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:05:06 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:05:06 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 404 769
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:05:06 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:05:10 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56996
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:05:52 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:06:12 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:06:12 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56938
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:06:54 +0700] "GET /phimmoi/login-facebook?code=AQCdsLhQyDk4z-aExWrP4a_5yY1cil21rhNK2mhhEX9Xd8CK7zDeughgWF0P7DBhIdqfm4-EN1ohkU2aBPLP5ZDTxamRtTFyx4id6DNoQe89vgn1MDXVlDMOGTvhST0B95oJL5ay7X7lYGmlh7MH_RZPaNyoVJtR5G4akHf0TtTgUxMgyO1FUhELlY4rekvSJzM0uqSm71ncPWEs7JevIILa20QVMccNE4m2ktgABRAajYhdwZ4ugB13tT6jBBp8GF9ugX4Y7JVzc0mxSr_T4697tD775jEjuKQmHhkgoANigAip3yViD5h9HgfJssGK66aUQGD33a9xA6d5XDF-B6BS8ZqeFjiBQfRPw1U-_hCuJJorSDQBvAWb2VKJMqhz5tDDNdK52LS3V1lF97pnB1RfhMg8tOzX2htzPNUflvJKeQ_vyCfOIcbnLuiC_pf6ghk HTTP/1.1" 500 3986
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:06:57 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:06:57 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:07:13 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:07:13 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:07:13 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56793
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:07:16 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:07:16 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56888
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:07:20 +0700] "GET /phimmoi/login-facebook?code=AQCYkgwcP2GtNU0u4UNawwFefGdmVpazEYR7AH1miMnSaGfSDG24a2XgK5E7WbI41W7PF-2tYlIpQnIKyVkgfttdK0A4OpVYQBW5yvHIPzlkHsYUcruDHVO2tZvD5Miw9YvQONEEXPSESvbyGWC_jHlPhQAPOSQbCA4MFpgl5SgzcGBAGY976DvrNwPKakSQVAoEQ0wa1d8sSYtF-oULV_Mb7vq24ZF9vcgSzX3KMWm5aymHENjDUEOWLSJRICBI01bK8umSqs3WErsyI9R18wItRsChCBTaOaN4GAiqZ6XNiFrJZTLsjoJ9nWMBqquQJOAD60rPJ9Fk4V6ttvGKxFDMh83hPpuXwtOCz8T5Tkd6snK5sJJoJH2ohTxnkvLs3OjGKvOco7Zvu-umacu0GmvW2RvMLmQJ6YEyQ_wfPaT2sLTHOoPhX7f-n-oJQKmsJuU HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:07:21 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:07:28 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:07:28 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 60262
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:07:29 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:07:29 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 60268
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:36 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:36 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:37 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 60361
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:38 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:41 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:43 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56488
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:43 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:48 +0700] "GET /phimmoi/login-facebook?code=AQBcnyzL-GYVLLvWVN1FBLkqgUfY3HJkaXXBPq78HGBrLdtFgosnvtHuMkDtR1UmvF7u8XHeNXQQBLYZJptvpxJuXpLfjZzuAuYCoq802IUXq8oNFgGFIWyUg0X-JLVcD_F0uP0SXYciRD7wu6gzo5wijp41N9o7Jtkcq88DK-8xTbnMasIZDQRdjpb5ZedkHnonrKWUdjKeiTf8wEqVUlpEtipS9wH41l6HXdIvfGPsIdzuy0ox7T-0BtvSelYPuelUfY7Ny4cGoSvKJaVGnjyh9DzlZKIosE1rDIek9n-GPrHbkKbqnEy7lNJ80nfZ7QK1RUdTvAn9QK9TtE5iEhcs_LFxB7sThIYMan33yirNU2QcHHOY3KVhKZfwJs_1cx8OT9vOVEV-B31A2aIWcDzICWF0iXaKPTLwPEBDbcZvm8yEzoabGjwJc4uu8gKK6g8 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:49 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:54 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:54 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 59874
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:54 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:19:55 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 59808
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:21:37 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:21:37 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:21:37 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 60022
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:21:38 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:22:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:22:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:22:55 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56465
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:22:55 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:23:02 +0700] "GET /phimmoi/login-facebook?code=AQBW9QXQBMZ194JL9DoUJ8kcmwOyOd3aC30IWJOPZp2W03VXDpKmJiJoMgxblS8UaOD3kM8ZfCLOJPLPAcfNRTv3aFWP-UpPz7qM6IVlPhb5GZKwpyULJ2Atpueb43oKC0vFHXI2wFpykbfOF7mSJzUFfWxMsA5A_-0c40H-2T58nj_Z2AS_E42ZwzaHCYHcr1y3wsKmxqR8wFD4vXVzPT7KmhLvLfw8QHVTTH-y8ZkFlMCq4Kue5R911KYcLdtx9kg5RMzjeFlSiTKztyuUo1wwSo8Uo7pUbGhYEcbDyAm5No_0HzwF5vBh95ame5CfLlx_3QLPq8EmGm6PHWM65ysFOwrYRvoctM-YPe7oNemDPxN2XlHqxd_bGLyn0nS7KzwimOj2NMEndF_HOwATHajKbJyvA7SKMR1_cMg4WQfUVd8SZHPWUsnbqargBm998Qk HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:23:03 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:23:07 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:23:07 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:23:08 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 59875
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:49 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:49 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:50 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 59962
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:51 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:52 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 404 769
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:52 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:53 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 404 769
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:53 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:53 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:54 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:56 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56322
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:28:56 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:29:08 +0700] "GET /phimmoi/login-facebook?code=AQDws1dzkFVjqULLX2awNOswFOxIimXKVaJfNI6h4bgB2N2LEkQ3HTpo7PNxpzg8mVQY5XeveHWBHXewer2nFvRr79Qn0O3YD9mW0tBpNGJbgbDkHpUHsN2jI-z_vPyhQFKlF4mv-JSu0KCT9AQxhVaZHiy9af841-TBh-ZwR3RenrS1PtGmXtLefht5p96mg6wlMO-uPNkyo1kVJ0Jkdgp6m5Wd_Jd3g9jFkokIAL2ohyU9l37t4jneJy1Gj4sqZchUkR97Py6Gj3C_LYqyxDENowMk1AhHoy2gG-XKFkPe7dMVcm8QDYafFaqmPb5fGc4cZ91F-RpbpTeQp6ib8dMNOrMKGjOsY6uuPvlxWa-xWhkTZrOiQjNffyeGogoGVNkaBwzeHVXFoFjkG_8pI4-1fE_I6q629i0h3R8cIQfkYQFbbmRKp8rbKNDx-eZuOsA HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:29:08 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:29:55 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:29:55 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:29:55 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 59815
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:29:55 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:29:55 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 59920
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:32:06 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:32:06 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:32:08 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56380
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:32:08 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:32:12 +0700] "GET /phimmoi/login-facebook?code=AQAv3jmIicf5xnz1pCQrXV9PMaQWvstwk3HL1sIgYq6El6QRXQePzvJTmMD-jKKqEOdH5ILoCOiEFmrKon7SMuexAez7MCTCyPDaK1FKgTuExcnbpYJvzsuIs9sGwzdmz4CXwT4rEfJeGQPX-APr3m8tcQfjLtTVZKC96IPzhZmczDotMJrrflxrttjC2tJkS6odHE3fKG8lCYK9L-3oShcWSosteqZMP7_BR9Yw-5tmz9LhywAmNL7GZj1vuMkASSFao52207OvEB-_CRbVkFD2rvi_G5GxNGwthFp4XL1j9bjkjZdG0805AFpcWAJHoWuTe1tra839lxdy7B1-zlTbicaejmRBk5kOcxzkXCVu6joXBXukUOylMwAsPRJVWWtXvyFDVhP1HZ2j6Z8HH6ZST0_yUtqSMd6dpCOEOIGv5KTSg_L2_Yd6WWcXiADa844 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:32:12 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:32:13 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:32:14 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 60088
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:34:48 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:34:48 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:34:48 +0700] "GET /phimmoi/logout HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:34:49 +0700] "GET /phimmoi/home HTTP/1.1" 200 86328
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:34:50 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:34:50 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56512
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:35:19 +0700] "GET /phimmoi/login-facebook?code=AQDmqrt9esqZXk4roLFCuePtoVK6v4DueETmldIi3JFVf0D64BoerEY7-5usC5wnP6NeDLyWsvVK62--i3Im79s0R2E22BjzfTO2Mm-cIcim_R9yJ7YA3_6-VJRxyQhPZQ0q0SM4n8gYZzFFswkDc7NM8pL6kYWcq5hpcFrQ_ufRKzADPNgW9zDO3inF3iJM0xTiPB-mJxHTmltEFSqtFUp6TG-UUwR3nfWgHht4426iXIksikhiu2bvgYzgT0Bena81badxdICL3QpMeuSrhhqGb_kvAgO_G1rybrBq-Z7WxpQHSFktw-NwuEaq6NbhfJcr2-vAoJUhOwAJ_EbMbn6wasDNKw9JFWT_1-NT_-_ibhtEGQPovNdzf4WqH4H3EHJwH57m3MFLsLLeqaBxqtlCHpC5TSt-KGF-j3MQxLJoXb4zLL-SzpKy3wGQG-EBKxk HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:35:19 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:35:21 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:35:22 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 59944
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:35:34 +0700] "GET /phimmoi/logout HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:35:34 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:35:34 +0700] "GET /phimmoi/home HTTP/1.1" 200 86328
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:35:37 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:35:37 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56567
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:36:31 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:36:31 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56605
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:36:32 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:36:34 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:36:34 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56572
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:36:41 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:36:42 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56478
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:36:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:36:53 +0700] "GET /phimmoi/ HTTP/1.1" 200 86328
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:36:54 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:36:59 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:36:59 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56442
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:00 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:00 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56388
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:52 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56607
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:53 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:55 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:55 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56541
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:57 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:57 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 404 769
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:57 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:57 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:58 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 404 769
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:58 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:58 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:37:59 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:38:00 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56464
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:38:01 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:12 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:12 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:12 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56625
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:13 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:15 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:15 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56488
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:16 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:17 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:17 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56459
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:17 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:18 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:18 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56657
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:19 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:19 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 404 769
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:19 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:19 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:20 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 404 769
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:20 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:20 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:21 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:22 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 56754
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:23 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:44 +0700] "GET /phimmoi/login-facebook?code=AQATnERmguJ1oZ20Sfd-cKTQRNDrGgRkb7I-e-IduysDVaHJOIOnZRmHsrEQ8pMv1u8U-dt6ev1hAloApSS3LrdAVAWYl-S-qubuLTH1VLL3fggTbj2jdZBsntw0aPOK3c8cUCNh-NHyuY5u0d1pI6HF-MoLciOJe2JPfAcBsq4UiRGmem7a0bntEhoC5p_maJ7ykoqHlnf_DQwDqKoF1HsBFrxZV1qiC6b89QDNMQoqaqgkPF7M4P8HeZesu4Zw16czdHzc1SmPyz_45AMArmxua-llkDysUU1nKhM_JwZrLRYzXRW2fUmElZlcOlHukoFapdSa5Tx_lY6LvhKM-AfA6AP5okLFRfFHF-9wCng_w9aBkFmsU6S_e2sJNPiczOA6bUrvyfaG8v0Dr48ep8MoyeatZNK0x3FXqOyXp8q-p2xRZDKg6khyn2vNgVchaWc HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:44 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:46 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:22:40:46 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 60359
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:03:05 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:03:05 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:03:06 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 57615
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:03:08 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:03:15 +0700] "GET /phimmoi/login-facebook?code=AQBmr0nfE7ASRZZ2XZ_o3wJ373oB8q6z3dW9tYtUVgOHC5UNyU66PPoXjrJy8bWXy0nYTa0k71t_7e1YMssE61OB9vihhYtMlTg_YtOIi4XA71QiuUOBHRJ-FuU6BM49uMg3slq4tTJV7GH5fFWOZmZsdscO9cSRiclNlQVnvtOsNzjV6kSe_upERj1OhNK8eBhJpsf4GejplRLu_CodGcyz68h6aZ40Yio8jOChdwf_W3KWFVFY47T7dXoVKyL8W0cvd3gd--om9ffcLOdjODSurjJtg2Cv4z2PNG1bFCIZD-UbP_0OpeflAFhkkLO72QplZhk0cBvFA9mhUf_BMOwKpI_ISxIk37Q6TOvwJlKxJDhxBYhKV4iMLxOy0ELofXA5PGZAMKEFE-auUSLVezkAz_W8SCgUPwsCNRqhKj62MslOFXT19CCH3ZXjTocIfrY HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:03:16 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:03:17 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:03:18 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 61397
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:04:25 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:04:25 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:04:25 +0700] "GET /phimmoi/add-response?user_id=958140914734886&comment_id=19&phim_id=1&content=%C6%A1i HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:04:25 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 55689
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:04:44 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:04:44 +0700] "GET /phimmoi/add-response?user_id=958140914734886&comment_id=7&phim_id=1&content=www HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:04:45 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 55470
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:06:27 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:06:27 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:06:27 +0700] "GET /phimmoi/add-response?user_id=958140914734886&comment_id=19&phim_id=1&content=huhuhuu HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:06:27 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 55632
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:07:11 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:07:11 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 55695
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:07:12 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:08:02 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:08:02 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 55432
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:08:03 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:09:30 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:09:30 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:09:32 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 52008
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:09:32 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:09:37 +0700] "GET /phimmoi/login-facebook?code=AQCi_CX_MjV-Do6QCAJ3e59BDcGGl_Ux69d-1la9RScRDv1MxMQvjST50_lgeeCoBg5Fc2aWQEDe34tFrewTz6nB420vjw5smL5UkJNIKknZRgBUXTw0OpmqMyQxfLgFxewz0_EhLD82KD6r5W8ec_VcFawdjtRGeoRpWOwO706qUvkbHrn4Fh4ZEakonx1BzUiw8iB4gdYjpZvv3xnTJXm325rpnE22mP-2yiBXbCaEQCrnAwpbzTe9zZaWTfIo9Hs570ZFVyS8pZyNXLEIU7UHxsb2AY8JxTI4iwqL5scITFkIgKZqu5vmWTvxrqbjgJ45z9wQr5ugDAjbnF8KAwBqLLNvxQKXQO_6uR9L7I69EwI1984FQt8f2xVhJopmkXIkrK1y-WMakrO6l7UNw-xnuvCqTB1Fnwbm4QHNOk__nWjercNImSsIC_PUEliGEUI HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:09:38 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:14:28 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:14:28 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:14:28 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 500 1101
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:14:30 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:14:30 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:14:32 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 52015
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:14:48 +0700] "GET /phimmoi/login-facebook?code=AQC6eF3vha9q6jnS99sbFvVWaUFYDc_y-bpffdH7cAgUgiElBCuBJJq6Q96JZLSQkfpmDPbmwSOY7VVP1sccWPnHqj3LOQ0liCN7pYtC9ulib9oG-wtUeO8mpCXu6vkF3tFe_FcRPT-lVoIa-CYh4_9Mdke0bvtifODcDY1JWmmj5xa6BMmIultOf4yWHq4K2mKUwcaGFRdK1ZCCkdHtyhoVOcaF--Ur8SH1ubCihwCuAdo8GeKbmbQoRpoprdnBU_PF_RcWZo69ZlC-Sm9S6s1PoAEgfT8ZKpwY3NuWN46MvUjymXGEU8JKcN_fxEeb4gfTAWp1CSz0BzhiQvxQJzNUP39aZPE2wzmc-K6zVUQh70D7Ggj3J2nMnwB5_1kOzJFXoFuwn8R4cGIboaSrLR5qSs2isj3BbC4lRM8MKiVDj7_mZiBI6TXoScl56FNYpuQ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:14:49 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:14:51 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:14:52 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 55594
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:15:00 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:15:00 +0700] "GET /phimmoi/add-response?user_id=958140914734886&comment_id=19&phim_id=1&content=hu HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:15:01 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 55434
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:27:02 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:27:02 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:27:02 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 404 769
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:27:02 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:27:03 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:27:05 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 69298
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:27:06 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:27:58 +0700] "GET /phimmoi/login-facebook?code=AQCVxq731HgOzZZFKliQItNLcpj7JaYryMA27dNibhfIE0UVTWUYKPRVa29rLm8cf92nwHAzAKWz7E3AuhOMbXgLGf1goqBXTjLhwQ6h7V6H-UEq3PWPir-NjTAPq-WnlvJcoDxg9D8dIGnYUz0zY7MMOhN8puvQ4P6Sbhv-XNEiuX3pF2NujcwbArG-pdsRRmp1mFIOLY5HZ2JJbhO1mgA5aoDlrJJsu7k2FHUYrxrQUTFyitTabB9qwH-ifGROx30sKzVIIkv7UpKlDzAZaCN23WXnNqGBLGp_87fwKnDn3D7YeWDOg4MNLGkzsJBd_DkEtHChbwy5_4mKEbgA4aDmBQsnk7Vb-COaYD14IPIn6U9D9IAjMFIT4Yd5JHN9EQoF4_37XojU-5uvvOwyOIn7BNW7l1ctwbgjEiEAV5OHILwnG3AgSEldFDpQZn0x1Gw HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:27:59 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:28:00 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:28:00 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 73056
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:29:16 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:29:16 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:29:16 +0700] "GET /phimmoi/add-response?user_id=958140914734886&comment_id=7&phim_id=1&content=dowr HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:29:16 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 76000
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:30:21 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:30:21 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:30:21 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 75663
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:30:22 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:30:26 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:30:27 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 71826
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:30:28 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:30:28 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:30:29 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 71819
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:30:29 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:23 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:23 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:23 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 71766
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:25 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:32 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:33 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 71510
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:34 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:45 +0700] "GET /phimmoi/login-facebook?code=AQC5TvaJlSgeQCDwfn9zL0d-QALbtnzGN94LWWrjfBVUh04qCGDqUjORPF4dQfXAPnua8c_kRar_drP6y-P9Bnv4M11BCA1TJRY-8umDj_pNe3jyPv1LJ2QcC3zy8x5G41xHPhDKdH6f7ZM3SCeAKi4x1GvEeZRtJCfQ-38R-RSFIELXMNX3m0H45qPrnq3qBsfEHwl02cdlr2A4yCGWbPtZddEqGUSGzQVnvi5ern80C0LsJ_eW2V3gF0ktcw-UbzB8PPMsXVJrEJxK5RDAp7cjISbCEA2xU2Ni6OBR1YPd2pU_DtHECCuJ7JkwLDO67RT_P_H-5O2ESgfl0-GdMvR9ol8HYTORNgM_D_inFmEcq8N2R3Dd_JXtUX8hLYYteb4gGvxvUJot7zUu__PwkMIIcgbSZtfv1k_TrKqfO16bPXfNAX67zHKYmTu6rUocQQ4 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:45 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:47 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:48 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 75980
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:57 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:57 +0700] "GET /phimmoi/update-comment?id=19&user-id=958140914734886&phim-id=1&content=anh+c%C6%B0%E1%BB%9Dng+%C6%A1iddddd HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:36:57 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 75787
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:40:46 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:40:46 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:40:47 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:28 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:28 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:29 +0700] "GET /phimmoi/home HTTP/1.1" 200 86328
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:29 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:30 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:31 +0700] "GET /phimmoi/home HTTP/1.1" 200 86328
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:31 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:34 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:34 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 72173
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:35 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:35 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 71991
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:39 +0700] "GET /phimmoi/login-facebook?code=AQByylZpkVaabg-lV-h1VJr14nCHS1-gjuEbrptvejnXid_VuRIn4fzJzlknSQlVF4xx2tibr5R98BL6yquI5fX7BA8q1C80bwHO23z_8L-ab_Nhd38afAe8LYI6JcQmMM9Ewvr-il41sIu5cvgkGG_OCJsYZDo1p-lIxobtWgkjJvhtahQ6s7jx58RrXLBpTDYK8qtDwXPqIaajlgMpADI_-yGHp5V9zGK0yhPfggWMeyTB6Cy_nPEuM6ztiPSfgoozwcrI1A4mMczOSssHl1FfVnwNWnGo5a4iVS075-vSd0W0Q-muS7RXBFwTx1XCpoeo-sEYNxNtE-FpU70LWluRXZcd5z2jLy5UdanaeQPQGC-o6-O99fmGQynG7qb4ERgAJH016JjkY5mLiE0LdM7UWssjxR-hGbs46nRHI6W8gpgiXBQBCQUsIN2_d8850OY HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:39 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:41 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:55:41 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 77210
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:56:19 +0700] "GET /phimmoi/update-response?id=8&user_id=958140914734886&content=hhhhhhhhhhhhhhhhhhhhh HTTP/1.1" 500 1272
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:56:19 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:56:48 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:56:48 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:56:48 +0700] "GET /phimmoi/update-response?id=8&user_id=958140914734886&content=hhhhhhhhhhhhhhhhhhhhh HTTP/1.1" 500 1272
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:56:48 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:56:48 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:56:50 +0700] "GET /phimmoi/update-response?id=8&user_id=958140914734886&content=hhhhhhhhhhhhhhhhhhhhh HTTP/1.1" 500 1272
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:56:50 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:56:50 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:56:50 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:57:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:57:52 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:57:53 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 77208
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:57:54 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:57:54 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 77444
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:57:58 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:57:58 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 500 1101
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:57:58 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:57:58 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:57:59 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 404 769
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:57:59 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:57:59 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:00 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 404 769
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:00 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:00 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:00 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:02 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 71842
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:02 +0700] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:06 +0700] "GET /phimmoi/login-facebook?code=AQDxjXnJt4RO-YSRjNlVY_N76DG7lwJCBGxAaLy7_kQ-wY-3EmFu8DmAqp7BQM4rIDnC_PGdRAJ7z7ol6bMlhpKDOe2Nw1ME26B3nkk9vKkSqcmE4Q1JSA5jur4qLS-2_VdHnpriHwr7DuPULBQQhUbOjh9vUvNjM2quta-um7P4KGx6172c_XoPlerolIUa9vk_wZNRvchb3MSWFbtshL7rlX69YHM-UfOSYl984SctTTxvfdEJnZHbys-lF-5RDNCnrg_Um-5pih1rG4k2dBxbJ6K0P60TIjqOaA7V2ECF93VGggC3e6dB5jXlQUkt0ZWP8x4q94hE7a62yYP2k_dQhdJLADCy5sIAXTxhZ6InzgOLQRXfXZuFzmgvHAVXadHFbcYm2a87CZpG93fj1VExF77SrhI_QCfCtyJUM7OpRcN3E9vBriMN642pM_gniKM HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:07 +0700] "GET /phimmoi/home HTTP/1.1" 200 86414
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:08 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:08 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 77425
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:45 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:45 +0700] "GET /phimmoi/update-response?id=7&phim_id=1&user_id=958140914734886&content=huy%E1%BB%81n+anh+ph%E1%BA%A3i+g%E1%BB%8Di+c%C6%B0%E1%BB%9Dng+b%E1%BA%B1ng+anh HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:58:45 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 77663
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:59:05 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:59:05 +0700] "GET /phimmoi/update-response?id=6&phim_id=1&user_id=958140914734886&content=kh%C3%B4ng+%C4%91%C6%B0%E1%BB%A3c+l%C6%B0%C6%A1n HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2021:23:59:05 +0700] "GET /phimmoi/detail?id=1 HTTP/1.1" 200 77702
