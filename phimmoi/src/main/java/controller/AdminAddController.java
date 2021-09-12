@@ -26,7 +26,7 @@ public class AdminAddController extends HttpServlet {
 		if (a != null) {
 
 			Phim p = new Phim(0, req.getParameter("type"), req.getParameter("category"), req.getParameter("episode"),
-					req.getParameter("episodeURL"), req.getParameter("imageURL"), req.getParameter("title"), 0, false);
+					req.getParameter("episodeURL"), req.getParameter("imageURL"), req.getParameter("title"), 0, false,0);
 			new AdminDAO().addDAO(p);
 			resp.sendRedirect("home");
 		} else {

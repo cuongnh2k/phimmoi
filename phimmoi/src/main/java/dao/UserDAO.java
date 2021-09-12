@@ -103,7 +103,7 @@ public class UserDAO {
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),0));
 			}
 			rs.close();
 			sta.close();
@@ -117,14 +117,14 @@ public class UserDAO {
 	public List<Phim> getPhimLeCapNhat() {
 		List<Phim> list = new ArrayList<>();
 		try {
-			String sql = "select * from phim where `type`=? group by(title) order by(id) desc limit 12;";
+			String sql = "select *,count(*) from phim where `type`=? group by(title) order by(id) desc limit 12;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, "Phim lẻ");
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),rs.getLong(10)));
 			}
 			rs.close();
 			sta.close();
@@ -138,14 +138,14 @@ public class UserDAO {
 	public List<Phim> getPhimHoatHinhCapNhat() {
 		List<Phim> list = new ArrayList<>();
 		try {
-			String sql = "select * from phim where `type`=? group by(title) order by(id) desc limit 12;";
+			String sql = "select *,count(*) from phim where `type`=? group by(title) order by(id) desc limit 12;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, "Phim hoạt hình");
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),rs.getLong(10)));
 			}
 			rs.close();
 			sta.close();
@@ -159,14 +159,14 @@ public class UserDAO {
 	public List<Phim> getPhimChieuRapCapNhat() {
 		List<Phim> list = new ArrayList<>();
 		try {
-			String sql = "select * from phim where `type`=? group by(title) order by(id) desc limit 12;";
+			String sql = "select *,count(*) from phim where `type`=? group by(title) order by(id) desc limit 12;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, "Phim chiếu rạp");
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),rs.getLong(10)));
 			}
 			rs.close();
 			sta.close();
@@ -180,14 +180,14 @@ public class UserDAO {
 	public List<Phim> getPhimBoCapNhat() {
 		List<Phim> list = new ArrayList<>();
 		try {
-			String sql = "select * from phim where `type`=? group by(title) order by(id) desc limit 12;";
+			String sql = "select *,count(*) from phim where `type`=? group by(title) order by(id) desc limit 12;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, "Phim bộ");
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),rs.getLong(10)));
 			}
 			rs.close();
 			sta.close();
@@ -208,7 +208,7 @@ public class UserDAO {
 			setView(id);
 			while (rs.next()) {
 				return new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),0);
 			}
 			rs.close();
 			sta.close();
@@ -230,7 +230,7 @@ public class UserDAO {
 
 			while (rs.next()) {
 				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),0));
 			}
 			rs.close();
 			sta.close();
@@ -244,14 +244,14 @@ public class UserDAO {
 	public List<Phim> getPhimTuongTu(Phim p) {
 		List<Phim> list = new ArrayList<Phim>();
 		try {
-			String sql = "select * from phim where category=? group by(title) order by rand() limit 12;";
+			String sql = "select *,count(*) from phim where category=? group by(title) order by rand() limit 12;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, p.getCategory());
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),rs.getLong(10)));
 			}
 			rs.close();
 			sta.close();
@@ -279,7 +279,7 @@ public class UserDAO {
 	public List<Phim> searchByName(String txt, long x) {
 		List<Phim> list = new ArrayList<Phim>();
 		try {
-			String sql = "SELECT * FROM phim WHERE MATCH(title) AGAINST( ? ) group by(title) limit 12 offset ?;";
+			String sql = "SELECT *,count(*) FROM phim WHERE MATCH(title) AGAINST( ? ) group by(title) limit 12 offset ?;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, txt);
@@ -287,7 +287,7 @@ public class UserDAO {
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),rs.getLong(10)));
 			}
 			rs.close();
 			sta.close();
@@ -320,7 +320,7 @@ public class UserDAO {
 	public List<Phim> searchMenu(Phim p) {
 		List<Phim> list = new ArrayList<Phim>();
 		try {
-			String sql = "select * from phim where `type`=? and category=? group by(title) limit 12 offset ?;";
+			String sql = "select *,count(*) from phim where `type`=? and category=? group by(title) limit 12 offset ?;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			sta.setString(1, p.getType());
@@ -329,7 +329,7 @@ public class UserDAO {
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),rs.getLong(10)));
 			}
 			rs.close();
 			sta.close();

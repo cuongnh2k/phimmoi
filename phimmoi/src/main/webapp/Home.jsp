@@ -60,6 +60,14 @@
 .menu3:hover {
 	background-color: rgb(60, 179, 113);
 }
+
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
 </style>
 
 <body class="bg-dark" style="font-family: Trirong, serif;">
@@ -176,6 +184,7 @@
 				style="height: 1px; border: none; background-color: rgb(240, 240, 240);">
 		</div>
 	</c:if>
+	
 	<c:if test="${phimBoCapNhat!=null}">
 		<div class="container">
 			<h3 style="color: rgb(255, 200, 50);">PHIM BỘ CẬP NHẬT</h3>
