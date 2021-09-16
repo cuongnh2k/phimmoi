@@ -4938,3 +4938,19 @@
 2021-09-13 00:49:50,248 [Worker-213: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\phimmoi\phimmoi\src\main\resources
 2021-09-13 00:49:50,249 [Worker-213: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2021-09-13 00:49:50,250 [Worker-213: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\phimmoi\phimmoi\src\test\resources
+2021-09-13 23:10:31,146 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-09-13 23:11:24,611 [Worker-6: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2021-09-13 23:11:27,044 [Worker-0: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: phimmoi:phimmoi:0.0.1-SNAPSHOT @ D:\phimmoi\phimmoi\pom.xml.
+2021-09-13 23:11:30,754 [Worker-6: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: phimmoi:phimmoi:0.0.1-SNAPSHOT @ D:\phimmoi\apache-tomcat-9.0.46\webapps\phimmoi\META-INF\maven\phimmoi\phimmoi\pom.xml.
+2021-09-13 23:11:57,171 [Worker-6: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /phimmoi_phimmoi/src/main/java
+2021-09-13 23:11:57,172 [Worker-6: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /phimmoi_phimmoi/src/test/java
+2021-09-13 23:11:57,668 [Worker-1: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: phimmoi:phimmoi:0.0.1-SNAPSHOT @ D:\phimmoi\phimmoi\pom.xml.
+2021-09-13 23:12:05,153 [Worker-6: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 40 sec
+2021-09-13 23:12:06,299 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-09-13 23:12:06,300 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\phimmoi\phimmoi\src\main\resources
+2021-09-13 23:12:06,318 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-09-13 23:12:06,319 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\phimmoi\phimmoi\src\test\resources
+2021-09-13 23:12:06,499 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-09-13 23:12:06,500 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\phimmoi\apache-tomcat-9.0.46\webapps\phimmoi\META-INF\maven\phimmoi\phimmoi\src\main\resources
+2021-09-13 23:12:06,514 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-09-13 23:12:06,516 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\phimmoi\apache-tomcat-9.0.46\webapps\phimmoi\META-INF\maven\phimmoi\phimmoi\src\test\resources

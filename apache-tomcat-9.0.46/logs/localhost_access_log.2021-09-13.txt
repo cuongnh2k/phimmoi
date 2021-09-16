@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [13/Sep/2021:23:12:12 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [13/Sep/2021:23:12:13 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [13/Sep/2021:23:12:21 +0700] "GET /phimmoi/ HTTP/1.1" 200 87241
+0:0:0:0:0:0:0:1 - - [13/Sep/2021:23:12:26 +0700] "GET /phimmoi/login-facebook?code=AQCgIdA-eCljuSOh6X-39C8I7Nx9VCAIVFZ9JWri3xRCES8tzX309C3nUYpUVIGgNfVxR6UlTsQHj3sUzwmQKDuYXtiv-xpSne3CQLB-UFgVFkFEt8u50qMtAbbIE2UDBm2ly5TlK3wdLUr9PK5_ZqcWBJIkE-xACpOD7bhW7lhDJ-bnr3AKlrmxIGSlU0tXHNPdio8RsK5B7PbvQ8XiiYVRDswp-0hjFjayflaIQPgH7LpXKxtmIuDWkidJEnw_RfPkTTE8l1NW17fOH0_attleocrYc6yrL1_kt2ix0eMyJGTOskBNQyy72FhnFeF0VSIcMG9WH9OIfT87QRlTWzpdbYZ_3WxhNw6mIU7TL_H1RiInL2zvNJfUzGKWKsfHtiIr0bfF2G2BivW-CXtIeUoQxNBL5aZRjP0ggZPu_Ba0HJLlAWOoiWgVDmV7P2rk2x0 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [13/Sep/2021:23:12:27 +0700] "GET /phimmoi/home HTTP/1.1" 200 96326
+0:0:0:0:0:0:0:1 - - [13/Sep/2021:23:12:30 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [13/Sep/2021:23:12:31 +0700] "GET /phimmoi/detail?id=7895 HTTP/1.1" 200 53634
+0:0:0:0:0:0:0:1 - - [13/Sep/2021:23:12:37 +0700] "-" 400 -
+0:0:0:0:0:0:0:1 - - [13/Sep/2021:23:12:37 +0700] "GET /phimmoi/add-comment?text=haha&user-id=958140914734886&phim-id=7895 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [13/Sep/2021:23:12:38 +0700] "GET /phimmoi/detail?id=7895 HTTP/1.1" 200 73784

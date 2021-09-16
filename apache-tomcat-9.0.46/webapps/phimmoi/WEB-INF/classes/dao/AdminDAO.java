@@ -215,7 +215,7 @@ public class AdminDAO {
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9)));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),0));
 			}
 			rs.close();
 			sta.close();

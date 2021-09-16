@@ -27,7 +27,7 @@ public class AdminEditController extends HttpServlet {
 
 			Phim p = new Phim(Long.parseLong(req.getParameter("id")), req.getParameter("type"),
 					req.getParameter("category"), req.getParameter("episode"), req.getParameter("episodeURL"),
-					req.getParameter("imageURL"), req.getParameter("title"), 0, false);
+					req.getParameter("imageURL"), req.getParameter("title"), 0, false,0);
 			new AdminDAO().editDAO(p);
 			resp.sendRedirect("detail?id=" + p.getId());
 		} else {

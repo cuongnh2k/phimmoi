@@ -21,19 +21,28 @@ public class UserAddResponseController extends HttpServlet {
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
 
-		Response r = new Response(0, req.getParameter("content"), Long.parseLong(req.getParameter("user_id")),
-				Long.parseLong(req.getParameter("comment_id")), null, null,
-				Long.parseLong(req.getParameter("phim_id")), false);
+		String content = req.getParameter("content");
+		long phim_id = Long.parseLong(req.getParameter("phim_id"));
+		content = content.replaceAll("  ", " ");
+		content = content.trim();
 
-		HttpSession session = req.getSession();
-		User user = (User) session.getAttribute("user");
+		if (content.length() > 1) {
+			Response r = new Response(0, content, Long.parseLong(req.getParameter("user_id")),
+					Long.parseLong(req.getParameter("comment_id")), null, null,
+					phim_id, false);
 
-		if (user != null) {
-			new UserDAO().addResponse(r);
-			resp.sendRedirect("detail?id=" + r.getPhim_id());
+			HttpSession session = req.getSession();
+			User user = (User) session.getAttribute("user");
 
+			if (user != null) {
+				new UserDAO().addResponse(r);
+				resp.sendRedirect("detail?id=" + r.getPhim_id());
+
+			} else {
+				resp.sendRedirect("detail?id=" + r.getPhim_id());
+			}
 		} else {
-			resp.sendRedirect("detail?id=" + r.getPhim_id());
+			resp.sendRedirect("detail?id=" + phim_id);
 		}
 	}
 
