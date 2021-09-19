@@ -44,7 +44,7 @@
 				<div class="dropdown-menu dropdown-menu-right">
 					<c:forEach items="${categoryPhimBo}" var="o">
 						<a class="dropdown-item menu2"
-							href="search?type=Phim%20bộ&category=${o }">${o }</a>
+							href="search?type=Phim%20bộ&category=${o}">${o}</a>
 					</c:forEach>
 				</div>
 			</div>

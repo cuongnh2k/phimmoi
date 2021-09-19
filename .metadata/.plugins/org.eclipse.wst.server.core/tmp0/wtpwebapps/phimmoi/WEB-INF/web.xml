@@ -3,5 +3,6 @@
   <display-name>phimmoi</display-name>
   <welcome-file-list>
     <welcome-file>home</welcome-file>
+   
   </welcome-file-list>
 </web-app>
