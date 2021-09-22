@@ -52,6 +52,66 @@
 	}
 }
 
+ul.root > li{
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+ul.root > li > a{
+	font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 15px;
+    line-height: 40px;
+    display: block;
+}
+
+ul.root > li > a:hover{
+    background-color: white;
+    color: rgb(255, 200, 50);
+    transition: ease-in 0.35s;
+    -moz-transition: ease-in 0.35s;
+    -webkit-transition: ease-in 0.35s;
+}
+
+ul.sub-menu {
+	font-size: 15px;
+    display: none;
+    background-color: #fff;
+    width: 350px;
+    position: absolute;
+    columns: 2;
+}
+
+ul.sub-menu li{
+    list-style: none;
+}
+
+ul.sub-menu li a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    line-height: 40px;
+    text-indent: 5px;
+}
+
+ul.sub-menu li a:hover{
+    background-color: lightgray;
+    transition: ease-in 0.35s;
+    -moz-transition: ease-in 0.35s;
+    -webkit-transition: ease-in 0.35s;
+}
+
+ul.root > li:hover ul.sub-menu{
+    display: block;
+    z-index: 2;
+}
+
+.body{
+	z-index: 1;
+}
+
 .show_txt {
 	display: inline-block;
 	width: 100%;
@@ -71,6 +131,7 @@
   font-size: 18px;
 }
 
+
 .card-img-top {
 	height: 400px;
 	object-fit: cover;
@@ -85,6 +146,7 @@
 	color: white;
 	font-size: 15px;
 }
+
 
 .movie-list:hover{
 	transform: scale(1.2);
@@ -124,10 +186,14 @@
 </style>
 
 <body class="bg-dark" style="font-family: Trirong, serif;">
-	<jsp:include page="Head.jsp"></jsp:include>
+	
 	<div class="container">
+	<jsp:include page="Head.jsp"></jsp:include>
 		<div id="search" class="row"></div>
 	</div>
+	
+	<div class="body"> 
+	
 	<c:if test="${size!=null}">
 		<div class="container">
 			<div class="row">
@@ -177,7 +243,7 @@
 	</c:if>
 	<c:if test="${list1!=null&&list2!=null&&list3!=null}">
 		<div class="container huyen-anh">
-			<h3 style="color: rgb(255, 200, 50);">PHIM ĐỀ CỬ</h3>
+			<h3 style="color: rgb(255, 200, 50);padding-bottom: 30px;">PHIM ĐỀ CỬ</h3>
 			<div id="carouselExampleIndicators" class="carousel slide"
 				data-ride="carousel">
 				<ol class="carousel-indicators">
@@ -250,7 +316,7 @@
 	
 	<c:if test="${phimBoCapNhat!=null}">
 		<div class="container">
-			<h3 style="color: rgb(255, 200, 50);">PHIM BỘ CẬP NHẬT</h3>
+			<h3 style="color: rgb(255, 200, 50);padding-bottom: 30px;">PHIM BỘ CẬP NHẬT</h3>
 			<div class="row">
 				<c:forEach items="${phimBoCapNhat}" var="o">
 					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6 movie-list">
@@ -268,7 +334,7 @@
 	</c:if>
 	<c:if test="${phimLeCapNhat!=null}">
 		<div class="container">
-			<h3 style="color: rgb(255, 200, 50);">PHIM LẺ CẬP NHẬT</h3>
+			<h3 style="color: rgb(255, 200, 50);padding-bottom: 30px;">PHIM LẺ CẬP NHẬT</h3>
 			<div class="row">
 				<c:forEach items="${phimLeCapNhat}" var="o">
 					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6 movie-list">
@@ -285,7 +351,7 @@
 	</c:if>
 	<c:if test="${phimChieuRapCapNhat!=null}">
 		<div class="container">
-			<h3 style="color: rgb(255, 200, 50);">PHIM CHIẾU RẠP CẬP NHẬT</h3>
+			<h3 style="color: rgb(255, 200, 50);padding-bottom: 30px;">PHIM CHIẾU RẠP CẬP NHẬT</h3>
 			<div class="row">
 				<c:forEach items="${phimChieuRapCapNhat}" var="o">
 					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6 movie-list">
@@ -302,7 +368,7 @@
 	</c:if>
 	<c:if test="${phimHoatHinhCapNhat!=null}">
 		<div class="container">
-			<h3 style="color: rgb(255, 200, 50);">PHIM HOẠT HÌNH CẬP NHẬT</h3>
+			<h3 style="color: rgb(255, 200, 50);padding-bottom: 30px;">PHIM HOẠT HÌNH CẬP NHẬT</h3>
 			<div class="row">
 				<c:forEach items="${phimHoatHinhCapNhat}" var="o">
 					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6 movie-list">
@@ -316,7 +382,8 @@
 			</div>
 		</div>
 	</c:if>
-	<jsp:include page="Footer.jsp"></jsp:include>
+	</div>
+	<div class="footer"><jsp:include page="Footer.jsp"></jsp:include></div>
 	<script>
 		function searchByName(param) {
 			var txtSearch = param.value;

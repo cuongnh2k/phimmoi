@@ -27,9 +27,12 @@
 <!-- font google -->
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Sofia">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,100;1,300;1,700&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
 <!-- jquery -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 <title>${phim.title }</title>
 </head>
 
@@ -125,6 +128,66 @@
 	}
 }
 
+ul.root > li{
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+ul.root > li > a{
+	font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 15px;
+    line-height: 40px;
+    display: block;
+}
+
+ul.root > li > a:hover{
+    background-color: white;
+    color: rgb(255, 200, 50);
+    transition: ease-in 0.35s;
+    -moz-transition: ease-in 0.35s;
+    -webkit-transition: ease-in 0.35s;
+}
+
+ul.sub-menu {
+	font-size: 15px;
+    display: none;
+    background-color: #fff;
+    width: 350px;
+    position: absolute;
+    columns: 2;
+}
+
+ul.sub-menu li{
+    list-style: none;
+}
+
+ul.sub-menu li a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    line-height: 40px;
+    text-indent: 5px;
+}
+
+ul.sub-menu li a:hover{
+    background-color: lightgray;
+    transition: ease-in 0.35s;
+    -moz-transition: ease-in 0.35s;
+    -webkit-transition: ease-in 0.35s;
+}
+
+ul.root > li:hover ul.sub-menu{
+    display: block;
+    z-index: 2;
+}
+
+.body{
+	z-index: 1;
+}
+
 .show_txt {
 	display: inline-block;
 	width: 100%;
@@ -145,68 +208,123 @@
 	color: white;
 	background-color: #708090;
 }
+
+.movie-title{
+	font-family: 'Sen', sans-serif;
+	font-size: 30px;
+	color: #fff;
+}
+
+.show_txt{
+	font-family: 'Sen', sans-serif;
+	color: white;
+	font-size: 15px;
+}
+
+.col-sm-6 .card-img-top {
+	height: 200px;
+}
+
+.movie-list:hover{
+	transform: scale(1.2);
+	cursor: pointer;
+    position: relative;
+}
+
+.movie-list:hover img{
+    opacity: 0.5;
+}
+
+.movie-list:hover .movie-list-item{
+	opacity: 1;
+}
+
+.movie-list-item{
+	position: absolute;
+	font-size: 40px;
+	color: white;
+	top: 35%;
+    left: 70px;
+    opacity: 0;
+}
+
+.sum-episode{
+	position: absolute;
+	font-family: 'Sen', sans-serif;
+	background-color: rgb(148, 142, 142);
+	color: white;
+	font-size: 13px;
+	top: 5px;
+    left: 20px;
+    padding: 0 5px;
+    border-radius: 5px;
+}
 </style>
 
 <body class="bg-dark" style="font-family: Trirong, serif;">
-	<jsp:include page="Head.jsp"></jsp:include>
+	
 	<div class="container">
+		<jsp:include page="Head.jsp"></jsp:include>
 		<div id="search" class="row"></div>
 	</div>
-	<c:if test="${phim!=null}">
-		<div class="container">
-			<p style="color: rgb(255, 200, 50);">${phim.type }/
-				${phim.category} / ${phim.title }</p>
-			<h3 class="text-primary">${phim.title }</h3>
-			<c:if test="${boPhim!=null}">
-				<p style="color: rgb(240, 240, 240);">Tập: ${phim.episode }</p>
-			</c:if>
-			<div class="row">
-				<div class="col-sm-12">
-					<p style="color: rgb(240, 240, 240);">
-						Lượt xem: ${phim.view} <i class="bi bi-eye"></i>
-					</p>
-				</div>
-				<div class="col-sm-1" onclick="report()"
-					style="color: rgb(240, 240, 240); font-size: 25px;">
-					<i class="bi bi-flag-fill"></i>
-				</div>
-				<c:if test="${sessionScope.admin!=null }">
-					<div class="col-sm-1">
-						<i data-toggle="modal" data-target="#edit" class="bi bi-hammer"
-							style="color: rgb(240, 240, 240); font-size: 25px;"></i>
-					</div>
-					<div class="col-sm-1">
-						<i data-toggle="modal" data-target="#remove" class="bi bi-trash"
-							style="color: rgb(240, 240, 240); font-size: 25px;"></i>
-					</div>
+	<div class="body">
+		<c:if test="${phim!=null}">
+			<div class="container">
+				<p style="color: rgb(255, 200, 50);">${phim.type }/
+					${phim.category} / ${phim.title }</p>
+				<c:if test="${boPhim!=null}">
+					<p class="movie-title">${phim.title } - Tập ${phim.episode }</p>
 				</c:if>
-			</div>
-			<iframe class="ifra" width=100% src="${phim.episodeURL }"
-				title="${phim.title }" frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen></iframe>
-			<c:forEach items="${boPhim}" var="o">
-				<span class="btn ${o.episode==phim.episode?"btn-danger":"btn-secondary" } menu3"><a
-					style="color: rgb(240, 240, 240); padding: 0px;" class="nav-link"
-					href="detail?id=${o.id }">${o.episode}</a></span>
-			</c:forEach>
-			<jsp:include page="Comment.jsp"></jsp:include>
-			<hr
-				style="height: 1px; border: none; background-color: rgb(240, 240, 240);">
-			<h3 style="color: rgb(255, 200, 50);">Có thể bạn muốn xem</h3>
-
-			<div class="row">
-				<c:forEach items="${phimTuongTu}" var="o">
-					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6">
-						<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
-							class="card-img-top" alt="${o.title}">
-							<p class="show_txt text-primary">${o.title}</p></a>
+				<div class="row">
+					<div class="col-sm-12">
+						<p style="color: rgb(240, 240, 240);">
+							Lượt xem: ${phim.view} <i class="bi bi-eye"></i>
+						</p>
 					</div>
+					<div class="col-sm-1" onclick="report()"
+						style="color: rgb(240, 240, 240); font-size: 25px;">
+						<i class="bi bi-flag-fill"></i>
+					</div>
+					<c:if test="${sessionScope.admin!=null }">
+						<div class="col-sm-1">
+							<i data-toggle="modal" data-target="#edit" class="bi bi-hammer"
+								style="color: rgb(240, 240, 240); font-size: 25px;"></i>
+						</div>
+						<div class="col-sm-1">
+							<i data-toggle="modal" data-target="#remove" class="bi bi-trash"
+								style="color: rgb(240, 240, 240); font-size: 25px;"></i>
+						</div>
+					</c:if>
+				</div>
+				<iframe class="ifra" width=100% src="${phim.episodeURL }"
+					title="${phim.title }" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+				<c:forEach items="${boPhim}" var="o">
+					<span class="btn ${o.episode==phim.episode?"btn-danger":"btn-secondary" } menu3"><a
+						style="color: rgb(240, 240, 240); padding: 0px;" class="nav-link"
+						href="detail?id=${o.id }">${o.episode}</a></span>
 				</c:forEach>
-
+				<jsp:include page="Comment.jsp"></jsp:include>
+				<hr
+					style="height: 1px; border: none; background-color: rgb(240, 240, 240);">
+				<h3 style="color: rgb(255, 200, 50);padding: 30px 0;">CÓ THỂ BẠN MUỐN XEM</h3>
+	
+				<div class="row">
+					<c:forEach items="${phimTuongTu}" var="o">
+						<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6 movie-list">
+							<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
+								class="card-img-top" alt="${o.title}">
+								<p class="sum-episode">${o.sumEpisode} Tập</p>
+								<i class="fas fa-play-circle movie-list-item"></i>
+								<p class="show_txt">${o.title}</p></a>
+						</div>
+					</c:forEach>
+	
+				</div>
 			</div>
-		</div>
-	</c:if>
+		</c:if>
+	</div>
 	<jsp:include page="Footer.jsp"></jsp:include>
 
 	<!-- Edit -->
