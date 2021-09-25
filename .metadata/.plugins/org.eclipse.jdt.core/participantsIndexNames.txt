@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
+D:\phimmoi\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2093815040.index
+\rest-api-using-jax-rs-crud-operation--main\src\main\java
 D:\phimmoi\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3471955049.index
 \phimmoi\src\main\java

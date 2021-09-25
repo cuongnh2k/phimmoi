@@ -27,9 +27,12 @@
 <!-- font google -->
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Sofia">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,100;1,300;1,700&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
 <!-- jquery -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 <title>Phim mới</title>
 </head>
 
@@ -47,6 +50,66 @@
 	.huyen-anh {
 		display: none;
 	}
+}
+
+ul.root > li{
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+ul.root > li > a{
+	font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 15px;
+    line-height: 40px;
+    display: block;
+}
+
+ul.root > li > a:hover{
+    background-color: white;
+    color: rgb(255, 200, 50);
+    transition: ease-in 0.35s;
+    -moz-transition: ease-in 0.35s;
+    -webkit-transition: ease-in 0.35s;
+}
+
+ul.sub-menu {
+	font-size: 15px;
+    display: none;
+    background-color: #fff;
+    width: 350px;
+    position: absolute;
+    columns: 2;
+}
+
+ul.sub-menu li{
+    list-style: none;
+}
+
+ul.sub-menu li a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    line-height: 40px;
+    text-indent: 5px;
+}
+
+ul.sub-menu li a:hover{
+    background-color: lightgray;
+    transition: ease-in 0.35s;
+    -moz-transition: ease-in 0.35s;
+    -webkit-transition: ease-in 0.35s;
+}
+
+ul.root > li:hover ul.sub-menu{
+    display: block;
+    z-index: 2;
+}
+
+.body{
+	z-index: 1;
 }
 
 .show_txt {
@@ -68,21 +131,79 @@
   font-size: 18px;
 }
 
+
+.card-img-top {
+	height: 400px;
+	object-fit: cover;
+}
+
+.col-sm-6 .card-img-top {
+	height: 200px;
+}
+
+.show_txt{
+	font-family: 'Sen', sans-serif;
+	color: white;
+	font-size: 15px;
+}
+
+
+.movie-list:hover{
+	transform: scale(1.2);
+	cursor: pointer;
+    position: relative;
+}
+
+.movie-list:hover img{
+    opacity: 0.5;
+}
+
+.movie-list:hover .movie-list-item{
+	opacity: 1;
+}
+
+.movie-list-item{
+	position: absolute;
+	font-size: 40px;
+	color: white;
+	top: 35%;
+    left: 70px;
+    opacity: 0;
+}
+
+.sum-episode{
+	position: absolute;
+	font-family: 'Sen', sans-serif;
+	background-color: rgb(148, 142, 142);
+	color: white;
+	font-size: 13px;
+	top: 5px;
+    left: 20px;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
 </style>
 
 <body class="bg-dark" style="font-family: Trirong, serif;">
-	<jsp:include page="Head.jsp"></jsp:include>
+	
 	<div class="container">
+	<jsp:include page="Head.jsp"></jsp:include>
 		<div id="search" class="row"></div>
 	</div>
+	
+	<div class="body"> 
+	
 	<c:if test="${size!=null}">
 		<div class="container">
 			<div class="row">
 				<c:forEach items="${searchByName}" var="o">
-					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6">
+					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6 movie-list">
 						<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
 							class="card-img-top" alt="${o.title}">
-							<p class="show_txt text-primary">${o.title}</p></a>
+							<p class="sum-episode">${o.sumEpisode} Tập</p>
+							<i class="fas fa-play-circle movie-list-item"></i>
+							<p class="show_txt">${o.title}</p></a>
 					</div>
 				</c:forEach>
 			</div>
@@ -101,10 +222,12 @@
 				${CT030408.category}</p>
 			<div class="row">
 				<c:forEach items="${searchMenu}" var="o">
-					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6">
+					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6 movie-list">
 						<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
 							class="card-img-top" alt="${o.title}">
-							<p class="show_txt text-primary">${o.title}</p></a>
+							<p class="sum-episode">${o.sumEpisode} Tập</p>
+							<i class="fas fa-play-circle movie-list-item"></i>
+							<p class="show_txt">${o.title}</p></a>
 					</div>
 				</c:forEach>
 			</div>
@@ -120,7 +243,7 @@
 	</c:if>
 	<c:if test="${list1!=null&&list2!=null&&list3!=null}">
 		<div class="container huyen-anh">
-			<h3 style="color: rgb(255, 200, 50);">PHIM ĐỀ CỬ</h3>
+			<h3 style="color: rgb(255, 200, 50);padding-bottom: 30px;">PHIM ĐỀ CỬ</h3>
 			<div id="carouselExampleIndicators" class="carousel slide"
 				data-ride="carousel">
 				<ol class="carousel-indicators">
@@ -133,10 +256,12 @@
 					<div class="carousel-item active">
 						<div class="row">
 							<c:forEach items="${list1}" var="o">
-								<div class="col-3">
+								<div class="col-3 movie-list">
 									<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
 										class="card-img-top" alt="${o.title}">
-										<p class="show_txt text-primary">${o.title}</p></a>
+										<p class="sum-episode">${o.sumEpisode} Tập</p>
+										<i class="fas fa-play-circle movie-list-item"></i>
+										<p class="show_txt ">${o.title}</p></a>
 								</div>
 							</c:forEach>
 						</div>
@@ -146,11 +271,12 @@
 					<div class="carousel-item">
 						<div class="row">
 							<c:forEach items="${list2}" var="o">
-								<div class="col-3">
+								<div class="col-3 movie-list">
 									<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
 										class="card-img-top" alt="${o.title}">
-										<p class="show_txt text-primary">${o.title}</p></a>
-
+										<p class="sum-episode">${o.sumEpisode} Tập</p>
+										<i class="fas fa-play-circle movie-list-item"></i>
+										<p class="show_txt ">${o.title}</p></a>
 								</div>
 
 							</c:forEach>
@@ -159,10 +285,12 @@
 					<div class="carousel-item">
 						<div class="row">
 							<c:forEach items="${list3}" var="o">
-								<div class="col-3">
+								<div class="col-3 movie-list">
 									<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
 										class="card-img-top" alt="${o.title}">
-										<p class="show_txt text-primary">${o.title}</p></a>
+										<p class="sum-episode">${o.sumEpisode} Tập</p>
+										<i class="fas fa-play-circle movie-list-item"></i>
+										<p class="show_txt ">${o.title}</p></a>
 
 								</div>
 
@@ -170,6 +298,7 @@
 						</div>
 					</div>
 				</div>
+				<br> <br>
 				<a class="carousel-control-prev" href="#carouselExampleIndicators"
 					role="button" data-slide="prev"> <span
 					class="carousel-control-prev-icon" aria-hidden="true"></span> <span
@@ -187,13 +316,15 @@
 	
 	<c:if test="${phimBoCapNhat!=null}">
 		<div class="container">
-			<h3 style="color: rgb(255, 200, 50);">PHIM BỘ CẬP NHẬT</h3>
+			<h3 style="color: rgb(255, 200, 50);padding-bottom: 30px;">PHIM BỘ CẬP NHẬT</h3>
 			<div class="row">
 				<c:forEach items="${phimBoCapNhat}" var="o">
-					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6">
+					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6 movie-list">
 						<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
 							class="card-img-top" alt="${o.title}">
-							<p class="show_txt text-primary">${o.title}</p></a>
+							<p class="sum-episode">${o.sumEpisode} Tập</p>
+							<i class="fas fa-play-circle movie-list-item"></i>
+							<p class="show_txt">${o.title}</p></a>
 					</div>
 				</c:forEach>
 			</div>
@@ -203,13 +334,14 @@
 	</c:if>
 	<c:if test="${phimLeCapNhat!=null}">
 		<div class="container">
-			<h3 style="color: rgb(255, 200, 50);">PHIM LẺ CẬP NHẬT</h3>
+			<h3 style="color: rgb(255, 200, 50);padding-bottom: 30px;">PHIM LẺ CẬP NHẬT</h3>
 			<div class="row">
 				<c:forEach items="${phimLeCapNhat}" var="o">
-					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6">
+					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6 movie-list">
 						<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
 							class="card-img-top" alt="${o.title}">
-							<p class="show_txt text-primary">${o.title}</p></a>
+							<i class="fas fa-play-circle movie-list-item"></i>
+							<p class="show_txt">${o.title}</p></a>
 					</div>
 				</c:forEach>
 			</div>
@@ -219,13 +351,14 @@
 	</c:if>
 	<c:if test="${phimChieuRapCapNhat!=null}">
 		<div class="container">
-			<h3 style="color: rgb(255, 200, 50);">PHIM CHIẾU RẠP CẬP NHẬT</h3>
+			<h3 style="color: rgb(255, 200, 50);padding-bottom: 30px;">PHIM CHIẾU RẠP CẬP NHẬT</h3>
 			<div class="row">
 				<c:forEach items="${phimChieuRapCapNhat}" var="o">
-					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6">
+					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6 movie-list">
 						<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
 							class="card-img-top" alt="${o.title}">
-							<p class="show_txt text-primary">${o.title}</p></a>
+							<i class="fas fa-play-circle movie-list-item"></i>
+							<p class="show_txt">${o.title}</p></a>
 					</div>
 				</c:forEach>
 			</div>
@@ -235,19 +368,22 @@
 	</c:if>
 	<c:if test="${phimHoatHinhCapNhat!=null}">
 		<div class="container">
-			<h3 style="color: rgb(255, 200, 50);">PHIM HOẠT HÌNH CẬP NHẬT</h3>
+			<h3 style="color: rgb(255, 200, 50);padding-bottom: 30px;">PHIM HOẠT HÌNH CẬP NHẬT</h3>
 			<div class="row">
 				<c:forEach items="${phimHoatHinhCapNhat}" var="o">
-					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6">
+					<div class="col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6 movie-list">
 						<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
 							class="card-img-top" alt="${o.title}">
-							<p class="show_txt text-primary">${o.title}</p></a>
+							<p class="sum-episode">${o.sumEpisode} Tập</p>
+							<i class="fas fa-play-circle movie-list-item"></i>
+							<p class="show_txt">${o.title}</p></a>
 					</div>
 				</c:forEach>
 			</div>
 		</div>
 	</c:if>
-	<jsp:include page="Footer.jsp"></jsp:include>
+	</div>
+	<div class="footer"><jsp:include page="Footer.jsp"></jsp:include></div>
 	<script>
 		function searchByName(param) {
 			var txtSearch = param.value;

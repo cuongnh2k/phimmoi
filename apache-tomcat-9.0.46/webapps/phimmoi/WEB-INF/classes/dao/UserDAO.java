@@ -97,13 +97,13 @@ public class UserDAO {
 	public List<Phim> getPhimDeCu() {
 		List<Phim> list = new ArrayList<>();
 		try {
-			String sql = "select * from phim group by(title) order by(sum(`view`)) desc limit 12;";
+			String sql = "select *,count(*) from phim group by(title) order by(sum(`view`)) desc limit 12;";
 			Connection conn = new DBContext().getConnection();
 			PreparedStatement sta = conn.prepareStatement(sql);
 			ResultSet rs = sta.executeQuery();
 			while (rs.next()) {
 				list.add(new Phim(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5),
-						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),0));
+						rs.getString(6), rs.getString(7), rs.getLong(8), rs.getBoolean(9),rs.getLong(10)));
 			}
 			rs.close();
 			sta.close();
