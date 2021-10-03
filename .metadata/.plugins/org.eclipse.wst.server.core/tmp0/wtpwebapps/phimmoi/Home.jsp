@@ -147,6 +147,10 @@ ul.root > li:hover ul.sub-menu{
 	font-size: 15px;
 }
 
+.movie-list1:hover{
+	cursor: pointer;
+    position: relative;
+}
 
 .movie-list:hover{
 	transform: scale(1.2);
@@ -154,11 +158,11 @@ ul.root > li:hover ul.sub-menu{
     position: relative;
 }
 
-.movie-list:hover img{
+.movie-list:hover img, .movie-list1:hover img{
     opacity: 0.5;
 }
 
-.movie-list:hover .movie-list-item{
+.movie-list:hover .movie-list-item, .movie-list1:hover .movie-list-item{
 	opacity: 1;
 }
 
@@ -256,7 +260,7 @@ ul.root > li:hover ul.sub-menu{
 					<div class="carousel-item active">
 						<div class="row">
 							<c:forEach items="${list1}" var="o">
-								<div class="col-3 movie-list">
+								<div class="col-3 movie-list1">
 									<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
 										class="card-img-top" alt="${o.title}">
 										<p class="sum-episode">${o.sumEpisode} Tập</p>
@@ -271,7 +275,7 @@ ul.root > li:hover ul.sub-menu{
 					<div class="carousel-item">
 						<div class="row">
 							<c:forEach items="${list2}" var="o">
-								<div class="col-3 movie-list">
+								<div class="col-3 movie-list1">
 									<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
 										class="card-img-top" alt="${o.title}">
 										<p class="sum-episode">${o.sumEpisode} Tập</p>
@@ -285,7 +289,7 @@ ul.root > li:hover ul.sub-menu{
 					<div class="carousel-item">
 						<div class="row">
 							<c:forEach items="${list3}" var="o">
-								<div class="col-3 movie-list">
+								<div class="col-3 movie-list1">
 									<a href="detail?id=${o.id }"> <img src="${o.imageURL }"
 										class="card-img-top" alt="${o.title}">
 										<p class="sum-episode">${o.sumEpisode} Tập</p>

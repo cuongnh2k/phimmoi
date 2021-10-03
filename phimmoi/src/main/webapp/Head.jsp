@@ -121,6 +121,7 @@
 	</nav>
 		<hr
 			style="height: 1px; border: none; background-color: rgb(240, 240, 240);">
+	<br> <br>
 	</div>
 	<!-- Add -->
 	<div class="modal fade" id="add" tabindex="-1"

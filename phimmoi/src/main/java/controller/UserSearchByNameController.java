@@ -30,10 +30,12 @@ public class UserSearchByNameController extends HttpServlet {
 		List<Phim> list = new UserDAO().searchByName(txtSearch, 0);
 		PrintWriter out = resp.getWriter();
 		for (Phim p : list) {
-			out.println("<div class=\"col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6\">\r\n"
-					+ "						<a href=\"" + "detail?id=" + p.getId() + "\"> <img src=\"" + p.getImageURL()
-					+ "\"\r\n" + "							class=\"card-img-top\" alt=\"" + p.getTitle() + "\">\r\n"
-					+ "							<p class=\"show_txt text-primary\">" + p.getTitle() + "</p></a>\r\n"
+			out.println("<br><div class=\"col-12 col-md-4 col-xl-2 col-lg-3 col-sm-6 movie-list\">\r\n"
+					+ "<a href=\"" + "detail?id=" + p.getId() + "\"> <img src=\"" + p.getImageURL()
+					+ "\"\r\n" + "class=\"card-img-top\" alt=\"" + p.getTitle() + "\">\r\n"
+					+ "<p class=\"sum-episode\">"+ p.getEpisode() + "Tập</p>"
+					+ "<i class=\"fas fa-play-circle movie-list-item\"></i>"
+					+ "<p class=\"show_txt\">" + p.getTitle() + "</p></a>\r\n"
 					+ "					</div>");
 		}
 
